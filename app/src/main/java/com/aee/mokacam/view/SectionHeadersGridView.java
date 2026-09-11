@@ -41,23 +41,18 @@ public class SectionHeadersGridView extends RecyclerView {
         super(context, attrs, defStyle);
     }
 
-    @Override
-    public void setAdapter(Adapter adapter) {
-        if (adapter instanceof BaseAdapter) {
-            BaseAdapter base = (BaseAdapter) adapter;
-            GridLayoutManager lm = new GridLayoutManager(getContext(), 4);
-            lm.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-                @Override
-                public int getSpanSize(int position) {
-                    return wrapper != null && wrapper.isHeader(position) ? 4 : 1;
-                }
-            });
-            setLayoutManager(lm);
-            wrapper = new Wrapper(base);
-            super.setAdapter(wrapper);
-        } else {
-            super.setAdapter(adapter);
-        }
+    public void setGridAdapter(BaseAdapter base) {
+        GridLayoutManager lm = new GridLayoutManager(getContext(), 4);
+        final Wrapper w = new Wrapper(base);
+        lm.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                return w.isHeader(position) ? 4 : 1;
+            }
+        });
+        setLayoutManager(lm);
+        wrapper = w;
+        super.setAdapter(w);
     }
 
     private Wrapper wrapper;

@@ -7,9 +7,9 @@ import android.widget.ImageView;
 /* JADX INFO: loaded from: classes.dex */
 class u implements Runnable {
     final /* synthetic */ r a;
-    private final ab b;
-    private int c;
-    private int d;
+    final ab b;
+    int c;
+    int d;
 
     public u(r rVar, Context context) {
         this.a = rVar;

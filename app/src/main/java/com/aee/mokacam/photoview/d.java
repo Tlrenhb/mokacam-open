@@ -7,8 +7,8 @@ import android.view.MotionEvent;
 /* JADX INFO: loaded from: classes.dex */
 @TargetApi(5)
 public class d extends b {
-    private int f;
-    private int g;
+    int f;
+    int g;
 
     public d(Context context) {
         super(context);

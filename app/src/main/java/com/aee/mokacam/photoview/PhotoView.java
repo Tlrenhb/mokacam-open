@@ -13,8 +13,8 @@ import android.widget.ImageView;
 
 /* JADX INFO: loaded from: classes.dex */
 public class PhotoView extends ImageView implements i {
-    private r a;
-    private ImageView.ScaleType b;
+    r a;
+    ImageView.ScaleType b;
 
     public PhotoView(Context context) {
         this(context, null);

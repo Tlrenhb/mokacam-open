@@ -34,7 +34,7 @@ public class t {
         return list;
     }
 
-    private static File[] b(String str) {
+    static File[] b(String str) {
         File[] fileArrListFiles = new File[0];
         if (str != null) {
             File file = new File(str);

@@ -47,11 +47,11 @@ public class ResolveJson {
         return true;
     }
 
-    private static <T> List<T> getArrayList(String str, Class<T> cls) {
+    static <T> List<T> getArrayList(String str, Class<T> cls) {
         return JSON.parseArray(str.toString(), cls);
     }
 
-    private static <T> T getClass(String str, Class<T> cls) {
+    static <T> T getClass(String str, Class<T> cls) {
         return (T) JSON.parseObject(str, cls);
     }
 

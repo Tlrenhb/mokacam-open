@@ -5,11 +5,11 @@ import android.widget.ImageView;
 /* JADX INFO: loaded from: classes.dex */
 class t implements Runnable {
     final /* synthetic */ r a;
-    private final float b;
-    private final float c;
-    private final long d = System.currentTimeMillis();
-    private final float e;
-    private final float f;
+    final float b;
+    final float c;
+    final long d = System.currentTimeMillis();
+    final float e;
+    final float f;
 
     public t(r rVar, float f, float f2, float f3, float f4) {
         this.a = rVar;
@@ -19,7 +19,7 @@ class t implements Runnable {
         this.f = f2;
     }
 
-    private float a() {
+    float a() {
         return this.a.d.getInterpolation(Math.min(1.0f, ((System.currentTimeMillis() - this.d) * 1.0f) / this.a.a));
     }
 

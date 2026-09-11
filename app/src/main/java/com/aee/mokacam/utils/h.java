@@ -9,7 +9,7 @@ class h extends FilterOutputStream {
     final /* synthetic */ g a;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    private h(g gVar, OutputStream outputStream) {
+    h(g gVar, OutputStream outputStream) {
         super(outputStream);
         this.a = gVar;
     }

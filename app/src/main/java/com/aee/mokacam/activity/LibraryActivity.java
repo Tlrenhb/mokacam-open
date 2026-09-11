@@ -89,7 +89,7 @@ public class LibraryActivity extends BaseActivity {
             this.i.sendMessage(message);
             return;
         }
-        this.y.b();
+        this.y.clearDiscCache();
         File fileA = com.aee.mokacam.utils.t.a(this, this.z.generate(str));
         if (fileA.exists()) {
             fileA.delete();
@@ -204,7 +204,7 @@ public class LibraryActivity extends BaseActivity {
         if (a(this.s)) {
             this.A = b(this.B);
             this.p = new bn(this, null);
-            this.f.setAdapter((ListAdapter) this.p);
+            this.f.setGridAdapter(this.p);
         }
     }
 
@@ -316,7 +316,7 @@ public class LibraryActivity extends BaseActivity {
             }
             com.aee.mokacam.bean.g gVar = this.s.get(i2);
             if (gVar.a().endsWith(".JPG") && gVar.d() && gVar.h != null) {
-                this.y.a(gVar.h);
+                this.y.cancelDisplayTask(gVar.h);
             } else if (gVar.a().endsWith(".MP4") && gVar.d() && (bmVar = this.b.get(Integer.valueOf(i2))) != null) {
                 bmVar.cancel(true);
             }
@@ -379,7 +379,7 @@ public class LibraryActivity extends BaseActivity {
                 } else if (a(this.s)) {
                     this.A = b(this.B);
                     this.p = new bn(this, null);
-                    this.f.setAdapter((ListAdapter) this.p);
+                    this.f.setGridAdapter(this.p);
                 }
                 if (this.o != 0) {
                     this.n.setSelectedNum(this.o);
@@ -437,14 +437,14 @@ public class LibraryActivity extends BaseActivity {
             for (int i2 = 0; i2 < this.s.size(); i2++) {
                 com.aee.mokacam.bean.g gVar = this.s.get(i2);
                 if ((gVar.a.endsWith(".JPG") || gVar.a.endsWith(".jpg")) && gVar.h != null) {
-                    this.y.a(gVar.h);
+                    this.y.cancelDisplayTask(gVar.h);
                 } else if ((gVar.a.endsWith(".MP4") || gVar.a.endsWith(".mp4")) && (bmVar = this.b.get(Integer.valueOf(i2))) != null) {
                     bmVar.cancel(true);
                 }
             }
         }
         a = 0;
-        this.y.b();
+        this.y.clearDiscCache();
         super.onDestroy();
     }
 
@@ -478,7 +478,7 @@ public class LibraryActivity extends BaseActivity {
             this.A = b(this.B);
             this.p = new bn(this, null);
             this.f.setColumnWidth(6);
-            this.f.setAdapter((ListAdapter) this.p);
+            this.f.setGridAdapter(this.p);
             this.f.setSelection(a);
         }
     }

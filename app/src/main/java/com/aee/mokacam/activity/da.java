@@ -44,12 +44,12 @@ class da extends PagerAdapter {
         View viewInflate = View.inflate(this.a, R.layout.item_showpicorvideopager, null);
         FrameLayout frameLayout = (FrameLayout) viewInflate.findViewById(R.id.fl_video);
         FrameLayout frameLayout2 = (FrameLayout) viewInflate.findViewById(R.id.fl_image);
-        this.a.R = (ProgressBar) viewInflate.findViewById(R.id.video_loading_pb);
+        this.a.pb = (ProgressBar) viewInflate.findViewById(R.id.video_loading_pb);
         String strA = this.b.get(i).a();
         this.a.p = String.valueOf(AeeConstants.a) + File.separator + this.b.get(i).f();
         if (strA.endsWith(".JPG")) {
             frameLayout.setVisibility(8);
-            this.a.R.setVisibility(8);
+            this.a.pb.setVisibility(8);
             frameLayout2.setVisibility(0);
             this.a.Z.setVisibility(0);
             this.a.F.setVisibility(0);

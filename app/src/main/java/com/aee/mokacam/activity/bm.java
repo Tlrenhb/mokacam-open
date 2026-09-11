@@ -85,12 +85,6 @@ class bm extends AsyncTask<String, Void, Bitmap> {
         } catch (Exception e4) {
             e = e4;
             outputStreamA = null;
-        } catch (Throwable th2) {
-            th = th2;
-            outputStreamA = null;
-            if (outputStreamA != null) {
-            }
-            throw th;
         }
         if (bitmapDecodeStream == null) {
             if (outputStreamA != null) {

@@ -29,7 +29,7 @@ public class b {
         }
     }
 
-    private static void a(Context context, String str) {
+    static void a(Context context, String str) {
         boolean z = "0".equals(str) ? false : true;
         Intent intent = new Intent();
         intent.putExtra("com.sonyericsson.home.intent.extra.badge.SHOW_MESSAGE", z);
@@ -40,7 +40,7 @@ public class b {
         context.sendBroadcast(intent);
     }
 
-    private static String b(Context context) {
+    static String b(Context context) {
         PackageManager packageManager = context.getPackageManager();
         Intent intent = new Intent("android.intent.action.MAIN");
         intent.setPackage(context.getPackageName());
@@ -56,7 +56,7 @@ public class b {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    private static void b(Context context, int i) throws Throwable {
+    static void b(Context context, int i) throws Throwable {
         Notification notification;
         boolean z;
         NotificationManager notificationManager = (NotificationManager) context.getSystemService("notification");
@@ -119,7 +119,7 @@ public class b {
         }
     }
 
-    private static void c(Context context, int i) {
+    static void c(Context context, int i) {
         Intent intent = new Intent("android.intent.action.BADGE_COUNT_UPDATE");
         intent.putExtra("badge_count", i);
         intent.putExtra("badge_count_package_name", context.getPackageName());

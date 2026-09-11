@@ -97,7 +97,7 @@ class bn extends BaseAdapter implements com.aee.mokacam.view.SectionHeadersGridV
             String strA2 = ((com.aee.mokacam.bean.g) this.a.s.get(i)).a();
             if (strA2.endsWith(".JPG")) {
                 bpVar.d.setVisibility(8);
-                this.a.y.a("file:///" + strA2, bpVar.c, this.a.x, new bo(this, i));
+                this.a.y.displayImage("file:///" + strA2, new com.nostra13.universalimageloader.core.imageaware.ImageViewAware(bpVar.c), this.a.x, new bo(this, i));
             } else {
                 String strA3 = this.a.a(true, i);
                 bpVar.c.setTag(strA3);

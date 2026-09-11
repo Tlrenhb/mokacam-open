@@ -12,8 +12,8 @@ public class b implements g {
     float c;
     final float d;
     final float e;
-    private VelocityTracker f;
-    private boolean g;
+    VelocityTracker f;
+    boolean g;
 
     public b(Context context) {
         ViewConfiguration viewConfiguration = ViewConfiguration.get(context);

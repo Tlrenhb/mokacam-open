@@ -7,13 +7,13 @@ import java.util.Arrays;
 /* JADX INFO: loaded from: classes.dex */
 final class i {
     final /* synthetic */ e a;
-    private final String b;
-    private final long[] c;
-    private boolean d;
-    private g e;
-    private long f;
+    final String b;
+    final long[] c;
+    boolean d;
+    g e;
+    long f;
 
-    private i(e eVar, String str) {
+    i(e eVar, String str) {
         this.a = eVar;
         this.b = str;
         this.c = new long[eVar.g];
@@ -23,7 +23,7 @@ final class i {
         this(eVar, str);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a(String[] strArr) throws IOException {
         if (strArr.length != this.a.g) {
             throw b(strArr);
@@ -37,7 +37,7 @@ final class i {
         }
     }
 
-    private IOException b(String[] strArr) throws IOException {
+    IOException b(String[] strArr) throws IOException {
         throw new IOException("unexpected journal line: " + Arrays.toString(strArr));
     }
 

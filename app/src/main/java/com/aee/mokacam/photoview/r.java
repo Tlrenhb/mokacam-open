@@ -18,38 +18,38 @@ import java.lang.ref.WeakReference;
 
 /* JADX INFO: loaded from: classes.dex */
 public class r implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutListener, i, q {
-    private static /* synthetic */ int[] G;
-    private int A;
-    private u B;
-    private int C;
-    private float D;
-    private boolean E;
-    private ImageView.ScaleType F;
+    static /* synthetic */ int[] G;
+    int A;
+    u B;
+    int C;
+    float D;
+    boolean E;
+    ImageView.ScaleType F;
     int a;
-    private Interpolator d;
-    private float e;
-    private float f;
-    private float g;
-    private boolean h;
-    private boolean i;
-    private WeakReference<ImageView> j;
-    private GestureDetector k;
-    private g l;
-    private final Matrix m;
-    private final Matrix n;
-    private final Matrix o;
-    private final RectF p;
-    private final float[] q;
-    private v r;
-    private w s;
-    private z t;
-    private View.OnLongClickListener u;
-    private x v;
-    private y w;
-    private int x;
-    private int y;
-    private int z;
-    private static final boolean c = Log.isLoggable("PhotoViewAttacher", 3);
+    Interpolator d;
+    float e;
+    float f;
+    float g;
+    boolean h;
+    boolean i;
+    WeakReference<ImageView> j;
+    GestureDetector k;
+    g l;
+    final Matrix m;
+    final Matrix n;
+    final Matrix o;
+    final RectF p;
+    final float[] q;
+    v r;
+    w s;
+    z t;
+    View.OnLongClickListener u;
+    x v;
+    y w;
+    int x;
+    int y;
+    int z;
+    static final boolean c = Log.isLoggable("PhotoViewAttacher", 3);
     static int b = 1;
 
     public r(ImageView imageView) {
@@ -89,12 +89,12 @@ public class r implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutL
         b(z);
     }
 
-    private float a(Matrix matrix, int i) {
+    float a(Matrix matrix, int i) {
         matrix.getValues(this.q);
         return this.q[i];
     }
 
-    private RectF a(Matrix matrix) {
+    RectF a(Matrix matrix) {
         Drawable drawable;
         ImageView imageViewC = c();
         if (imageViewC == null || (drawable = imageViewC.getDrawable()) == null) {
@@ -105,7 +105,7 @@ public class r implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutL
         return this.p;
     }
 
-    private void a(Drawable drawable) {
+    void a(Drawable drawable) {
         ImageView imageViewC = c();
         if (imageViewC == null || drawable == null) {
             return;
@@ -155,11 +155,11 @@ public class r implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutL
         t();
     }
 
-    private static boolean a(ImageView imageView) {
+    static boolean a(ImageView imageView) {
         return (imageView == null || imageView.getDrawable() == null) ? false : true;
     }
 
-    private static void b(float f, float f2, float f3) {
+    static void b(float f, float f2, float f3) {
         if (f >= f2) {
             throw new IllegalArgumentException("Minimum zoom has to be less than Medium zoom. Call setMinimumZoom() with a more appropriate value");
         }
@@ -168,7 +168,7 @@ public class r implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutL
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void b(Matrix matrix) {
         RectF rectFA;
         ImageView imageViewC = c();
@@ -182,14 +182,14 @@ public class r implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutL
         }
     }
 
-    private static void b(ImageView imageView) {
+    static void b(ImageView imageView) {
         if (imageView == null || (imageView instanceof i) || ImageView.ScaleType.MATRIX.equals(imageView.getScaleType())) {
             return;
         }
         imageView.setScaleType(ImageView.ScaleType.MATRIX);
     }
 
-    private static boolean b(ImageView.ScaleType scaleType) {
+    static boolean b(ImageView.ScaleType scaleType) {
         if (scaleType == null) {
             return false;
         }
@@ -201,14 +201,14 @@ public class r implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutL
         }
     }
 
-    private int c(ImageView imageView) {
+    int c(ImageView imageView) {
         if (imageView == null) {
             return 0;
         }
         return (imageView.getWidth() - imageView.getPaddingLeft()) - imageView.getPaddingRight();
     }
 
-    private int d(ImageView imageView) {
+    int d(ImageView imageView) {
         if (imageView == null) {
             return 0;
         }
@@ -256,34 +256,34 @@ public class r implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutL
         return iArr;
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public Matrix o() {
         this.n.set(this.m);
         this.n.postConcat(this.o);
         return this.n;
     }
 
-    private void p() {
+    void p() {
         if (this.B != null) {
             this.B.a();
             this.B = null;
         }
     }
 
-    private void q() {
+    void q() {
         if (s()) {
             b(o());
         }
     }
 
-    private void r() {
+    void r() {
         ImageView imageViewC = c();
         if (imageViewC != null && !(imageViewC instanceof i) && !ImageView.ScaleType.MATRIX.equals(imageViewC.getScaleType())) {
             throw new IllegalStateException("The ImageView's ScaleType has been changed since attaching a PhotoViewAttacher. You should call setScaleType on the PhotoViewAttacher instead of on the ImageView");
         }
     }
 
-    private boolean s() {
+    boolean s() {
         RectF rectFA;
         float f;
         float f2 = 0.0f;
@@ -336,7 +336,7 @@ public class r implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutL
         return false;
     }
 
-    private void t() {
+    void t() {
         this.o.reset();
         b(this.D);
         b(o());

@@ -6,10 +6,10 @@ import java.io.OutputStream;
 /* JADX INFO: loaded from: classes.dex */
 public final class g {
     final /* synthetic */ e a;
-    private final i b;
-    private boolean c;
+    final i b;
+    boolean c;
 
-    private g(e eVar, i iVar) {
+    g(e eVar, i iVar) {
         this.a = eVar;
         this.b = iVar;
     }

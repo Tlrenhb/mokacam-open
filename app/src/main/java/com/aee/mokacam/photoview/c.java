@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 /* JADX INFO: loaded from: classes.dex */
 public class c implements GestureDetector.OnDoubleTapListener {
-    private r a;
+    r a;
 
     public c(r rVar) {
         a(rVar);

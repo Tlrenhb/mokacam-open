@@ -6,11 +6,11 @@ import java.io.InputStream;
 /* JADX INFO: loaded from: classes.dex */
 public final class j implements Closeable {
     final /* synthetic */ e a;
-    private final String b;
-    private final long c;
-    private final InputStream[] d;
+    final String b;
+    final long c;
+    final InputStream[] d;
 
-    private j(e eVar, String str, long j, InputStream[] inputStreamArr) {
+    j(e eVar, String str, long j, InputStream[] inputStreamArr) {
         this.a = eVar;
         this.b = str;
         this.c = j;

@@ -14,7 +14,7 @@ import java.util.Date;
 
 /* JADX INFO: loaded from: classes.dex */
 public class p implements Thread.UncaughtExceptionHandler {
-    private static p a;
+    static p a;
 
     public static p a() {
         if (a == null) {

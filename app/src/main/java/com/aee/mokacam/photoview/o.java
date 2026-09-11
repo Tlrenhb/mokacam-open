@@ -6,7 +6,7 @@ import android.database.DataSetObserver;
 class o extends DataSetObserver {
     final /* synthetic */ LazyViewPager a;
 
-    private o(LazyViewPager lazyViewPager) {
+    o(LazyViewPager lazyViewPager) {
         this.a = lazyViewPager;
     }
 

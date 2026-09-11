@@ -6,8 +6,8 @@ import com.aee.mokacam.AeeApplication;
 
 /* JADX INFO: loaded from: classes.dex */
 class y implements Runnable {
-    private final /* synthetic */ boolean a;
-    private final /* synthetic */ int b;
+    final /* synthetic */ boolean a;
+    final /* synthetic */ int b;
 
     y(boolean z, int i) {
         this.a = z;

@@ -5,7 +5,7 @@ import android.widget.Scroller;
 
 /* JADX INFO: loaded from: classes.dex */
 public class aa extends ab {
-    private final Scroller a;
+    final Scroller a;
 
     public aa(Context context) {
         this.a = new Scroller(context);

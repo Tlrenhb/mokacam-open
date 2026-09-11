@@ -25,22 +25,22 @@ import org.xutils.BuildConfig;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class e implements Closeable {
-    private static final Charset a = Charset.forName("UTF-8");
-    private final File b;
-    private final File c;
-    private final File d;
-    private final int e;
-    private final long f;
-    private final int g;
-    private Writer i;
-    private int k;
-    private long h = 0;
-    private final LinkedHashMap<String, i> j = new LinkedHashMap<>(0, 0.75f, true);
-    private long l = 0;
-    private final ExecutorService m = new ThreadPoolExecutor(0, 1, 60, TimeUnit.SECONDS, new LinkedBlockingQueue());
-    private final Callable<Void> n = new f(this);
+    static final Charset a = Charset.forName("UTF-8");
+    final File b;
+    final File c;
+    final File d;
+    final int e;
+    final long f;
+    final int g;
+    Writer i;
+    int k;
+    long h = 0;
+    final LinkedHashMap<String, i> j = new LinkedHashMap<>(0, 0.75f, true);
+    long l = 0;
+    final ExecutorService m = new ThreadPoolExecutor(0, 1, 60, TimeUnit.SECONDS, new LinkedBlockingQueue());
+    final Callable<Void> n = new f(this);
 
-    private e(File file, int i, int i2, long j) {
+    e(File file, int i, int i2, long j) {
         this.b = file;
         this.e = i;
         this.c = new File(file, "journal");
@@ -73,7 +73,7 @@ public final class e implements Closeable {
         return eVar2;
     }
 
-    private synchronized g a(String str, long j) {
+    synchronized g a(String str, long j) {
         i iVar;
         g gVar;
         g();
@@ -117,7 +117,7 @@ public final class e implements Closeable {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public synchronized void a(g gVar, boolean z) {
         synchronized (this) {
             i iVar = gVar.b;
@@ -191,7 +191,7 @@ public final class e implements Closeable {
         }
     }
 
-    private static <T> T[] a(T[] tArr, int i, int i2) {
+    static <T> T[] a(T[] tArr, int i, int i2) {
         int length = tArr.length;
         if (i > i2) {
             throw new IllegalArgumentException();
@@ -206,13 +206,13 @@ public final class e implements Closeable {
         return tArr2;
     }
 
-    private static void b(File file) throws IOException {
+    static void b(File file) throws IOException {
         if (file.exists() && !file.delete()) {
             throw new IOException();
         }
     }
 
-    private void c() {
+    void c() {
         BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(this.c), 8192);
         try {
             String strA = a((InputStream) bufferedInputStream);
@@ -235,7 +235,7 @@ public final class e implements Closeable {
         }
     }
 
-    private void d() throws IOException {
+    void d() throws IOException {
         b(this.d);
         Iterator<i> it = this.j.values().iterator();
         while (it.hasNext()) {
@@ -256,7 +256,7 @@ public final class e implements Closeable {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private void d(String str) throws IOException {
+    void d(String str) throws IOException {
         i iVar;
         i iVar2 = null;
         Object[] objArr = null;
@@ -282,13 +282,13 @@ public final class e implements Closeable {
             iVar.e = null;
             iVar.a((String[]) a(strArrSplit, 2, strArrSplit.length));
         } else if (strArrSplit[0].equals("DIRTY") && strArrSplit.length == 2) {
-            iVar.e = new g(this, iVar, 0);
+            iVar.e = new g(this, iVar, null);
         } else if (!strArrSplit[0].equals("READ") || strArrSplit.length != 2) {
             throw new IOException("unexpected journal line: " + str);
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public synchronized void e() {
         if (this.i != null) {
             this.i.close();
@@ -315,24 +315,24 @@ public final class e implements Closeable {
         this.i = new BufferedWriter(new FileWriter(this.c, true), 8192);
     }
 
-    private void e(String str) {
+    void e(String str) {
         if (str.contains(" ") || str.contains("\n") || str.contains("\r")) {
             throw new IllegalArgumentException("keys must not contain spaces or newlines: \"" + str + "\"");
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public boolean f() {
         return this.k >= 2000 && this.k >= this.j.size();
     }
 
-    private void g() {
+    void g() {
         if (this.i == null) {
             throw new IllegalStateException("cache is closed");
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void h() {
         while (this.h > this.f) {
             c(this.j.entrySet().iterator().next().getKey());

@@ -443,7 +443,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         }
         if (new File(str).delete()) {
             if (str.endsWith(".JPG")) {
-                File fileA = com.aee.mokacam.utils.t.a(this, new com.aee.mokacam.utils.z().a(str));
+                File fileA = com.aee.mokacam.utils.t.a(this, new com.aee.mokacam.utils.z().generate(str));
                 if (fileA.exists()) {
                     fileA.delete();
                 }
@@ -537,7 +537,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
                             h();
                             d();
                             g();
-                            this.t.seekTo(this.ac);
+                            this.t.seekTo((int) this.ac);
                             this.k.setProgress((int) this.ac);
                         } else {
                             this.t.start();
@@ -683,7 +683,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
             if (this.ac == 0) {
                 this.l.setText(a(this.u));
             } else {
-                this.t.seekTo(this.ac);
+                this.t.seekTo((int) this.ac);
                 this.k.setProgress((int) this.ac);
                 a(this.u - this.ac);
             }

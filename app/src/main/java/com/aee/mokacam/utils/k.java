@@ -2,8 +2,8 @@ package com.aee.mokacam.utils;
 
 /* JADX INFO: loaded from: classes.dex */
 public class k {
-    private static final char[] a = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
-    private static final char[] b = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+    static final char[] a = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+    static final char[] b = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
     public static float a(int i) {
         return i >= 32768 ? (float) (((double) (i - 32768)) * (-0.1d)) : (float) (0.1d * ((double) i));

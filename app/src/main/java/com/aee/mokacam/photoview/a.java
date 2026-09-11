@@ -19,17 +19,17 @@ public class a {
     }
 
     @TargetApi(5)
-    private static int b(int i) {
+    static int b(int i) {
         return (65280 & i) >> 8;
     }
 
     @TargetApi(16)
-    private static void b(View view, Runnable runnable) {
+    static void b(View view, Runnable runnable) {
         view.postOnAnimation(runnable);
     }
 
     @TargetApi(11)
-    private static int c(int i) {
+    static int c(int i) {
         return (65280 & i) >> 8;
     }
 }
