@@ -343,7 +343,7 @@ public final class e implements Closeable {
         }
     }
 
-    public synchronized j a(String str) {
+    public synchronized j a(String str) throws IOException {
         j jVar = null;
         synchronized (this) {
             g();
@@ -368,7 +368,7 @@ public final class e implements Closeable {
         return jVar;
     }
 
-    public synchronized void a() {
+    public synchronized void a() throws IOException {
         g();
         h();
         this.i.flush();
@@ -383,7 +383,7 @@ public final class e implements Closeable {
         a(this.b);
     }
 
-    public synchronized boolean c(String str) {
+    public synchronized boolean c(String str) throws IOException {
         boolean z;
         synchronized (this) {
             g();
@@ -413,7 +413,7 @@ public final class e implements Closeable {
     }
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
-    public synchronized void close() {
+    public synchronized void close() throws IOException {
         if (this.i != null) {
             for (i iVar : new ArrayList<>(this.j.values())) {
                 if (iVar.e != null) {
