@@ -259,7 +259,7 @@ public final class e implements Closeable {
     private void d(String str) throws IOException {
         i iVar;
         i iVar2 = null;
-        Object[] objArr = 0;
+        Object[] objArr = null;
         String[] strArrSplit = str.split(" ");
         if (strArrSplit.length < 2) {
             throw new IOException("unexpected journal line: " + str);
@@ -282,7 +282,7 @@ public final class e implements Closeable {
             iVar.e = null;
             iVar.a((String[]) a(strArrSplit, 2, strArrSplit.length));
         } else if (strArrSplit[0].equals("DIRTY") && strArrSplit.length == 2) {
-            iVar.e = new g(this, iVar, objArr == true ? 1 : 0);
+            iVar.e = new g(this, iVar, 0);
         } else if (!strArrSplit[0].equals("READ") || strArrSplit.length != 2) {
             throw new IOException("unexpected journal line: " + str);
         }
@@ -411,7 +411,7 @@ public final class e implements Closeable {
     @Override // java.io.Closeable, java.lang.AutoCloseable
     public synchronized void close() {
         if (this.i != null) {
-            for (i iVar : new ArrayList(this.j.values())) {
+            for (i iVar : new ArrayList<>(this.j.values())) {
                 if (iVar.e != null) {
                     iVar.e.b();
                 }

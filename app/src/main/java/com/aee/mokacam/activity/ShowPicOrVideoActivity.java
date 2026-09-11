@@ -64,7 +64,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
     boolean O;
     LinearLayout P;
     long Q;
-    ProgressBar R;
+    ProgressBar pb;
     String S;
     ImageView T;
     ImageView U;
@@ -521,7 +521,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
                 if (this.Q == 0 || jCurrentTimeMillis - this.Q >= 1000) {
                     this.Q = jCurrentTimeMillis;
                     if (!this.b) {
-                        this.R.setVisibility(0);
+                        this.pb.setVisibility(0);
                         i();
                         d();
                         g();
@@ -677,7 +677,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         this.ae = this.t.getVideoHeight();
         if (this.c && this.a) {
             f();
-            this.R.setVisibility(8);
+            this.pb.setVisibility(8);
             this.u = this.t.getDuration();
             this.k.setMax((int) this.u);
             if (this.ac == 0) {

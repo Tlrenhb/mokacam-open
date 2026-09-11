@@ -28,7 +28,7 @@ class bm extends AsyncTask<String, Void, Bitmap> {
     /*
         Code decompiled incorrectly, please refer to instructions dump.
     */
-    public Bitmap doInBackground(String... strArr) throws Throwable {
+    public Bitmap doInBackground(String... strArr) {
         OutputStream outputStreamA;
         Bitmap bitmapDecodeStream;
         this.b = strArr[0];

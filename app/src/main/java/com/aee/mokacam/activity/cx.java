@@ -23,7 +23,7 @@ class cx implements com.aee.mokacam.service.n {
                 return;
             }
             if (this.b.endsWith(".JPG")) {
-                File fileA = com.aee.mokacam.utils.t.a(this.a, new com.aee.mokacam.utils.z().a(this.b));
+                File fileA = com.aee.mokacam.utils.t.a(this.a, new com.aee.mokacam.utils.z().generate(this.b));
                 if (fileA.exists()) {
                     fileA.delete();
                 }

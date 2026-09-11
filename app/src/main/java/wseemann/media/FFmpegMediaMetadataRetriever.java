@@ -13,7 +13,7 @@ public class FFmpegMediaMetadataRetriever {
     public static final int OPTION_CLOSEST = MediaMetadataRetriever.OPTION_CLOSEST;
     public static final int OPTION_PREVIOUS_SYNC = MediaMetadataRetriever.OPTION_PREVIOUS_SYNC;
     public static final int OPTION_NEXT_SYNC = MediaMetadataRetriever.OPTION_NEXT_SYNC;
-    public static final int OPTION_BEST = MediaMetadataRetriever.OPTION_BEST;
+    public static final int OPTION_BEST = 4;
 
     private final MediaMetadataRetriever retriever = new MediaMetadataRetriever();
 

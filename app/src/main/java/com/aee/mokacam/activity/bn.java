@@ -9,7 +9,7 @@ import com.aee.mokacam.R;
 import com.aee.mokacam.AeeApplication;
 
 /* JADX INFO: loaded from: classes.dex */
-class bn extends BaseAdapter implements com.tonicartos.widget.stickygridheaders.t {
+class bn extends BaseAdapter implements com.aee.mokacam.view.SectionHeadersGridView.HeaderAdapter {
     final /* synthetic */ LibraryActivity a;
 
     bn(LibraryActivity libraryActivity) {
@@ -20,13 +20,13 @@ class bn extends BaseAdapter implements com.tonicartos.widget.stickygridheaders.
         this(libraryActivity);
     }
 
-    @Override // com.tonicartos.widget.stickygridheaders.t
-    public long a(int i) {
+        @Override // HeaderAdapter
+    public long headerId(int i) {
         return ((com.aee.mokacam.bean.l) this.a.A.get(i)).b();
     }
 
-    @Override // com.tonicartos.widget.stickygridheaders.t
-    public View a(int i, View view, ViewGroup viewGroup) {
+        @Override // HeaderAdapter
+    public View headerView(int i, View view, ViewGroup viewGroup) {
         bl blVar;
         if (view == null) {
             bl blVar2 = new bl();

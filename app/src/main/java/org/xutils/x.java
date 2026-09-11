@@ -21,6 +21,6 @@ public final class x {
     }
 
     public static Http http() {
-        return Http.INSTANCE;
+        return org.xutils.http.Http.INSTANCE;
     }
 }

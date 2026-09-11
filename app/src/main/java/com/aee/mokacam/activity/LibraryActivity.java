@@ -90,7 +90,7 @@ public class LibraryActivity extends BaseActivity {
             return;
         }
         this.y.b();
-        File fileA = com.aee.mokacam.utils.t.a(this, this.z.a(str));
+        File fileA = com.aee.mokacam.utils.t.a(this, this.z.generate(str));
         if (fileA.exists()) {
             fileA.delete();
         }
