@@ -49,8 +49,8 @@ public class ZoomImageView extends ImageView implements ScaleGestureDetector.OnS
 
     /* JADX INFO: Access modifiers changed from: */
     public void a() {
-        float fWidth;
-        float fHeight;
+        float fWidth = 0.0f;
+        float fHeight = 0.0f;
         RectF drawableRectF = getDrawableRectF();
         int width = getWidth();
         int height = getHeight();
