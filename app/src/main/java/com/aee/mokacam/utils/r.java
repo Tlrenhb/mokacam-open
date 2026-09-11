@@ -9,7 +9,7 @@ import org.w3c.dom.NodeList;
 
 /* JADX INFO: loaded from: classes.dex */
 public class r {
-    public HashMap<String, String> a(InputStream inputStream) {
+    public HashMap<String, String> a(InputStream inputStream) throws Exception {
         HashMap<String, String> map = new HashMap<>();
         NodeList childNodes = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(inputStream).getDocumentElement().getChildNodes();
         int i = 0;
