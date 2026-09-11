@@ -215,7 +215,7 @@ public class o {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public synchronized boolean b(String str, long j) {
-        ReceiveMsg receiveMsg;
+        ReceiveMsg receiveMsg = null;
         boolean z = true;
         synchronized (this) {
             String str2 = BuildConfig.FLAVOR;
