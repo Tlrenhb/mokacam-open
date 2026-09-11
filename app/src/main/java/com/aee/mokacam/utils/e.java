@@ -337,7 +337,7 @@ public final class e implements Closeable {
     }
 
     /* JADX INFO: Access modifiers changed from: */
-    public void h() {
+    public void h() throws IOException {
         while (this.h > this.f) {
             c(this.j.entrySet().iterator().next().getKey());
         }
