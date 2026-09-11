@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6141414">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_dv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dv_version"
+                android:textColor="#FFFFFFFF" />
+        </LinearLayout>
+
+        <TextView style="@style/SettingLabel" android:layout_marginTop="12dp"
+            android:text="@string/video_resolutions" android:textColor="#FFFFFFFF" />
+        <Spinner android:id="@+id/sp_video_resolution"
+            android:layout_width="match_parent" android:layout_height="44dp" />
+
+        <TextView style="@style/SettingLabel" android:layout_marginTop="8dp"
+            android:text="@string/photo_resolution" android:textColor="#FFFFFFFF" />
+        <Spinner android:id="@+id/sp_photo_size"
+            android:layout_width="match_parent" android:layout_height="44dp" />
+
+        <TextView style="@style/SettingLabel" android:layout_marginTop="8dp"
+            android:text="@string/photo_shot_mode" android:textColor="#FFFFFFFF" />
+        <Spinner android:id="@+id/sp_photo_shot_mode"
+            android:layout_width="match_parent" android:layout_height="44dp" />
+
+        <TextView style="@style/SettingLabel" android:layout_marginTop="8dp"
+            android:text="@string/setup_key_tone" android:textColor="#FFFFFFFF" />
+        <Spinner android:id="@+id/sp_beep"
+            android:layout_width="match_parent" android:layout_height="44dp" />
+
+        <TextView style="@style/SettingLabel" android:layout_marginTop="8dp"
+            android:text="@string/setup_selflamp" android:textColor="#FFFFFFFF" />
+        <Spinner android:id="@+id/sp_status_led"
+            android:layout_width="match_parent" android:layout_height="44dp" />
+
+        <TextView style="@style/SettingLabel" android:layout_marginTop="8dp"
+            android:text="@string/setup_system_type" android:textColor="#FFFFFFFF" />
+        <Spinner android:id="@+id/sp_tv_mode"
+            android:layout_width="match_parent" android:layout_height="44dp" />
+
+        <TextView style="@style/SettingLabel" android:layout_marginTop="8dp"
+            android:text="@string/dv_language" android:textColor="#FFFFFFFF" />
+        <Spinner android:id="@+id/sp_language"
+            android:layout_width="match_parent" android:layout_height="44dp" />
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/btn_clock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/setup_time" />
+
+        <Button
+            android:id="@+id/btn_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/format" />
+
+        <Button
+            android:id="@+id/btn_factory_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nesignation" />
+
+        <TextView style="@style/SettingLabel" android:layout_marginTop="12dp"
+            android:text="@string/set_ssid" android:textColor="#FFFFFFFF" />
+        <EditText android:id="@+id/et_wifi_ssid"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/wifi_name" android:inputType="text"
+            android:textColorHint="#80FFFFFF" android:textColor="#FFFFFFFF" />
+
+        <TextView style="@style/SettingLabel" android:layout_marginTop="8dp"
+            android:text="@string/set_psw" android:textColor="#FFFFFFFF" />
+        <EditText android:id="@+id/et_wifi_password"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/wifi_pwd" android:inputType="textPassword"
+            android:textColorHint="#80FFFFFF" android:textColor="#FFFFFFFF" />
+
+        <Button
+            android:id="@+id/btn_firmware"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/appsetting_firmwareupdate" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.aee.mokacam.view.PinchImageView
+        android:id="@+id/pinch_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/video_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/btn_media_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/cancel"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/tv_media_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#FFFFFFFF" />
+
+        <ImageView
+            android:id="@+id/btn_media_download"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/pic_video_download"
+            android:src="@drawable/ic_photo_placeholder" />
+    </LinearLayout>
+</FrameLayout>

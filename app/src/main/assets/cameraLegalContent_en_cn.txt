@@ -1,0 +1,11 @@
+Camera Disclaimer and Legal Information
+
+1. Do not place the product near strong magnetic fields such as magnets or motors;
+2. Do not place the product near objects emitting strong radio waves such as antennas;
+3. Do not place the product in places with high temperature or direct sunlight;
+4. Do not store the memory card near strong magnetic fields such as TVs, speakers or magnets;
+5. Keep the memory card away from places prone to static electricity;
+6. Do not place the product in dark rooms, laboratories or places with corrosive chemicals;
+7. Failures or damage of image/video/audio caused by the above environments are not covered.
+
+This open-source rewrite keeps the informational text only, for interoperability research.

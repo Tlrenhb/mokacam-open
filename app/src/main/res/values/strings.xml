@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">AEE Mokacam</string>
+
+    <!-- Main -->
+    <string name="connect">Connect Camera</string>
+    <string name="isconnected">Connected</string>
+    <string name="connecting">Connecting…</string>
+    <string name="connecting_notexit">Connecting, please wait…</string>
+    <string name="pleaseconnect">Please connect to the camera Wi-Fi</string>
+    <string name="please_open_wifi">Please enable Wi-Fi first</string>
+    <string name="connect_error">Camera connection failed, please retry</string>
+    <string name="connect_wifi">Please connect to the camera Wi-Fi first</string>
+    <string name="menu">Menu</string>
+    <string name="library_title">Album</string>
+    <string name="tv_libary">Library</string>
+    <string name="product_specs">Product Specs</string>
+    <string name="shop">Website</string>
+    <string name="settings">Settings</string>
+    <string name="support_title">Support</string>
+    <string name="legal_title">Legal</string>
+    <string name="shop_link" translatable="false">http://www.aee.com</string>
+
+    <!-- Camera live -->
+    <string name="photo">Single Shot</string>
+    <string name="burst">Burst</string>
+    <string name="delay_photo">Delay</string>
+    <string name="video_setting">Video Settings</string>
+    <string name="interval_warning">Live preview is not available in interval mode</string>
+    <string name="please_stop_record">Please stop recording first</string>
+    <string name="please_stop_continous">Please stop burst shooting first</string>
+    <string name="take_photo_success">Photo saved</string>
+    <string name="take_photo_failed_sd_full">Capture failed (SD full or busy)</string>
+    <string name="card_full">SD card is full</string>
+    <string name="no_sdCard">SD card not found</string>
+    <string name="no_rtsp">Live stream disconnected</string>
+    <string name="preview_loading">Loading preview…</string>
+
+    <!-- Settings -->
+    <string name="param_setting">Parameters</string>
+    <string name="video_resolutions">Resolution</string>
+    <string name="tv_video_resolutions">1920x1080 60P 16:9</string>
+    <string name="bit_rate">Bitrate</string>
+    <string name="video_stamp">Video timestamp</string>
+    <string name="photo_setting">Capture Settings</string>
+    <string name="photo_resolution">Resolution</string>
+    <string name="tv_photo_resolutions">12M (4000x3000 4:3)</string>
+    <string name="photo_shot_mode">Photos per second</string>
+    <string name="tv_photo_shot_mode">3/sec</string>
+    <string name="photo_tlm">Auto continuous interval</string>
+    <string name="photo_delay">Delay timer</string>
+    <string name="photo_stamp">Photo timestamp</string>
+    <string name="setup_loop_back">Loop recording</string>
+    <string name="setup_key_tone">Beep</string>
+    <string name="setup_selflamp">Status LED</string>
+    <string name="setup_system_type">TV output</string>
+    <string name="dv_language">Camera language</string>
+    <string name="setup_time">Time setting</string>
+    <string name="online_upgrade">Online upgrade</string>
+    <string name="format">Format SD card</string>
+    <string name="nesignation">Factory reset</string>
+    <string name="sure_format">Format the SD card?</string>
+    <string name="sure_nesignation">Restore factory settings?</string>
+    <string name="sure">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="dv_pid">Model:</string>
+    <string name="dv_version">Version:</string>
+    <string name="set_success">Done</string>
+    <string name="set_failed">Failed</string>
+    <string name="get_setting_failed">Failed to read setting, please retry</string>
+    <string name="fast_not_support_resolution">Not available in burst mode</string>
+
+    <!-- WiFi -->
+    <string name="wifi">Wi-Fi</string>
+    <string name="set_ssid">Change Wi-Fi name</string>
+    <string name="set_psw">Change Wi-Fi password</string>
+    <string name="new_ssid">New name:</string>
+    <string name="wifi_name">Enter Wi-Fi name</string>
+    <string name="new_password_a">New password:</string>
+    <string name="wifi_pwd">Enter Wi-Fi password</string>
+    <string name="confirm_password">Confirm:</string>
+    <string name="wifi_pwd_confirm">Confirm Wi-Fi password</string>
+    <string name="save">Save</string>
+    <string name="wifi_setting_fail">Failed to update Wi-Fi</string>
+    <string name="new_ssid_is_empty">New SSID is empty</string>
+    <string name="new_password_is_empty">New password is empty</string>
+    <string name="confirm_password_is_empty">Confirmation is empty</string>
+    <string name="password_is_too_short">Password must be at least 8 characters</string>
+    <string name="password_is_not_consistent">Passwords do not match</string>
+    <string name="wifi_restart">Rebooting Wi-Fi…</string>
+    <string name="wifi_disable">Camera Wi-Fi not connected. Connect now?</string>
+
+    <!-- Library -->
+    <string name="camera_lib">Camera Album</string>
+    <string name="local_lib">Local Album</string>
+    <string name="library_selectAll">Select all</string>
+    <string name="lib_select">Select</string>
+    <string name="library_selectNone">Invert</string>
+    <string name="library_download">Select items to download</string>
+    <string name="library_share">Select items to share</string>
+    <string name="share">Share</string>
+    <string name="library_delete">Select items to delete</string>
+    <string name="delete_failed">Delete failed</string>
+    <string name="delete_success">Deleted</string>
+    <string name="sure_delete">Delete selected items?</string>
+    <string name="done">Done</string>
+    <string name="singleisdownloadedwarning">File already exists in download folder</string>
+    <string name="singlestartDownlad">Download started, see the notification bar</string>
+    <string name="singledownloadwarning">Only single-task download is supported here</string>
+    <string name="singledownloadfinish">Download finished</string>
+    <string name="download_notification_channel">Downloads</string>
+    <string name="pic_video_download">Download</string>
+    <string name="download_warning">Do not disconnect Wi-Fi while downloading</string>
+    <string name="load_loading">Downloading</string>
+    <string name="load_finish">Downloaded</string>
+    <string name="load_waitting">Waiting</string>
+    <string name="load_cancel">Cancelled</string>
+    <string name="load_fail">Failed</string>
+    <string name="stop_video_first">Stop playback before downloading</string>
+
+    <!-- App settings -->
+    <string name="clear_app_cache">Clear app cache</string>
+    <string name="clear_map_cache">Clear map cache</string>
+    <string name="clearcache_finish">Cache cleared</string>
+    <string name="welcome_page">Welcome page</string>
+    <string name="drone_setting_unlinemapdownload">Offline map download</string>
+    <string name="appsetting_wifipswchange">Wi-Fi password</string>
+    <string name="appsetting_firmwareupdate">Firmware update</string>
+    <string name="version">Version</string>
+    <string name="coming_soon">Coming soon</string>
+
+    <!-- Update -->
+    <string name="version_update">New version</string>
+    <string name="version_update_info">A new version is available</string>
+    <string name="network_err">Network error</string>
+    <string name="network_err1">Update check failed, please verify internet access</string>
+    <string name="soft_update_title">Software update</string>
+    <string name="soft_update_updatebtn">Update now</string>
+    <string name="soft_update_later">Later</string>
+    <string name="soft_update_info">New version detected</string>
+    <string name="soft_updating">Updating</string>
+    <string name="soft_updating_check">Checking for updates…</string>
+
+    <!-- Support -->
+    <string name="support_register">Register</string>
+    <string name="support_contact">Contact us</string>
+    <string name="usa_tel">USA +18774147993</string>
+    <string name="eu_tel">EU +4915161601591</string>
+    <string name="china_tel">China +4000538880</string>
+    <string name="camera_question1">Icons missing / menus scrambled on screen?</string>
+    <string name="camera_answer1">Restore factory settings.</string>
+    <string name="camera_question2">Cannot connect to Wi-Fi?</string>
+    <string name="camera_question3">Wi-Fi connects but signal is weak</string>
+    <string name="camera_question4">Camera will not power on?</string>
+    <string name="camera_question5">No Wi-Fi signal after enabling Wi-Fi?</string>
+    <string name="camera_answer5">Format the SD card and restore factory settings.</string>
+    <string name="sparrow_question1">Cannot hover / drifts</string>
+    <string name="sparrow_answer1">Check the optical-flow lens for dirt</string>
+    <string name="sparrow_question2">Cannot find or connect Wi-Fi</string>
+    <string name="sparrow_answer2">If the Wi-Fi LED stays green: firmware lost, reflash from the website</string>
+    <string name="sparrow_question3">Dirty or blurry image</string>
+    <string name="sparrow_answer3">Clean the camera lens</string>
+    <string name="sparrow_question4">Cannot take off / spins on ground</string>
+    <string name="sparrow_answer4">Propellers mounted backwards, remount them</string>
+    <string name="sparrow_question5">USB not recognized</string>
+    <string name="sparrow_answer5">Unplug USB and battery, re-insert battery, reconnect</string>
+    <string name="condor_question1">USB not recognized</string>
+    <string name="condor_answer1">Unplug USB, power cycle, reconnect</string>
+    <string name="condor_question2">No PWM signal from motors</string>
+    <string name="condor_answer2">Restart the aircraft</string>
+    <string name="condor_question3">Smart battery error</string>
+    <string name="condor_answer3">Remove and re-insert the battery</string>
+    <string name="condor_question4">Yaws after takeoff</string>
+    <string name="condor_answer4">Calibrate the compass</string>
+    <string name="condor_question5">Drifts while hovering</string>
+    <string name="condor_answer5">Recalibrate the remote controller</string>
+    <string name="choosemode">Select product</string>
+
+    <!-- Legal / register / product -->
+    <string name="legal_camera_title">Camera disclaimer and legal information</string>
+    <string name="legal_drone_title">Aircraft disclaimer and legal information</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="product_intro_text">Mokacam is one of the world\'s smallest 4K action cameras, designed by AEE. It records 1080P60 video, takes 12 MP photos and streams live preview over Wi-Fi to this app.</string>
+    <string name="p_param_model">Model</string>
+    <string name="p_param_sensor">Sensor</string>
+    <string name="p_param_photo">Photo</string>
+    <string name="p_param_video">Video</string>
+    <string name="p_param_screen">Screen</string>
+    <string name="p_param_battery">Battery</string>
+    <string name="p_param_wifi">Wi-Fi</string>
+    <string name="p_param_weight">Weight</string>
+    <string name="register_title">Product Registration</string>
+    <string name="register_user_info">User information</string>
+    <string name="register_product_info">Product information</string>
+    <string name="register_name">Name</string>
+    <string name="register_serial">Serial number</string>
+    <string name="register_next">Next</string>
+    <string name="register_submit">Submit</string>
+
+    <!-- Misc -->
+    <string name="common_loading">Loading</string>
+    <string name="deleting">Deleting</string>
+    <string name="failed">Failed</string>
+    <string name="help">Help</string>
+    <string name="loading">Loading…</string>
+</resources>

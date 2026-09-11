@@ -1,0 +1,9 @@
+Aircraft Disclaimer and Legal Information
+
+1. Confirm that local laws allow drone flights before takeoff; stay away from crowds, airports and no-fly zones;
+2. Fly within visual line of sight and avoid severe weather such as strong wind, rain or snow;
+3. Check battery and propeller installation, and confirm compass/IMU calibration before takeoff;
+4. Return or land immediately on low-battery warning to avoid crashes, property damage or injury;
+5. The operator bears full legal responsibility for operating the aircraft.
+
+This open-source rewrite keeps the informational text only, for interoperability research.

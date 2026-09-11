@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iv_settingback"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/cancel"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/settings"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/clear_appcache"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/clear_app_cache"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/tv_appcachesize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_changewifi"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/appsetting_wifipswchange"
+            android:textColor="#FFFFFFFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_downloadmap"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/drone_setting_unlinemapdownload"
+            android:textColor="#FFFFFFFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_firmware_update"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/appsetting_firmwareupdate"
+            android:textColor="#FFFFFFFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_version"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/version"
+            android:textColor="#FFFFFFFF" />
+    </RelativeLayout>
+</LinearLayout>
