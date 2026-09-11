@@ -57,7 +57,7 @@ class as extends BaseAdapter {
         String str = String.valueOf(AeeApplication.a().h) + ((com.aee.mokacam.bean.g) this.a.c.get(i)).b + ((com.aee.mokacam.bean.g) this.a.c.get(i)).a;
         auVar.b.setText(((com.aee.mokacam.bean.g) this.a.c.get(i)).a);
         if (str.endsWith(".JPG")) {
-            com.nostra13.universalimageloader.core.g.a().a(str, auVar.a);
+            com.nostra13.universalimageloader.core.ImageLoader.getInstance().displayImage(str, auVar.a);
         } else {
             auVar.a.setImageResource(R.drawable.download_video_pic);
         }

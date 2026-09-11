@@ -16,7 +16,7 @@ import com.aee.mokacam.bean.o;
 import com.aee.mokacam.bean.q;
 import com.aee.mokacam.constants.AeeConstants;
 import com.aee.mokacam.utils.p;
-import com.nostra13.universalimageloader.core.j;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -165,7 +165,7 @@ public class AeeApplication extends Application {
     }
 
     private void f() {
-        com.nostra13.universalimageloader.core.g.a().a(j.a(this));
+        com.nostra13.universalimageloader.core.ImageLoader.getInstance().init(ImageLoaderConfiguration.createDefault(this));
     }
 
     private void g() {

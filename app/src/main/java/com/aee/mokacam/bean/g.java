@@ -20,7 +20,7 @@ public class g {
     public Callback.Cancelable e;
     public Bitmap f;
     public boolean g;
-    public com.nostra13.universalimageloader.core.c.b h;
+    public com.nostra13.universalimageloader.core.imageaware.ImageViewAware h;
     private String i;
     private boolean j;
     private String k;

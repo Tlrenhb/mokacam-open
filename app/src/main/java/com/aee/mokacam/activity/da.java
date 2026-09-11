@@ -64,9 +64,9 @@ class da extends PagerAdapter {
                 this.a.U.setImageResource(R.drawable.library_share_pressed);
             }
             if (new File(this.a.p).exists()) {
-                com.nostra13.universalimageloader.core.g.a().a("file:///" + this.a.p, pinchImageView);
+                com.nostra13.universalimageloader.core.ImageLoader.getInstance().displayImage("file:///" + this.a.p, pinchImageView);
             } else {
-                com.nostra13.universalimageloader.core.g.a().a(String.valueOf(AeeApplication.a().h) + this.b.get(i).b + strA, pinchImageView);
+                com.nostra13.universalimageloader.core.ImageLoader.getInstance().displayImage(String.valueOf(AeeApplication.a().h) + this.b.get(i).b + strA, pinchImageView);
             }
             this.a.d = true;
             this.a.a(pinchImageView, this.a.T, this.a.U, this.a.V);

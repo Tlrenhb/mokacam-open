@@ -3,9 +3,10 @@ package com.aee.mokacam.activity;
 import android.graphics.Bitmap;
 import android.view.View;
 import com.nostra13.universalimageloader.core.assist.FailReason;
+import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
-/* JADX INFO: loaded from: classes.dex */
-public class bo implements com.nostra13.universalimageloader.core.d.a {
+/** ImageLoadingListener capturing decoded bitmaps into the album model. */
+public class bo implements ImageLoadingListener {
     final /* synthetic */ bn a;
     private int b;
 
@@ -14,22 +15,22 @@ public class bo implements com.nostra13.universalimageloader.core.d.a {
         this.b = i;
     }
 
-    @Override // com.nostra13.universalimageloader.core.d.a
-    public void a(String str, View view) {
+    @Override // ImageLoadingListener
+    public void onLoadingStarted(String imageUri, View view) {
     }
 
-    @Override // com.nostra13.universalimageloader.core.d.a
-    public void a(String str, View view, Bitmap bitmap) {
+    @Override // ImageLoadingListener
+    public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
+    }
+
+    @Override // ImageLoadingListener
+    public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
         if (this.b <= this.a.a.s.size()) {
-            ((com.aee.mokacam.bean.g) this.a.a.s.get(this.b)).f = bitmap;
+            ((com.aee.mokacam.bean.g) this.a.a.s.get(this.b)).f = loadedImage;
         }
     }
 
-    @Override // com.nostra13.universalimageloader.core.d.a
-    public void a(String str, View view, FailReason failReason) {
-    }
-
-    @Override // com.nostra13.universalimageloader.core.d.a
-    public void b(String str, View view) {
+    @Override // ImageLoadingListener
+    public void onLoadingCancelled(String imageUri, View view) {
     }
 }

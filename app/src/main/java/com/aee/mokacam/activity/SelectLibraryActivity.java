@@ -8,8 +8,8 @@ import android.graphics.BitmapFactory;
 import android.media.ThumbnailUtils;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
@@ -36,7 +36,7 @@ public class SelectLibraryActivity extends BaseActivity {
     private List<com.aee.mokacam.bean.g> g;
     private ImageView h;
     private ImageView k;
-    private com.nostra13.universalimageloader.core.g l;
+    private com.nostra13.universalimageloader.core.ImageLoader l;
     private com.aee.mokacam.utils.e m;
     private ImageView n;
     private ImageView o;
@@ -108,7 +108,7 @@ public class SelectLibraryActivity extends BaseActivity {
 
     private void c() {
         com.aee.mokacam.service.a.a().d();
-        this.l = com.nostra13.universalimageloader.core.g.a();
+        this.l = com.nostra13.universalimageloader.core.ImageLoader.getInstance();
         h();
         g();
     }
@@ -140,7 +140,7 @@ public class SelectLibraryActivity extends BaseActivity {
                 new ce(this).start();
                 return;
             }
-            this.l.a(String.valueOf(AeeApplication.a().h) + this.r + this.f.get(0).a(), this.h);
+            this.l.displayImage(String.valueOf(AeeApplication.a().h) + this.r + this.f.get(0).a(), this.h);
             this.n.setVisibility(8);
         }
     }
@@ -154,7 +154,7 @@ public class SelectLibraryActivity extends BaseActivity {
             new cg(this).start();
             this.o.setVisibility(0);
         } else {
-            this.l.a("file:///" + this.g.get(0).a(), this.k);
+            this.l.displayImage("file:///" + this.g.get(0).a(), this.k);
             this.o.setVisibility(8);
         }
     }
@@ -197,8 +197,8 @@ public class SelectLibraryActivity extends BaseActivity {
                     if (com.aee.mokacam.utils.t.a(this.j, "videoThumbnailCache").delete()) {
                         h();
                     }
-                    this.l.c();
-                    this.l.b();
+                    this.l.clearMemoryCache();
+                    this.l.clearDiscCache();
                 } else {
                     this.r = listA.get(0).a();
                     if (AeeApplication.a().r != null) {

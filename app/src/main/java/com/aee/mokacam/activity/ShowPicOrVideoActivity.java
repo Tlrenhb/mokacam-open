@@ -355,7 +355,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.remote);
         if (this.g.get(this.f).a().endsWith(".JPG")) {
-            remoteViews.setImageViewBitmap(R.id.iv_notification, com.nostra13.universalimageloader.core.g.a().a(String.valueOf(AeeApplication.a().h) + this.g.get(this.f).b + this.g.get(this.f).a, new com.nostra13.universalimageloader.core.assist.c(com.aee.mokacam.utils.d.a(this, 61.0f), com.aee.mokacam.utils.d.a(this, 61.0f))));
+            remoteViews.setImageViewBitmap(R.id.iv_notification, com.nostra13.universalimageloader.core.ImageLoader.getInstance().loadImageSync(String.valueOf(AeeApplication.a().h) + this.g.get(this.f).b + this.g.get(this.f).a, new com.nostra13.universalimageloader.core.assist.ImageSize(com.aee.mokacam.utils.d.a(this, 61.0f), com.aee.mokacam.utils.d.a(this, 61.0f))));
             remoteViews.setImageViewResource(R.id.vedioflag, 0);
         } else {
             remoteViews.setImageViewBitmap(R.id.iv_notification, p());

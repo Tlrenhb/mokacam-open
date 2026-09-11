@@ -59,7 +59,7 @@ class bd implements View.OnClickListener {
         for (int i2 = 0; i2 < this.a.s.size(); i2++) {
             com.aee.mokacam.bean.g gVar2 = (com.aee.mokacam.bean.g) this.a.s.get(i2);
             if (gVar2.a.endsWith(".JPG") && gVar2.h != null) {
-                this.a.y.a(gVar2.h);
+                this.a.y.cancelDisplayTask(gVar2.h);
             } else if (gVar2.a.endsWith(".MP4") && (bmVar = this.a.b.get(Integer.valueOf(i2))) != null) {
                 bmVar.cancel(true);
             }

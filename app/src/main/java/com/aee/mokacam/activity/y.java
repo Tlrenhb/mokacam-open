@@ -29,8 +29,8 @@ class y implements View.OnClickListener {
             com.aee.mokacam.service.a.a().a(new ab(this), new SendMsg("恢复出厂设置 ", 2, "on", "default_setting", 21));
             return;
         }
-        com.nostra13.universalimageloader.core.g.a().c();
-        com.nostra13.universalimageloader.core.g.a().b();
+        com.nostra13.universalimageloader.core.ImageLoader.getInstance().clearMemoryCache();
+        com.nostra13.universalimageloader.core.ImageLoader.getInstance().clearDiscCache();
         File fileA = com.aee.mokacam.utils.t.a(this.a.j, "videoThumbnailCache");
         if (fileA.exists()) {
             fileA.delete();

@@ -227,7 +227,7 @@ public class AeeAppSettingActivity extends BaseActivity {
                 break;
             case com.aee.mokacam.R.id.clear_appcache /* 2131427478 */:
                 try {
-                    com.nostra13.universalimageloader.core.g.a().c();
+                    com.nostra13.universalimageloader.core.ImageLoader.getInstance().clearMemoryCache();
                     File[] fileArrListFiles = com.aee.mokacam.utils.t.a(this, "videoThumbnailCache").listFiles();
                     if (fileArrListFiles.length != 0) {
                         for (File file : fileArrListFiles) {

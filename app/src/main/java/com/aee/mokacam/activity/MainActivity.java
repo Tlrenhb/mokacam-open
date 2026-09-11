@@ -19,7 +19,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.aee.mokacam.R;
 import com.aee.mokacam.AeeApplication;
-import com.aee.mokacam.bean.CommonSetting;
 import com.aee.mokacam.widget.SlidingMenuView;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +42,7 @@ public class MainActivity extends BaseActivity {
     private TextView u;
     private RelativeLayout v;
     private boolean f = false;
-    private List<CommonSetting> g = new ArrayList();
+    private List<Object> g = new ArrayList();
     private boolean q = false;
     public String b = "0.0.0.0";
     private boolean w = true;

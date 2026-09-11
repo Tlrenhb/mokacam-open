@@ -1,7 +1,7 @@
 package com.aee.mokacam.activity;
 
 import android.graphics.Bitmap;
-import androidx.core.util.LruCache;
+import androidx.collection.LruCache;
 
 /* JADX INFO: loaded from: classes.dex */
 class ay extends LruCache<String, Bitmap> {
@@ -14,7 +14,7 @@ class ay extends LruCache<String, Bitmap> {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // androidx.core.util.LruCache
+    @Override // androidx.collection.LruCache
     /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
     public int sizeOf(String str, Bitmap bitmap) {
         return bitmap.getByteCount();

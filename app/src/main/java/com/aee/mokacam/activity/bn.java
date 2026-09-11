@@ -84,9 +84,9 @@ class bn extends BaseAdapter implements com.tonicartos.widget.stickygridheaders.
             String str = String.valueOf(AeeApplication.a().h) + ((com.aee.mokacam.bean.g) this.a.s.get(i)).b + ((com.aee.mokacam.bean.g) this.a.s.get(i)).a;
             if (str.endsWith(".JPG")) {
                 bpVar.d.setVisibility(8);
-                com.nostra13.universalimageloader.core.c.b bVar = new com.nostra13.universalimageloader.core.c.b(bpVar.c);
+                com.nostra13.universalimageloader.core.imageaware.ImageViewAware bVar = new com.nostra13.universalimageloader.core.imageaware.ImageViewAware(bpVar.c);
                 ((com.aee.mokacam.bean.g) this.a.s.get(i)).h = bVar;
-                this.a.y.a(str, bVar, this.a.x, new bo(this, i));
+                this.a.y.displayImage(str, bVar, this.a.x, new bo(this, i));
             } else {
                 String strA = this.a.a(false, i);
                 bpVar.c.setTag(strA);

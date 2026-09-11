@@ -9,7 +9,7 @@ import android.graphics.BitmapFactory;
 import android.media.ThumbnailUtils;
 import android.os.Bundle;
 import android.os.Message;
-import androidx.core.util.LruCache;
+import androidx.collection.LruCache;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.Window;
@@ -53,8 +53,8 @@ public class LibraryActivity extends BaseActivity {
     private com.aee.mokacam.utils.e u;
     private ImageView v;
     private TextView w;
-    private com.nostra13.universalimageloader.core.d x;
-    private com.nostra13.universalimageloader.core.g y;
+    private com.nostra13.universalimageloader.core.DisplayImageOptions x;
+    private com.nostra13.universalimageloader.core.ImageLoader y;
     private com.aee.mokacam.utils.z z;
     private boolean l = false;
     private boolean m = true;
@@ -189,8 +189,8 @@ public class LibraryActivity extends BaseActivity {
     private void c() {
         e();
         d();
-        this.x = new com.nostra13.universalimageloader.core.f().a(R.drawable.loading_libpic).a(ImageScaleType.IN_SAMPLE_POWER_OF_2).a(true).b(true).a(Bitmap.Config.RGB_565).a();
-        this.y = com.nostra13.universalimageloader.core.g.a();
+        this.x = new com.nostra13.universalimageloader.core.DisplayImageOptions.Builder().showStubImage(R.drawable.loading_libpic).imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2).cacheInMemory(true).cacheOnDisc(true).bitmapConfig(Bitmap.Config.RGB_565).build();
+        this.y = com.nostra13.universalimageloader.core.ImageLoader.getInstance();
         this.z = new com.aee.mokacam.utils.z();
         this.r = getIntent().getStringExtra("fromWhere");
         if ("camera_lib".equals(this.r)) {
@@ -274,7 +274,7 @@ public class LibraryActivity extends BaseActivity {
 
     private void m() {
         this.f.setOnItemClickListener(new bk(this));
-        this.f.setOnScrollListener(new com.nostra13.universalimageloader.core.d.c(this.y, false, true));
+        this.f.setOnScrollListener(new com.nostra13.universalimageloader.core.listener.PauseOnScrollListener(this.y, false, true));
         this.f.setOnItemLongClickListener(new az(this));
     }
 
