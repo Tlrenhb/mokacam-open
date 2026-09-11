@@ -44,7 +44,7 @@ public class SectionHeadersGridView extends RecyclerView {
     public void setGridAdapter(BaseAdapter base) {
         GridLayoutManager lm = new GridLayoutManager(getContext(), 4);
         gridLayoutManager = lm;
-        final Wrapper w = new Wrapper(base);
+        final Wrapper w = new Wrapper(base, SectionHeadersGridView.this);
         lm.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
@@ -128,7 +128,8 @@ public class SectionHeadersGridView extends RecyclerView {
         /** Flat layout: header marker positions encoded as -(srcIndex + 1). */
         private final ArrayList<Integer> flat = new ArrayList<>();
 
-        Wrapper(BaseAdapter src) {
+        Wrapper(BaseAdapter src, SectionHeadersGridView grid) {
+            this.grid = grid;
             this.src = src;
             this.headers = src instanceof SectionHeadersGridView.HeaderAdapter
                     ? (SectionHeadersGridView.HeaderAdapter) src : null;
@@ -211,8 +212,8 @@ public class SectionHeadersGridView extends RecyclerView {
                     if (header) {
                         return;
                     }
-                    if (SectionHeadersGridView.this.itemClickListener != null) {
-                        SectionHeadersGridView.this.itemClickListener.onItemClick(null, view, srcIndex, srcIndex);
+                    if (grid.itemClickListener != null) {
+                        grid.itemClickListener.onItemClick(null, view, srcIndex, srcIndex);
                     }
                 }
             });
@@ -222,8 +223,8 @@ public class SectionHeadersGridView extends RecyclerView {
                     if (header) {
                         return false;
                     }
-                    return SectionHeadersGridView.this.itemLongClickListener != null
-                            && SectionHeadersGridView.this.itemLongClickListener
+                    return grid.itemLongClickListener != null
+                            && grid.itemLongClickListener
                             .onItemLongClick(null, view, srcIndex, srcIndex);
                 }
             });

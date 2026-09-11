@@ -328,7 +328,7 @@ public class LibraryActivity extends BaseActivity {
         try {
             this.t.evictAll();
             this.u.c(str);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -338,7 +338,7 @@ public class LibraryActivity extends BaseActivity {
         try {
             com.aee.mokacam.utils.j jVarA = this.u.a(com.aee.mokacam.utils.o.a(str));
             bitmapDecodeStream = jVarA != null ? BitmapFactory.decodeStream(jVarA.a(0)) : b(str);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         Bitmap bitmapExtractThumbnail = ThumbnailUtils.extractThumbnail(bitmapDecodeStream, 80, 80, 2);
