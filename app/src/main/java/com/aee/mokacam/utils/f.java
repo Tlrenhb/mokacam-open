@@ -17,7 +17,10 @@ class f implements Callable<Void> {
             if (this.a.i != null) {
                 this.a.h();
                 if (this.a.f()) {
-                    this.a.e();
+                    try {
+                        this.a.e();
+                    } catch (IOException e) {
+                    }
                     this.a.k = 0;
                 }
             }

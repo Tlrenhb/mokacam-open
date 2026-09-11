@@ -69,7 +69,11 @@ public final class e implements Closeable {
         }
         file.mkdirs();
         e eVar2 = new e(file, i, i2, j);
-        eVar2.e();
+        try {
+            eVar2.e();
+        } catch (IOException e) {
+            eVar2.b();
+        }
         return eVar2;
     }
 
