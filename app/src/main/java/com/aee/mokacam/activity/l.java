@@ -47,7 +47,11 @@ class l implements Runnable {
                 if (this.a.C) {
                     this.a.i();
                 }
-                TimeUnit.SECONDS.sleep(1L);
+                try {
+                    TimeUnit.SECONDS.sleep(1L);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
