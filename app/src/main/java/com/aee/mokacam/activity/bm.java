@@ -30,7 +30,7 @@ class bm extends AsyncTask<String, Void, Bitmap> {
     */
     public Bitmap doInBackground(String... strArr) {
         OutputStream outputStreamA;
-        Bitmap bitmapDecodeStream;
+        Bitmap bitmapDecodeStream = null;
         this.b = strArr[0];
         String strA = com.aee.mokacam.utils.o.a(this.b);
         try {
@@ -39,7 +39,6 @@ class bm extends AsyncTask<String, Void, Bitmap> {
                 if (gVarB != null) {
                     outputStreamA = gVarB.a(0);
                     try {
-                        try {
                             if (new File(this.b).exists()) {
                                 if (this.a.b(this.b, outputStreamA)) {
                                     gVarB.a();
@@ -61,16 +60,6 @@ class bm extends AsyncTask<String, Void, Bitmap> {
                                 }
                             }
                         }
-                    } catch (Throwable th) {
-                        th = th;
-                        if (outputStreamA != null) {
-                            try {
-                                outputStreamA.close();
-                            } catch (IOException e3) {
-                                e3.printStackTrace();
-                            }
-                        }
-                        throw th;
                     }
                 } else {
                     outputStreamA = null;
