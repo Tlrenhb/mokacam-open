@@ -374,7 +374,7 @@ public final class e implements Closeable {
         this.i.flush();
     }
 
-    public g b(String str) {
+    public g b(String str) throws IOException {
         return a(str, -1L);
     }
 
