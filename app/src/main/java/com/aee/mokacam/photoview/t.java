@@ -32,7 +32,7 @@ class t implements Runnable {
         float fA = a();
         this.a.a((this.e + ((this.f - this.e) * fA)) / this.a.g(), this.b, this.c);
         if (fA < 1.0f) {
-            a.a(imageViewC, this);
+            com.aee.mokacam.photoview.a.a(imageViewC, this);
         }
     }
 }

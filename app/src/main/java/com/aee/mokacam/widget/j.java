@@ -69,11 +69,4 @@ public class j {
         return new float[]{fArr[0], fArr[4]};
     }
 
-    public static float[] c(Matrix matrix) {
-        float[] fArr = new float[9];
-        if (matrix != null) {
-            matrix.getValues(fArr);
-        }
-        return fArr;
-    }
 }

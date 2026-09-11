@@ -18,4 +18,9 @@ public class LazyViewPager extends androidx.viewpager.widget.ViewPager {
     public LazyViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
+
+    /** Obfuscated alias used by the original code (setCurrentItem). */
+    public void a(int item, boolean smoothScroll) {
+        setCurrentItem(item, smoothScroll);
+    }
 }

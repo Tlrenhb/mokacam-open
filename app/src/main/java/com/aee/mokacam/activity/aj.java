@@ -13,7 +13,7 @@ class aj implements View.OnClickListener {
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        this.a.R.setVisibility(8);
+        this.a.rlWifiSetting.setVisibility(8);
         for (int i = 0; i < this.a.ap.size(); i++) {
             ((RelativeLayout) this.a.ap.get(i)).setBackgroundColor(0);
         }

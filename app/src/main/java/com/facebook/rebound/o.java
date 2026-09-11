@@ -7,6 +7,6 @@ public class o extends f {
     }
 
     public static o c() {
-        return new o(a.a());
+        return new o(com.facebook.rebound.a.a());
     }
 }

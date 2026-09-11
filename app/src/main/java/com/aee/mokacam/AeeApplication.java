@@ -100,7 +100,7 @@ public class AeeApplication extends Application {
     public boolean N = false;
     public boolean P = false;
     public String Q = BuildConfig.FLAVOR;
-    public byte R = -1;
+    public byte droneR = -1;
     public long S = 0;
     public int T = 0;
     public int U = 0;
@@ -206,16 +206,16 @@ public class AeeApplication extends Application {
         if (str.length() <= 10) {
             i = i2;
         } else if (str.contains("AEE_CONDOR")) {
-            this.R = (byte) 2;
+            this.droneR = (byte) 2;
         } else {
             if (str.contains("AEE_RC_CON")) {
                 i2 = 3;
-                this.R = (byte) 2;
+                this.droneR = (byte) 2;
             }
             i = i2;
         }
         if (i == 0) {
-            this.R = (byte) -1;
+            this.droneR = (byte) -1;
         }
         return i;
     }
@@ -282,10 +282,10 @@ public class AeeApplication extends Application {
         super.onCreate();
         bp = this;
         g();
-        x.Ext.init(this);
+        org.xutils.org.xutils.x.Ext.init(this);
         f();
         g();
-        p.a().a(this);
+        com.aee.mokacam.utils.com.aee.mokacam.utils.p.a().a(this);
     }
 
     @Override // android.app.Application, android.content.ComponentCallbacks

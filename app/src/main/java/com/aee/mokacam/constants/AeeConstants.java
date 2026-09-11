@@ -4,12 +4,12 @@ import com.aee.mokacam.utils.a;
 
 /* JADX INFO: loaded from: classes.dex */
 public class AeeConstants {
-    public static String a = String.valueOf(a.a()) + "/DCIM/Mokacam";
-    public static String b = String.valueOf(a.a()) + "/DCIM/NiloxCameraS91";
-    public static String c = String.valueOf(a.a()) + "/Mokacam/temp";
-    public static String d = String.valueOf(a.a()) + "/Mokacam";
-    public static String e = String.valueOf(a.a()) + "/Mokacam/updateApk";
-    public static String f = String.valueOf(a.a()) + "/Mokacam/fwupdate";
+    public static String a = String.valueOf(com.aee.mokacam.utils.a.a()) + "/DCIM/Mokacam";
+    public static String b = String.valueOf(com.aee.mokacam.utils.a.a()) + "/DCIM/NiloxCameraS91";
+    public static String c = String.valueOf(com.aee.mokacam.utils.a.a()) + "/Mokacam/temp";
+    public static String d = String.valueOf(com.aee.mokacam.utils.a.a()) + "/Mokacam";
+    public static String e = String.valueOf(com.aee.mokacam.utils.a.a()) + "/Mokacam/updateApk";
+    public static String f = String.valueOf(com.aee.mokacam.utils.a.a()) + "/Mokacam/fwupdate";
     public static String g = "rtsp://192.168.42.1/live";
     public static String h = "rtsp://192.168.3.60:8554/mk10";
     public static int i = 9;
@@ -19,7 +19,7 @@ public class AeeConstants {
     public static int m = 1282;
     public static int n = 4;
     public static int o = 258;
-    public static String p = String.valueOf(a.a()) + "/Nilox";
+    public static String p = String.valueOf(com.aee.mokacam.utils.a.a()) + "/Nilox";
     public static int q = 254;
     public static String r = "/tmp/fuse_d/DCIM/100MEDIA/";
     public static String s = "/tmp/fuse_d/DCIM/101MEDIA/";

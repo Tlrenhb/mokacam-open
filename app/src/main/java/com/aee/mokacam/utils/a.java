@@ -16,8 +16,8 @@ public class a {
     public static String a() {
         // The original wrote to /sdcard/DCIM; on API 29+ scoped storage makes
         // that read-only, so prefer the app-specific external directory.
-        if (AeeApplication.b() != null) {
-            java.io.File dir = AeeApplication.b().getExternalFilesDir(null);
+        if (com.aee.mokacam.AeeApplication.b() != null) {
+            java.io.File dir = com.aee.mokacam.AeeApplication.b().getExternalFilesDir(null);
             if (dir != null) {
                 return dir.toString();
             }

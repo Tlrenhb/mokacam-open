@@ -16,7 +16,7 @@ class r implements Runnable {
     public void run() {
         try {
             if (AeeApplication.a().b && AeeApplication.a().p == null) {
-                a.a().a(new s(this));
+                com.aee.mokacam.service.a.a().a(new s(this));
             }
             Thread.sleep(10000L);
             if (this.a.d == null || !this.a.d.isClosed()) {

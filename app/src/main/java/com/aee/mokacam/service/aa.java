@@ -26,7 +26,7 @@ class aa implements Runnable {
             }
             if (this.a.v) {
                 this.a.v = false;
-                this.a.K.a(AeeApplication.a().R);
+                this.a.K.a(AeeApplication.a().droneR);
             }
             if (AeeApplication.a().au) {
                 try {

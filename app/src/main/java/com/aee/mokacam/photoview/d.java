@@ -45,7 +45,7 @@ public class d extends b {
                 this.f = -1;
                 break;
             case 6:
-                int iA = a.a(motionEvent.getAction());
+                int iA = com.aee.mokacam.photoview.a.a(motionEvent.getAction());
                 if (motionEvent.getPointerId(iA) == this.f) {
                     int i = iA == 0 ? 1 : 0;
                     this.f = motionEvent.getPointerId(i);

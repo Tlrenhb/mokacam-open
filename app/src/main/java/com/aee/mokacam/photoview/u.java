@@ -65,6 +65,6 @@ class u implements Runnable {
         this.a.b(this.a.o());
         this.c = iC;
         this.d = iD;
-        a.a(imageViewC, this);
+        com.aee.mokacam.photoview.a.a(imageViewC, this);
     }
 }

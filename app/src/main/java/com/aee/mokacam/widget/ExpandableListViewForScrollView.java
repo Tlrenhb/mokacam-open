@@ -21,6 +21,6 @@ public class ExpandableListViewForScrollView extends ExpandableListView {
 
     @Override // android.widget.ListView, android.widget.AbsListView, android.view.View
     protected void onMeasure(int i, int i2) {
-        super.onMeasure(i, View.MeasureSpec.makeMeasureSpec(536870911, ExploreByTouchHelper.INVALID_ID));
+        super.onMeasure(i, View.MeasureSpec.makeMeasureSpec(536870911, android.view.View.MeasureSpec.AT_MOST));
     }
 }
