@@ -83,3 +83,4 @@ public class LegalActivity extends BaseActivity {
         return super.onCreateView(str, context, attributeSet);
     }
 }
+}
