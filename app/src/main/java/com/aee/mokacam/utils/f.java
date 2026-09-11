@@ -16,13 +16,13 @@ class f implements Callable<Void> {
     public Void call() {
         synchronized (this.a) {
             if (this.a.i != null) {
-                this.a.h();
-                if (this.a.f()) {
-                    try {
+                try {
+                    this.a.h();
+                    if (this.a.f()) {
                         this.a.e();
-                    } catch (IOException e) {
                     }
                     this.a.k = 0;
+                } catch (IOException e) {
                 }
             }
         }
