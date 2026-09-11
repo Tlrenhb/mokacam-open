@@ -73,7 +73,7 @@ public final class e implements Closeable {
         return eVar2;
     }
 
-    synchronized g a(String str, long j) {
+    synchronized g a(String str, long j) throws IOException {
         i iVar;
         g gVar;
         g();
@@ -85,7 +85,7 @@ public final class e implements Closeable {
                 this.j.put(str, iVar3);
                 iVar = iVar3;
             } else if (iVar2.e != null) {
-                gVar = null;
+                return null;
             } else {
                 iVar = iVar2;
             }
@@ -118,7 +118,7 @@ public final class e implements Closeable {
     }
 
     /* JADX INFO: Access modifiers changed from: */
-    public synchronized void a(g gVar, boolean z) {
+    public synchronized void a(g gVar, boolean z) throws IOException {
         synchronized (this) {
             i iVar = gVar.b;
             if (iVar.e != gVar) {
