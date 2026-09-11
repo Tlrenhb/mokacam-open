@@ -23,13 +23,13 @@ class h implements Runnable {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public void run() {
-        boolean z;
+        boolean z = false;
         if (AeeApplication.a().e == -1000 ? this.a.g() : true) {
             try {
+                z = ResolveJson.checkRval((ReceiveMsg) ResolveJson.resolveNormalInfo(a.a().c(new SendMsg(this.b, AeeApplication.a().e, null, null).toJson()), ReceiveMsg.class), this.b);
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            z = ResolveJson.checkRval((ReceiveMsg) ResolveJson.resolveNormalInfo(a.a().c(new SendMsg(this.b, AeeApplication.a().e, null, null).toJson()), ReceiveMsg.class), this.b);
         }
         if (this.c != null) {
             this.c.a(Boolean.valueOf(z));
