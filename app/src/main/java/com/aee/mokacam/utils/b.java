@@ -20,12 +20,16 @@ public class b {
     }
 
     public static void a(Context context, int i) {
-        if (Build.MANUFACTURER.equalsIgnoreCase("Xiaomi")) {
-            b(context, i);
-        } else if (Build.MANUFACTURER.toLowerCase().contains("sony")) {
-            a(context, new StringBuilder(String.valueOf(i)).toString());
-        } else {
-            c(context, i);
+        try {
+            if (Build.MANUFACTURER.equalsIgnoreCase("Xiaomi")) {
+                b(context, i);
+            } else if (Build.MANUFACTURER.toLowerCase().contains("sony")) {
+                a(context, new StringBuilder(String.valueOf(i)).toString());
+            } else {
+                c(context, i);
+            }
+        } catch (Throwable th) {
+            th.printStackTrace();
         }
     }
 
