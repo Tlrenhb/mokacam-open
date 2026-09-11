@@ -321,7 +321,7 @@ public class LibraryActivity extends BaseActivity {
             if (row.cameraFile != null) {
                 ImageLoader.get().load(row.cameraFile.getThumbnailUrl(), img);
             } else if (row.localFile != null) {
-                android.graphics.Bitmap bmp = android.graphics.ThumbnailUtils
+                android.graphics.Bitmap bmp = android.media.ThumbnailUtils
                         .createVideoThumbnail(row.localFile.getAbsolutePath(),
                                 android.provider.MediaStore.Video.Thumbnails.MINI_KIND);
                 if (bmp != null) {

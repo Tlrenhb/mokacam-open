@@ -232,7 +232,7 @@ public class CameraClient {
     }
 
     /** Firmware upload (msg 1286 + file push over the command channel). */
-    public boolean uploadFirmware(String localPath, FirmwareUpdater.ProgressListener l) {
-        return FirmwareUpdater.upload(localPath, l);
+    public boolean uploadFirmware(String localPath, FirmwareUploader.ProgressListener l) {
+        return FirmwareUploader.uploadFirmware(localPath, l);
     }
 }

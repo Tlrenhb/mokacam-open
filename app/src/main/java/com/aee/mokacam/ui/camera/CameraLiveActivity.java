@@ -124,7 +124,7 @@ public class CameraLiveActivity extends BaseActivity implements View.OnClickList
         player.setPlayWhenReady(true);
         player.addListener(new Player.Listener() {
             @Override
-            public void onPlayerError(androidx.media3.PlaybackException error) {
+            public void onPlayerError(androidx.media3.common.PlaybackException error) {
                 runOnUiThread(() ->
                         ToastUtils.show(CameraLiveActivity.this, R.string.no_rtsp));
             }

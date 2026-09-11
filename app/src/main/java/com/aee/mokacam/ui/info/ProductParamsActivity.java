@@ -31,7 +31,7 @@ public class ProductParamsActivity extends BaseActivity {
         params.add(new String[]{getString(R.string.p_param_battery), "850 mAh"});
         params.add(new String[]{getString(R.string.p_param_wifi), "802.11 b/g/n"});
         params.add(new String[]{getString(R.string.p_param_weight), "45 g"});
-        list.setAdapter(new android.widget.ArrayAdapter<>(this,
+        list.setAdapter(new android.widget.ArrayAdapter<String[]>(this,
                 android.R.layout.simple_list_item_1, params) {
             @Override
             public android.view.View getView(int position, View convertView, android.view.ViewGroup parent) {
