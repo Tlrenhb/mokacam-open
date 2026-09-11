@@ -58,11 +58,19 @@ class aa implements Runnable {
                             } else {
                                 if (this.a.O) {
                                     this.a.a(bArrC);
-                                    Thread.sleep(10L);
+                                    try {
+                                        Thread.sleep(10L);
+                                    } catch (InterruptedException eX) {
+                                        eX.printStackTrace();
+                                    }
                                     this.a.a(this.a.h());
                                 }
                                 if (AeeApplication.a().ae) {
-                                    Thread.sleep(20L);
+                                    try {
+                                        Thread.sleep(20L);
+                                    } catch (InterruptedException eY) {
+                                        eY.printStackTrace();
+                                    }
                                     if (System.currentTimeMillis() - this.a.P >= 200) {
                                         this.a.P = System.currentTimeMillis();
                                         this.a.a(AeeApplication.a().ad.b());
