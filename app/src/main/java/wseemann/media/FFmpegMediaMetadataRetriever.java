@@ -38,6 +38,9 @@ public class FFmpegMediaMetadataRetriever {
     }
 
     public void release() {
-        retriever.release();
+        try {
+            retriever.release();
+        } catch (Exception e) {
+        }
     }
 }
