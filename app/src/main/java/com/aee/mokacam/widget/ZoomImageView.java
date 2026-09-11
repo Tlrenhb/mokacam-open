@@ -103,7 +103,7 @@ public class ZoomImageView extends ImageView implements ScaleGestureDetector.OnS
         Matrix matrix = this.e;
         RectF rectF = new RectF();
         if (getDrawable() != null) {
-            rectF.set(0.0f, 0.0f, r2.getIntrinsicWidth(), r2.getIntrinsicHeight());
+            rectF.set(0.0f, 0.0f, getDrawable().getIntrinsicWidth(), getDrawable().getIntrinsicHeight());
         }
         matrix.mapRect(rectF);
         return rectF;

@@ -18,7 +18,11 @@ public class FFmpegMediaMetadataRetriever {
     private final MediaMetadataRetriever retriever = new MediaMetadataRetriever();
 
     public void setDataSource(String path) {
-        retriever.setDataSource(path);
+        try {
+            retriever.setDataSource(path);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public Bitmap getFrameAtTime(long timeUs, int option) {
