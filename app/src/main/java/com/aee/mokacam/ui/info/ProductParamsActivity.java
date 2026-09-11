@@ -1,7 +1,9 @@
 package com.aee.mokacam.ui.info;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.aee.mokacam.R;
 import com.aee.mokacam.ui.BaseActivity;

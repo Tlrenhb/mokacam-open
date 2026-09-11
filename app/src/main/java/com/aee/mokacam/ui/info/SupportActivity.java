@@ -2,7 +2,7 @@ package com.aee.mokacam.ui.info;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
+import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
