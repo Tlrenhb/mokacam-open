@@ -100,7 +100,7 @@ public class b {
                     if (0 != 0) {
                     }
                 } catch (Throwable th2) {
-                    th = th2;
+                    Throwable th = th2;
                     notification = null;
                     z = false;
                     if (notification != null) {
@@ -110,7 +110,7 @@ public class b {
                 }
             }
         } catch (Throwable th3) {
-            th = th3;
+            Throwable th = th3;
             notification = notificationBuild;
             z = true;
             if (notification != null) {

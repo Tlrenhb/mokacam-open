@@ -282,10 +282,10 @@ public class AeeApplication extends Application {
         super.onCreate();
         bp = this;
         g();
-        org.xutils.org.xutils.x.Ext.init(this);
+        org.xutils.x.Ext.init(this);
         f();
         g();
-        com.aee.mokacam.utils.com.aee.mokacam.utils.p.a().a(this);
+        com.aee.mokacam.utils.p.a().a(this);
     }
 
     @Override // android.app.Application, android.content.ComponentCallbacks

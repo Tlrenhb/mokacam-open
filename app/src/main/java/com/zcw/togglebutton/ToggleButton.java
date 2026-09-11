@@ -97,16 +97,16 @@ public class ToggleButton extends View {
 
     /* JADX INFO: Access modifiers changed from: */
     public void a(double d) {
-        this.s = (float) com.zcw.togglebutton.q.a(d, 0.0d, 1.0d, this.p, this.q);
-        this.t = (float) com.zcw.togglebutton.q.a(1.0d - d, 0.0d, 1.0d, 10.0d, this.r);
+        this.s = (float) com.facebook.rebound.q.a(d, 0.0d, 1.0d, this.p, this.q);
+        this.t = (float) com.facebook.rebound.q.a(1.0d - d, 0.0d, 1.0d, 10.0d, this.r);
         int iBlue = Color.blue(this.e);
         int iRed = Color.red(this.e);
         int iGreen = Color.green(this.e);
         int iBlue2 = Color.blue(this.f);
         int iRed2 = Color.red(this.f);
         int iGreen2 = Color.green(this.f);
-        int iA = (int) com.zcw.togglebutton.q.a(1.0d - d, 0.0d, 1.0d, iBlue, iBlue2);
-        this.i = Color.rgb(a((int) com.zcw.togglebutton.q.a(1.0d - d, 0.0d, 1.0d, iRed, iRed2), 0, 255), a((int) com.zcw.togglebutton.q.a(1.0d - d, 0.0d, 1.0d, iGreen, iGreen2), 0, 255), a(iA, 0, 255));
+        int iA = (int) com.facebook.rebound.q.a(1.0d - d, 0.0d, 1.0d, iBlue, iBlue2);
+        this.i = Color.rgb(a((int) com.facebook.rebound.q.a(1.0d - d, 0.0d, 1.0d, iRed, iRed2), 0, 255), a((int) com.facebook.rebound.q.a(1.0d - d, 0.0d, 1.0d, iGreen, iGreen2), 0, 255), a(iA, 0, 255));
         postInvalidate();
     }
 

@@ -423,8 +423,9 @@ public class r implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutL
     }
 
     public void a(float f, boolean z) {
-        if (c() != null) {
-            a(f, r0.getRight() / 2, r0.getBottom() / 2, z);
+        ImageView imageViewC = c();
+        if (imageViewC != null) {
+            a(f, imageViewC.getRight() / 2, imageViewC.getBottom() / 2, z);
         }
     }
 

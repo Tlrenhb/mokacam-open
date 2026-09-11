@@ -26,9 +26,9 @@ class ab extends Thread {
         while (this.a.F) {
             try {
             } catch (IOException e2) {
-                e = e2;
+                e2.printStackTrace();
             } catch (Exception e3) {
-                e = e3;
+                e3.printStackTrace();
             }
             if (this.a.a) {
                 Thread.sleep(1000L);

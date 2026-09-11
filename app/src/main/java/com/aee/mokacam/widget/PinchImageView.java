@@ -82,19 +82,19 @@ public class PinchImageView extends ImageView {
     }
 
     void a(float f, float f2, float f3, float f4) {
-        this.k = j.c(this.c)[0] / j.b(f, f2, f3, f4);
-        float[] fArrA = j.a(j.c(f, f2, f3, f4), this.c);
+        this.k = com.aee.mokacam.widget.j.c(this.c)[0] / com.aee.mokacam.widget.j.b(f, f2, f3, f4);
+        float[] fArrA = com.aee.mokacam.widget.j.a(com.aee.mokacam.widget.j.c(f, f2, f3, f4), this.c);
         this.j.set(fArrA[0], fArrA[1]);
     }
 
     void a(PointF pointF, float f, float f2, PointF pointF2) {
         if (c()) {
             float f3 = f * f2;
-            Matrix matrixA = j.a();
+            Matrix matrixA = com.aee.mokacam.widget.j.a();
             matrixA.postScale(f3, f3, pointF.x, pointF.y);
             matrixA.postTranslate(pointF2.x - pointF.x, pointF2.y - pointF.y);
             this.c.set(matrixA);
-            j.b(matrixA);
+            com.aee.mokacam.widget.j.b(matrixA);
             a();
             invalidate();
         }
@@ -109,7 +109,7 @@ public class PinchImageView extends ImageView {
         if (!c()) {
             return false;
         }
-        RectF rectFB = j.b();
+        RectF rectFB = com.aee.mokacam.widget.j.b();
         a(rectFB);
         float width = getWidth();
         float height = getHeight();
@@ -127,7 +127,7 @@ public class PinchImageView extends ImageView {
         } else if (rectFB.bottom + f2 < height) {
             f2 = rectFB.bottom > height ? height - rectFB.bottom : 0.0f;
         }
-        j.a(rectFB);
+        com.aee.mokacam.widget.j.a(rectFB);
         this.c.postTranslate(f, f2);
         a();
         invalidate();
@@ -138,10 +138,10 @@ public class PinchImageView extends ImageView {
     public void c(float f, float f2) {
         float f3 = 0.0f;
         if (c()) {
-            Matrix matrixA = j.a();
+            Matrix matrixA = com.aee.mokacam.widget.j.a();
             a(matrixA);
-            float f4 = j.c(matrixA)[0];
-            float f5 = j.c(this.c)[0];
+            float f4 = com.aee.mokacam.widget.j.c(matrixA)[0];
+            float f5 = com.aee.mokacam.widget.j.c(this.c)[0];
             float f6 = f4 * f5;
             float width = getWidth();
             float height = getHeight();
@@ -153,12 +153,12 @@ public class PinchImageView extends ImageView {
             if (maxScale >= f4) {
                 f4 = maxScale;
             }
-            Matrix matrixA2 = j.a(this.c);
+            Matrix matrixA2 = com.aee.mokacam.widget.j.a(this.c);
             matrixA2.postScale(f4 / f6, f4 / f6, f, f2);
             matrixA2.postTranslate((width / 2.0f) - f, (height / 2.0f) - f2);
-            Matrix matrixA3 = j.a(matrixA);
+            Matrix matrixA3 = com.aee.mokacam.widget.j.a(matrixA);
             matrixA3.postConcat(matrixA2);
-            RectF rectFA = j.a(0.0f, 0.0f, getDrawable().getIntrinsicWidth(), getDrawable().getIntrinsicHeight());
+            RectF rectFA = com.aee.mokacam.widget.j.a(0.0f, 0.0f, getDrawable().getIntrinsicWidth(), getDrawable().getIntrinsicHeight());
             matrixA3.mapRect(rectFA);
             float f7 = rectFA.right - rectFA.left < width ? (width / 2.0f) - ((rectFA.right + rectFA.left) / 2.0f) : rectFA.left > 0.0f ? -rectFA.left : rectFA.right < width ? width - rectFA.right : 0.0f;
             if (rectFA.bottom - rectFA.top < height) {
@@ -172,10 +172,10 @@ public class PinchImageView extends ImageView {
             e();
             this.l = new o(this, this.c, matrixA2);
             this.l.start();
-            j.a(rectFA);
-            j.b(matrixA3);
-            j.b(matrixA2);
-            j.b(matrixA);
+            com.aee.mokacam.widget.j.a(rectFA);
+            com.aee.mokacam.widget.j.b(matrixA3);
+            com.aee.mokacam.widget.j.b(matrixA2);
+            com.aee.mokacam.widget.j.b(matrixA);
         }
     }
 
@@ -185,19 +185,19 @@ public class PinchImageView extends ImageView {
 
     void d() {
         if (c()) {
-            Matrix matrixA = j.a();
+            Matrix matrixA = com.aee.mokacam.widget.j.a();
             b(matrixA);
-            float f = j.c(matrixA)[0];
-            float f2 = j.c(this.c)[0];
+            float f = com.aee.mokacam.widget.j.c(matrixA)[0];
+            float f2 = com.aee.mokacam.widget.j.c(this.c)[0];
             float width = getWidth();
             float height = getHeight();
             float maxScale = getMaxScale();
             float f3 = f > maxScale ? maxScale / f : 1.0f;
             float f4 = f2 * f3 < 1.0f ? 1.0f / f2 : f3;
             boolean z = f4 != 1.0f;
-            Matrix matrixA2 = j.a(matrixA);
+            Matrix matrixA2 = com.aee.mokacam.widget.j.a(matrixA);
             matrixA2.postScale(f4, f4, this.i.x, this.i.y);
-            RectF rectFA = j.a(0.0f, 0.0f, getDrawable().getIntrinsicWidth(), getDrawable().getIntrinsicHeight());
+            RectF rectFA = com.aee.mokacam.widget.j.a(0.0f, 0.0f, getDrawable().getIntrinsicWidth(), getDrawable().getIntrinsicHeight());
             matrixA2.mapRect(rectFA);
             float f5 = rectFA.right - rectFA.left < width ? (width / 2.0f) - ((rectFA.right + rectFA.left) / 2.0f) : rectFA.left > 0.0f ? -rectFA.left : rectFA.right < width ? width - rectFA.right : 0.0f;
             float f6 = rectFA.bottom - rectFA.top < height ? (height / 2.0f) - ((rectFA.bottom + rectFA.top) / 2.0f) : rectFA.top > 0.0f ? -rectFA.top : rectFA.bottom < height ? height - rectFA.bottom : 0.0f;
@@ -205,17 +205,17 @@ public class PinchImageView extends ImageView {
                 z = true;
             }
             if (z) {
-                Matrix matrixA3 = j.a(this.c);
+                Matrix matrixA3 = com.aee.mokacam.widget.j.a(this.c);
                 matrixA3.postScale(f4, f4, this.i.x, this.i.y);
                 matrixA3.postTranslate(f5, f6);
                 e();
                 this.l = new o(this, this.c, matrixA3);
                 this.l.start();
-                j.b(matrixA3);
+                com.aee.mokacam.widget.j.b(matrixA3);
             }
-            j.a(rectFA);
-            j.b(matrixA2);
-            j.b(matrixA);
+            com.aee.mokacam.widget.j.a(rectFA);
+            com.aee.mokacam.widget.j.b(matrixA2);
+            com.aee.mokacam.widget.j.b(matrixA);
         }
     }
 
@@ -253,11 +253,11 @@ public class PinchImageView extends ImageView {
             matrix.reset();
         }
         if (c()) {
-            RectF rectFA = j.a(0.0f, 0.0f, getDrawable().getIntrinsicWidth(), getDrawable().getIntrinsicHeight());
-            RectF rectFA2 = j.a(0.0f, 0.0f, getWidth(), getHeight());
+            RectF rectFA = com.aee.mokacam.widget.j.a(0.0f, 0.0f, getDrawable().getIntrinsicWidth(), getDrawable().getIntrinsicHeight());
+            RectF rectFA2 = com.aee.mokacam.widget.j.a(0.0f, 0.0f, getWidth(), getHeight());
             matrix.setRectToRect(rectFA, rectFA2, Matrix.ScaleToFit.CENTER);
-            j.a(rectFA2);
-            j.a(rectFA);
+            com.aee.mokacam.widget.j.a(rectFA2);
+            com.aee.mokacam.widget.j.a(rectFA);
         }
         return matrix;
     }
@@ -269,11 +269,11 @@ public class PinchImageView extends ImageView {
             rectF.setEmpty();
         }
         if (c()) {
-            Matrix matrixA = j.a();
+            Matrix matrixA = com.aee.mokacam.widget.j.a();
             b(matrixA);
             rectF.set(0.0f, 0.0f, getDrawable().getIntrinsicWidth(), getDrawable().getIntrinsicHeight());
             matrixA.mapRect(rectF);
-            j.b(matrixA);
+            com.aee.mokacam.widget.j.b(matrixA);
         }
         return rectF;
     }
@@ -326,9 +326,9 @@ public class PinchImageView extends ImageView {
     @Override // android.widget.ImageView, android.view.View
     protected void onDraw(Canvas canvas) {
         if (c()) {
-            Matrix matrixA = j.a();
+            Matrix matrixA = com.aee.mokacam.widget.j.a();
             setImageMatrix(b(matrixA));
-            j.b(matrixA);
+            com.aee.mokacam.widget.j.b(matrixA);
         }
         if (this.d == null) {
             super.onDraw(canvas);
@@ -372,8 +372,8 @@ public class PinchImageView extends ImageView {
                 b(motionEvent.getX() - this.i.x, motionEvent.getY() - this.i.y);
                 this.i.set(motionEvent.getX(), motionEvent.getY());
             } else if (this.e == 2 && motionEvent.getPointerCount() > 1) {
-                float fB = j.b(motionEvent.getX(0), motionEvent.getY(0), motionEvent.getX(1), motionEvent.getY(1));
-                float[] fArrC = j.c(motionEvent.getX(0), motionEvent.getY(0), motionEvent.getX(1), motionEvent.getY(1));
+                float fB = com.aee.mokacam.widget.j.b(motionEvent.getX(0), motionEvent.getY(0), motionEvent.getX(1), motionEvent.getY(1));
+                float[] fArrC = com.aee.mokacam.widget.j.c(motionEvent.getX(0), motionEvent.getY(0), motionEvent.getX(1), motionEvent.getY(1));
                 this.i.set(fArrC[0], fArrC[1]);
                 a(this.j, this.k, fB, this.i);
             }

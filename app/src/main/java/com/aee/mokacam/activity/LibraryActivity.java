@@ -41,7 +41,7 @@ public class LibraryActivity extends BaseActivity {
     Bitmap C;
     FFmpegMediaMetadataRetriever D;
     protected com.aee.mokacam.widget.c e;
-    GridView f;
+    com.aee.mokacam.view.SectionHeadersGridView f;
     ImageView g;
     ImageView h;
     TextView k;
@@ -177,7 +177,7 @@ public class LibraryActivity extends BaseActivity {
     }
 
     void b() {
-        this.f = (GridView) findViewById(R.id.library_gv);
+        this.f = (com.aee.mokacam.view.SectionHeadersGridView) findViewById(R.id.library_gv);
         this.g = (ImageView) findViewById(R.id.library_delete_iv);
         this.h = (ImageView) findViewById(R.id.library_right_iv);
         this.k = (TextView) findViewById(R.id.select_tv);

@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 public final class Http {
 
-    static final Http INSTANCE = new Http();
+    public static final Http INSTANCE = new Http();
     private static final String TAG = "xutils-shim";
     private final ExecutorService pool = Executors.newCachedThreadPool();
 
