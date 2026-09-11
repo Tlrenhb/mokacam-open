@@ -259,10 +259,12 @@ public class o {
             } else {
                 File file = new File(str);
                 if (file.exists()) {
-                    if (!com.aee.mokacam.utils.a.a(file).equals(receiveMsg.getMd5sum())) {
-                    }
                     this.i = false;
-                    TimeUnit.MILLISECONDS.sleep(280L);
+                    try {
+                        TimeUnit.MILLISECONDS.sleep(280L);
+                    } catch (InterruptedException e4) {
+                        e4.printStackTrace();
+                    }
                 }
             }
         }
