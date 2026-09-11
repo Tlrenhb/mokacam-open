@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:aee="http://schemas.android.com/apk/res/com.aee.mokacam">
+    <RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@+id/iv_selectlib_back" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/main_back" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/library_title" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <View android:background="#ffbdbbbc" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <RelativeLayout android:id="@+id/rl_camera_library" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="120.0dip" android:layout_margin="10.0dip">
+        <com.aee.mokacam.view.RatioLayout android:id="@+id/ratiolayout1" android:layout_width="120.0dip" android:layout_height="120.0dip" aee:picRatio="1.0">
+            <ImageView android:id="@+id/iv_camera_library" android:background="@drawable/icon_lib_bg" android:layout_width="120.0dip" android:layout_height="120.0dip" android:scaleType="fitXY" />
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_cameralib_play" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/play_lib" />
+        </com.aee.mokacam.view.RatioLayout>
+        <TextView android:textSize="22.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="60.0dip" android:text="@string/camera_lib" android:layout_toRightOf="@+id/ratiolayout1" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="#ffbdbbbc" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" />
+    <RelativeLayout android:id="@+id/rl_local_library" android:layout_width="fill_parent" android:layout_height="120.0dip" android:layout_margin="10.0dip">
+        <com.aee.mokacam.view.RatioLayout android:id="@+id/ratiolayout2" android:layout_width="120.0dip" android:layout_height="120.0dip" aee:picRatio="1.0">
+            <ImageView android:id="@+id/iv_local_library" android:background="@drawable/icon_lib_bg" android:layout_width="120.0dip" android:layout_height="120.0dip" android:scaleType="fitXY" />
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_locallib_play" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/play_lib" />
+        </com.aee.mokacam.view.RatioLayout>
+        <TextView android:textSize="22.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="60.0dip" android:text="@string/local_lib" android:layout_toRightOf="@+id/ratiolayout2" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

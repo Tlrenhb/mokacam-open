@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#882a2723" android:paddingRight="90.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:layout_gravity="center" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/drone_setting_batteryinfo" />
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="10.0dip">
+        <RelativeLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@+id/iv_dumperengy1" android:background="@drawable/dump_energy_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@+id/tv_dumperengy1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="N/A" android:layout_below="@+id/iv_dumperengy1" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@+id/iv_dumperengy2" android:background="@drawable/dump_energy_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@+id/tv_dumperengy2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="N/A" android:layout_below="@+id/iv_dumperengy2" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@+id/iv_dumperengy3" android:background="@drawable/dump_energy_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@+id/tv_dumperengy3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="N/A" android:layout_below="@+id/iv_dumperengy3" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <View android:background="#ffffffff" android:layout_width="0.5dip" android:layout_height="65.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_weight="1.0">
+            <TextView android:textColor="#ffffffff" android:id="@+id/tv_batteryvoltage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/battery_voltage" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@+id/tv_voltage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="N/A" android:layout_below="@+id/tv_batteryvoltage" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textColor="#ffffffff" android:id="@+id/tv_batterytemperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/battery_temperature" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@+id/tv_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="N/A" android:layout_below="@+id/tv_batterytemperature" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+    <LinearLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:text="@string/battery_current_dumpenergy" />
+        <TextView android:textColor="#ffffffff" android:id="@+id/tv_energy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="55.0dip" android:text="N/A" />
+    </LinearLayout>
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+    <LinearLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:text="@string/battery_capacity" />
+        <TextView android:textColor="#ffffffff" android:id="@+id/tv_capacity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="55.0dip" android:text="N/A" />
+    </LinearLayout>
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+    <LinearLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:text="@string/battery_circlecount" />
+        <TextView android:textColor="#ffffffff" android:id="@+id/tv_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="55.0dip" android:text="N/A" />
+    </LinearLayout>
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+    <LinearLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:text="@string/battery_life" />
+        <TextView android:textColor="#ffffffff" android:id="@+id/tv_life" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="55.0dip" android:text="N/A" />
+    </LinearLayout>
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/black_alpha" android:padding="@dimen/magin_left" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:paddingLeft="@dimen/padding" android:paddingRight="@dimen/padding" android:paddingBottom="@dimen/padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/waypoint_attribute" style="@style/TextThemeSmall" />
+        <TextView android:paddingLeft="@dimen/padding" android:paddingTop="@dimen/magin_bottom" android:paddingRight="@dimen/padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/air_point" style="@style/TextThemeSmall" />
+    </LinearLayout>
+    <HorizontalScrollView android:layout_gravity="center" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/magin_left" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/layout_airplan_line" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <include layout="@layout/layout_view_airplan_line" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <Button android:textSize="20.0sp" android:layout_gravity="center" android:id="@+id/sure" android:background="@null" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:text="确定" style="@style/TextThemeSmall" />
+</LinearLayout>

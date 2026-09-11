@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/photo_mode_bg" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/remotecontrol_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+        <ImageView android:id="@+id/iv_remotecontrol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_remotecontrol_n" />
+        <TextView android:textSize="9.0sp" android:textColor="@color/white" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/remotecontrol" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/motionplay_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+        <ImageView android:id="@+id/iv_motionplay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_body_feeling_model_h" />
+        <TextView android:textSize="9.0sp" android:textColor="@color/white" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/motionplay" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/joystick_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+        <ImageView android:id="@+id/iv_joystick" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/rocker_mode_h" />
+        <TextView android:textSize="9.0sp" android:textColor="@color/white" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/joystick" />
+    </LinearLayout>
+</LinearLayout>

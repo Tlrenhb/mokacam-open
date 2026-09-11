@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#882a2723" android:paddingRight="90.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="19.0sp" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@+id/limitheight_title" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/drone_setting_batteryinfo" />
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+    <SeekBar android:id="@+id/sb_limitheight" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="40.0dip" android:maxHeight="2.0dip" android:progressDrawable="@drawable/batteryalarm_seekbar_bg" android:minHeight="2.0dip" android:thumb="@drawable/waypoint_dot" android:thumbOffset="0.0dip" />
+    <RelativeLayout android:layout_width="280.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <TextView android:textColor="#ffffffff" android:id="@+id/tv_hight" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22.0dip" android:text="100m" />
+        <TextView android:textColor="#fffff100" android:id="@+id/tv_limitheightconfirm" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sure" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="74.0dip" android:layout_weight="0.09">
+        <EditText android:id="@+id/et_limithigh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="10.0dip" android:ems="10" android:inputType="number" />
+        <Button android:id="@+id/button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="30.0dip" android:text="@string/sure" />
+    </LinearLayout>
+</LinearLayout>

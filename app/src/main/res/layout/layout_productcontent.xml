@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/content_sv" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@+id/left_frame" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/iv_arrow_back" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/main_back" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_title_logo" android:layout_centerInParent="true" />
+            <ImageView android:id="@+id/menu" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_menu" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <View android:background="#ffadaaad" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ff888a8d" android:layout_gravity="center_horizontal" android:id="@+id/tv_type" android:paddingTop="30.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RECORD YOUR LIMITS" />
+        <RelativeLayout android:layout_gravity="center_horizontal" android:id="@+id/rl_selectproduct" android:background="@drawable/product_select" android:visibility="gone" android:layout_width="290.0dip" android:layout_height="40.0dip" android:layout_marginTop="25.0dip">
+            <TextView android:id="@+id/tv_product_series" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EVO 4K30" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="192.0dip" android:layout_marginTop="35.0dip">
+            <ImageView android:id="@+id/vp_main" android:layout_width="fill_parent" android:layout_height="192.0dip" android:src="@drawable/camera" />
+        </RelativeLayout>
+        <View android:layout_gravity="center_horizontal" android:background="#ffadaaad" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="25.0dip" android:layout_marginRight="15.0dip" />
+        <TextView android:textSize="16.0sp" android:textColor="#99606060" android:layout_gravity="center_horizontal" android:id="@+id/product_specs" android:paddingTop="16.0dip" android:paddingBottom="9.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/product_params" />
+        <RelativeLayout android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/rl_main_connect" android:background="@drawable/connect" android:layout_width="310.0dip" android:layout_height="42.0dip" android:layout_marginTop="8.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="#99606060" android:id="@+id/tv_main_connect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/connect" />
+        </RelativeLayout>
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_library" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:src="@drawable/libary_selector" />
+        <TextView android:textColor="#ff6d6e71" android:layout_gravity="center_horizontal" android:id="@+id/tv_libary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/library_title" />
+    </LinearLayout>
+</ScrollView>

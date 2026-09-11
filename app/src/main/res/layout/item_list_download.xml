@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:aee="http://schemas.android.com/apk/res/com.aee.mokacam">
+    <com.aee.mokacam.view.RatioLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" aee:picRatio="1.0">
+        <ImageView android:id="@+id/iv_file_image" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_margin="5.0dip" android:src="@drawable/download_video_pic" android:scaleType="fitXY" />
+    </com.aee.mokacam.view.RatioLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="10.0dip" android:layout_width="0.0dip" android:layout_height="70.0dip" android:layout_weight="8.0">
+        <TextView android:id="@+id/tv_file_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="FileName" android:maxLines="1" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/tv_file_state" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/load_waitting" />
+            <TextView android:id="@+id/tv_file_progress" android:paddingTop="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <ProgressBar android:id="@+id/savetolocation_progressbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:max="100" android:progressDrawable="@drawable/progressbar_color" style="?android:attr/progressBarStyleHorizontal" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:id="@+id/download_cancel" android:focusable="true" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/btn_cancel" android:scaleType="fitXY" />
+</LinearLayout>

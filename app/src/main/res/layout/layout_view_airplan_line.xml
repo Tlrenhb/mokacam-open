@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@+id/attribute" android:padding="@dimen/padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="62M" style="@style/TextThemeSmall" />
+    <TextView android:textSize="10.0sp" android:textColor="@color/black" android:id="@+id/air_dot_sign" android:background="@drawable/point_ico" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" style="@style/TextThemeSmall" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/air_dot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:src="@drawable/dot_ico" />
+        <ImageView android:id="@+id/air_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:src="@drawable/line_ico" android:scaleType="fitXY" />
+    </LinearLayout>
+</LinearLayout>

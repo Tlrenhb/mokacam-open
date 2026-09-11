@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="#88171717" android:layout_width="180.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="#ffdb2727" android:layout_gravity="center_horizontal" android:id="@+id/tv_progress_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/deleting" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@+id/deleting_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:src="@drawable/publicloading" />
+    <ProgressBar android:layout_gravity="center_horizontal" android:id="@+id/pb_delete" android:visibility="gone" android:layout_width="280.0dip" android:layout_height="10.0dip" android:layout_marginTop="15.0dip" android:progressDrawable="@drawable/myprogress_dialog_style" style="?android:attr/progressBarStyleHorizontal" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:id="@+id/tv_progress_precent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:id="@+id/tv_delete_number" android:paddingLeft="100.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1/80" />
+    </LinearLayout>
+</LinearLayout>

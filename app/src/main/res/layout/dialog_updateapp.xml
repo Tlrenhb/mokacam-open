@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#882a2723" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="23.0sp" android:textColor="#ff00ff00" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="提示信息" />
+    </RelativeLayout>
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/dialog_view" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="18.0sp" android:id="@+id/info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="\u0009\u0009亲，确定退出应用吗?" android:lineSpacingExtra="8.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textStyle="bold" android:textColor="#ff00ff00" android:gravity="center" android:id="@+id/dialog_button_ok" android:background="@drawable/transparentdialog_pressed_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Return Home" android:layout_weight="1.0" />
+            <View android:id="@+id/view_divider" android:background="#ffffffff" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+            <TextView android:textStyle="bold" android:textColor="#ff00ff00" android:gravity="center" android:id="@+id/dialog_button_cancel" android:background="@drawable/transparentdialog_pressed_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Cancel" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

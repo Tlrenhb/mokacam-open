@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/photo_mode_bg" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/tv_normal_video" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/drone_record" android:drawableTop="@drawable/btn_record_n" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/tv_timelapse_video" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/drone_time_lapse" android:drawableTop="@drawable/btn_time_lapse_n" />
+    </LinearLayout>
+</LinearLayout>

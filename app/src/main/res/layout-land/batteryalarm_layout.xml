@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#882a2723" android:paddingRight="90.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:layout_gravity="center" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/drone_setting_batteryalarm" />
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:text="@string/batteryalarm_one" />
+        <LinearLayout android:gravity="center_vertical" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <SeekBar android:id="@+id/sb_alarm_one" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:maxHeight="2.0dip" android:progressDrawable="@drawable/batteryalarm_seekbar_bg" android:minHeight="2.0dip" android:thumb="@drawable/waypoint_dot" android:thumbOffset="0.0dip" />
+            <TextView android:textColor="#ffffffff" android:id="@+id/tv_one" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="N/A" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:text="@string/batteryalarm_two" />
+        <LinearLayout android:gravity="center_vertical" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <SeekBar android:id="@+id/sb_alarm_two" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:maxHeight="2.0dip" android:progressDrawable="@drawable/batteryalarm_seekbar_bg" android:minHeight="2.0dip" android:thumb="@drawable/waypoint_dot" android:thumbOffset="0.0dip" />
+            <TextView android:textColor="#ffffffff" android:id="@+id/tv_two" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="N/A" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+</LinearLayout>

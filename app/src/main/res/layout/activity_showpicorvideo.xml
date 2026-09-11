@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.aee.mokacam.photoview.LazyViewPager android:id="@+id/showpic_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@+id/rl_title" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_alignParentTop="true">
+        <LinearLayout android:gravity="center" android:id="@+id/show_video_title_ll" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:gravity="center" android:id="@+id/tv_video_time" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="00:00" android:layout_weight="1.0" />
+            <SeekBar android:id="@+id/seekbar_video" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxHeight="2.0dip" android:progressDrawable="@drawable/seekbar_bg" android:minHeight="2.0dip" android:thumb="@drawable/seekbar_dot" android:thumbOffset="0.0dip" android:layout_weight="3.0" />
+            <TextView android:textColor="#ffff0000" android:gravity="center" android:id="@+id/tv_video_done" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/done" android:layout_weight="1.0" />
+        </LinearLayout>
+        <RelativeLayout android:id="@+id/show_pic_title_rl" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textColor="#ffff0000" android:id="@+id/tv_pic_done" android:padding="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginRight="7.0dip" android:text="@string/done" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="bottom" android:id="@+id/rl_bottom" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:id="@+id/video_play_bottom" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@+id/iv_video_delete" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/library_delete_pressed" android:layout_weight="1.0" />
+            <ImageView android:id="@+id/iv_video_playorpause" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/video_play" android:layout_weight="1.0" />
+            <ImageView android:id="@+id/iv_video_download" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/btn_download_h" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@+id/pic_bottom" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@+id/iv_showPic_del" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/library_delete_pressed" android:layout_weight="1.0" />
+            <ImageView android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/video_play" android:layout_weight="1.0" />
+            <ImageView android:id="@+id/iv_showPic_download" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/btn_download_h" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

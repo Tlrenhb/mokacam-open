@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="magin_left">20.0dip</dimen>
+    <dimen name="magin_bottom">10.0dip</dimen>
+    <dimen name="magin_right">80.0dip</dimen>
+    <dimen name="text_normal_size">18.0sp</dimen>
+    <dimen name="text_large_size">22.0sp</dimen>
+    <dimen name="text_smal_size">16.0sp</dimen>
+    <dimen name="padding">5.0dip</dimen>
+    <dimen name="min_width">100.0dip</dimen>
+    <dimen name="btn_height">40.0dip</dimen>
+    <dimen name="title_height">60.0dip</dimen>
+</resources>

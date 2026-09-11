@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/smart_fly_bg" android:layout_width="300.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/selectlockmode_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/lockmode_select" />
+        <TextView android:textSize="9.0sp" android:textColor="@color/white" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/selectlockmode" />
+    </LinearLayout>
+    <View android:layout_gravity="center_vertical" android:background="#66ffffff" android:layout_width="0.5dip" android:layout_height="50.0dip" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/waypoint_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/waypoint_selector" />
+        <TextView android:textSize="9.0sp" android:textColor="@color/white" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/way_point" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/followme_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/followme_selector" />
+        <TextView android:textSize="9.0sp" android:textColor="@color/white" android:paddingTop="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/follow_me" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/sphere_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/spherefocus_selector" />
+        <TextView android:textSize="9.0sp" android:textColor="@color/white" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sphere_focus" />
+    </LinearLayout>
+</LinearLayout>

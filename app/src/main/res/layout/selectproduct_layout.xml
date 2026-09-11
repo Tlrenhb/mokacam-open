@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textStyle="normal" android:gravity="center" android:id="@+id/tv_pruditem1" android:background="@drawable/product_popbg" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Lyfe Titan" />
+    <View android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <TextView android:gravity="center" android:id="@+id/tv_pruditem2" android:background="@drawable/product_popbg" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Lyfe Onyx" />
+    <View android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <TextView android:gravity="center" android:id="@+id/tv_pruditem3" android:background="@drawable/product_popbg" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Lyfe Silver" />
+</LinearLayout>

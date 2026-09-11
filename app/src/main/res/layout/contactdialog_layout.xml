@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@+id/tv_contact_one" android:background="@drawable/library_dialog_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/USA_tel" />
+    <View android:background="#ff939598" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <TextView android:gravity="center" android:id="@+id/tv_contact_two" android:background="@drawable/library_dialog_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/eu_tel" />
+    <View android:background="#ff939598" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <TextView android:gravity="center" android:id="@+id/tv_contact_three" android:background="@drawable/library_dialog_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/China_tel" />
+    <View android:background="#ff939598" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <TextView android:textColor="#ffff0000" android:gravity="center" android:id="@+id/tv_cancelcontact" android:background="@drawable/library_dialog_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" />
+</LinearLayout>

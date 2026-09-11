@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/register_success" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" />
+    <TextView android:textSize="18.0sp" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/register_successthank" />
+    <TextView android:textSize="18.0sp" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:text="@string/register_visit" />
+    <TextView android:textSize="18.0sp" android:textColor="#ffff0000" android:layout_gravity="center_horizontal" android:id="@+id/tv_go" android:background="@drawable/register_btn_shape" android:paddingLeft="120.0dip" android:paddingTop="10.0dip" android:paddingRight="120.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/register_visit_go" />
+</LinearLayout>

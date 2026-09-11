@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/transparent" android:padding="@dimen/padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@+id/layoutControl" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:layout_weight="0.05">
+            <RelativeLayout android:gravity="center" android:id="@+id/rl_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <com.aee.mokacam.view.AppSingleRocker android:id="@+id/leftRocker" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.5" />
+            <RelativeLayout android:gravity="center" android:id="@+id/rl_right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <com.aee.mokacam.view.AppSingleRocker android:id="@+id/rightRocker" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <ImageView android:id="@+id/imgFinger" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/finger" android:layout_above="@+id/rightRocker" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

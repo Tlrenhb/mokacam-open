@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="resolution">
+        <item>620x480 30fps</item>
+        <item>620x480 15fps</item>
+        <item>320X240 30fps</item>
+        <item>320x240 15fps</item>
+    </string-array>
+    <string-array name="system">
+        <item>Metric system</item>
+        <item>British system</item>
+    </string-array>
+    <string-array name="disconnet_status">
+        <item>Start recording</item>
+        <item>Start burst shooting</item>
+        <item>Keep idle</item>
+    </string-array>
+    <string-array name="height_name">
+        <item>50M</item>
+        <item>100M</item>
+        <item>200M</item>
+        <item>300M</item>
+        <item>400M</item>
+        <item>500M</item>
+    </string-array>
+    <string-array name="video_resolution_name">
+        <item>1920x1440 48fps</item>
+        <item>1920x1080 50fps</item>
+        <item>1920x1080 48fps</item>
+        <item>1920x1080 25fps</item>
+        <item>1920x1080 24fps</item>
+        <item>1280x960 50fps</item>
+        <item>1280x960 48fps</item>
+        <item>1280×720P 100fps</item>
+        <item>1280×720P 50fps</item>
+    </string-array>
+    <string-array name="video_resolution_ntsc_name">
+        <item>4K 30fps</item>
+        <item>1440P 60f</item>
+        <item>1440P 30f</item>
+        <item>1080P 100f</item>
+        <item>1080P 60f</item>
+        <item>1080P 30f</item>
+        <item>960P 60f</item>
+        <item>720P 200f</item>
+        <item>720P 120f</item>
+        <item>720P 60f</item>
+    </string-array>
+    <string-array name="video_resolution_pal_name">
+        <item>4K 25fps</item>
+        <item>1440P 50f</item>
+        <item>1440P 25f</item>
+        <item>1080P 100f</item>
+        <item>1080P 50f</item>
+        <item>1080P 25f</item>
+        <item>960P 50f</item>
+        <item>720P 200f</item>
+        <item>720P 100f</item>
+        <item>720P 50f</item>
+    </string-array>
+    <string-array name="photo_size_name">
+        <item>16.0M(4608×3456)</item>
+        <item>12.0M(4000×3000)</item>
+        <item>8.0M (3200×2400)</item>
+    </string-array>
+    <string-array name="record_mode_name">
+        <item>Video</item>
+        <item>Only Video</item>
+        <item>Voice</item>
+        <item>Time Lapse</item>
+        <item>Auto video</item>
+        <item>Capture</item>
+    </string-array>
+    <string-array name="record_mode_value">
+        <item>record_mode_vid</item>
+        <item>record_mode_voi</item>
+        <item>record_mode_lap</item>
+        <item>record_mode_pre</item>
+        <item>record_mode_sel</item>
+        <item>record_mode_piv</item>
+    </string-array>
+    <string-array name="video_fov_name">
+        <item>Ultra Wide</item>
+        <item>Wide</item>
+        <item>Medium</item>
+        <item>Narrow</item>
+    </string-array>
+    <string-array name="video_fov_value">
+        <item>video_fov_wid</item>
+        <item>video_fov_med</item>
+        <item>video_fov_nar</item>
+        <item>video_fov_zom</item>
+    </string-array>
+    <string-array name="video_quality_name">
+        <item>Super Bitrate</item>
+        <item>High Bitrate</item>
+        <item>Normal</item>
+    </string-array>
+    <string-array name="video_quality_value">
+        <item>sfine</item>
+        <item>fine</item>
+        <item>normal</item>
+    </string-array>
+    <string-array name="timelapse_video_name">
+        <item>0.1 sec</item>
+        <item>0.5 sec</item>
+        <item>1 sec</item>
+        <item>2 sec</item>
+        <item>5 sec</item>
+        <item>10 sec</item>
+        <item>30 sec</item>
+    </string-array>
+    <string-array name="timelapse_video_value">
+        <item>video_time_lapse_p1s</item>
+        <item>video_time_lapse_p5s</item>
+        <item>video_time_lapse_01s</item>
+        <item>video_time_lapse_02s</item>
+        <item>video_time_lapse_05s</item>
+        <item>video_time_lapse_10s</item>
+        <item>video_time_lapse_30s</item>
+    </string-array>
+    <string-array name="video_selftimer_name">
+        <item>5 sec</item>
+        <item>10 sec</item>
+        <item>20 sec</item>
+    </string-array>
+    <string-array name="video_selftimer_value">
+        <item>video_selftimer_05s</item>
+        <item>video_selftimer_10s</item>
+        <item>video_selftimer_20s</item>
+    </string-array>
+    <string-array name="video_flip_rotate_name">
+        <item>Open</item>
+        <item>Close</item>
+    </string-array>
+    <string-array name="video_flip_rotate_value">
+        <item>video_flip_rotate_off</item>
+        <item>video_flip_rotate_on_</item>
+    </string-array>
+    <string-array name="video_stamp_name">
+        <item>Off</item>
+        <item>Date</item>
+        <item>Time</item>
+        <item>Date-Time</item>
+    </string-array>
+    <string-array name="video_stamp_value">
+        <item>off</item>
+        <item>date</item>
+        <item>time</item>
+        <item>date/time</item>
+    </string-array>
+    <string-array name="photo_cap_mode_name">
+        <item>One-key shooting</item>
+        <item>Fast shot</item>
+        <item>cons</item>
+        <item>Auto cont</item>
+        <item>rewrith</item>
+        <item>Timed Shooting</item>
+    </string-array>
+    <string-array name="photo_cap_mode_value">
+        <item>photo_cap_mode_nor</item>
+        <item>photo_cap_mode_fas</item>
+        <item>photo_cap_mode_cfa</item>
+        <item>photo_cap_mode_tlm</item>
+        <item>photo_cap_mode_lop</item>
+        <item>photo_cap_mode_sel</item>
+    </string-array>
+    <string-array name="photo_burstRate_name">
+        <item>Off</item>
+        <item>3pic/s</item>
+        <item>5pic/s</item>
+        <item>10pic/s</item>
+    </string-array>
+    <string-array name="photo_burstRate_value">
+        <item>off</item>
+        <item>3p</item>
+        <item>5p</item>
+        <item>10p</item>
+    </string-array>
+    <string-array name="photo_autoShoot_name">
+        <item>Off</item>
+        <item>3s</item>
+        <item>5s</item>
+        <item>10s</item>
+        <item>30s</item>
+        <item>60s</item>
+    </string-array>
+    <string-array name="photo_autoShoot_value">
+        <item>off</item>
+        <item>3s</item>
+        <item>5s</item>
+        <item>10s</item>
+        <item>30s</item>
+        <item>60s</item>
+    </string-array>
+    <string-array name="photo_selfTimer_name">
+        <item>Off</item>
+        <item>2s</item>
+        <item>3s</item>
+        <item>5s</item>
+        <item>10s</item>
+        <item>30s</item>
+        <item>60s</item>
+    </string-array>
+    <string-array name="photo_selfTimer_value">
+        <item>off</item>
+        <item>2s</item>
+        <item>3s</item>
+        <item>5s</item>
+        <item>10s</item>
+        <item>30s</item>
+        <item>60s</item>
+    </string-array>
+    <string-array name="photo_tlm_name">
+        <item>Off</item>
+        <item>0.5 sec</item>
+        <item>1 sec</item>
+        <item>2 sec</item>
+        <item>3 sec</item>
+        <item>5 sec</item>
+        <item>10 sec</item>
+        <item>20 sec</item>
+        <item>30 sec</item>
+        <item>60 sec</item>
+    </string-array>
+    <string-array name="photo_tlm_value">
+        <item>photo_tlm_off</item>
+        <item>photo_tlm_p5s</item>
+        <item>photo_tlm_01s</item>
+        <item>photo_tlm_02s</item>
+        <item>photo_tlm_03s</item>
+        <item>photo_tlm_05s</item>
+        <item>photo_tlm_10s</item>
+        <item>photo_tlm_20s</item>
+        <item>photo_tlm_30s</item>
+        <item>photo_tlm_60s</item>
+    </string-array>
+    <string-array name="photo_loop_name">
+        <item>Off</item>
+        <item>On</item>
+    </string-array>
+    <string-array name="photo_loop_value">
+        <item>photo_loop_off</item>
+        <item>photo_loop_on_</item>
+    </string-array>
+    <string-array name="photo_stamp_name">
+        <item>Off</item>
+        <item>Date</item>
+        <item>Time</item>
+        <item>Date-Time</item>
+    </string-array>
+    <string-array name="photo_stamp_value">
+        <item>off</item>
+        <item>date</item>
+        <item>time</item>
+        <item>date/time</item>
+    </string-array>
+    <string-array name="Beep_name">
+        <item>Off</item>
+        <item>On</item>
+    </string-array>
+    <string-array name="Beep_value">
+        <item>off</item>
+        <item>on</item>
+    </string-array>
+    <string-array name="setup_selflamp_name">
+        <item>Off</item>
+        <item>2</item>
+        <item>On</item>
+    </string-array>
+    <string-array name="setup_selflamp_value">
+        <item>setup_selflamp_off</item>
+        <item>setup_selflamp_on2</item>
+        <item>setup_selflamp_on_</item>
+    </string-array>
+    <string-array name="setup_osd_name">
+        <item>Off</item>
+        <item>On</item>
+    </string-array>
+    <string-array name="setup_osd_value">
+        <item>setup_osd_off</item>
+        <item>setup_osd_on_</item>
+    </string-array>
+    <string-array name="Loop_Record_name">
+        <item>Off</item>
+        <item>1min</item>
+        <item>2min</item>
+        <item>3min</item>
+        <item>5min</item>
+    </string-array>
+    <string-array name="Loop_Record_value">
+        <item>off</item>
+        <item>60s</item>
+        <item>120s</item>
+        <item>180s</item>
+        <item>300s</item>
+    </string-array>
+    <string-array name="setup_poweroff_name">
+        <item>Off</item>
+        <item>2m</item>
+        <item>5m</item>
+        <item>10m</item>
+    </string-array>
+    <string-array name="setup_poweroff_value">
+        <item>setup_poweroff_off</item>
+        <item>setup_poweroff_02m</item>
+        <item>setup_poweroff_05m</item>
+        <item>setup_poweroff_10m</item>
+    </string-array>
+    <string-array name="video_standard_name">
+        <item>NTSC</item>
+        <item>PAL</item>
+    </string-array>
+    <string-array name="video_standard_value">
+        <item>NTSC</item>
+        <item>PAL</item>
+    </string-array>
+    <string-array name="setup_detect_face_name">
+        <item>Off</item>
+        <item>On</item>
+    </string-array>
+    <string-array name="setup_detect_face_value">
+        <item>setup_detect_face_off</item>
+        <item>setup_detect_face_on_</item>
+    </string-array>
+    <string-array name="set_protune_name">
+        <item>Off</item>
+        <item>On</item>
+    </string-array>
+    <string-array name="set_protune_value">
+        <item>set_protune_off</item>
+        <item>set_protune_on_</item>
+    </string-array>
+    <string-array name="setup_image_wb_name">
+        <item>Auto</item>
+        <item>3000K</item>
+        <item>5500K</item>
+        <item>6500K</item>
+        <item>Cam Raw (with Protune)</item>
+    </string-array>
+    <string-array name="setup_image_wb_value">
+        <item>image_wb_auto</item>
+        <item>image_wb_03m0</item>
+        <item>image_wb_05m5</item>
+        <item>image_wb_06m5</item>
+        <item>image_wb_camr</item>
+    </string-array>
+    <string-array name="set_image_contrast_name">
+        <item>Standard</item>
+        <item>Hard</item>
+    </string-array>
+    <string-array name="set_image_contrast_value">
+        <item>image_contrast_stan</item>
+        <item>image_contrast_hard</item>
+    </string-array>
+    <string-array name="set_image_iso_name">
+        <item>Auto</item>
+        <item>Lowly</item>
+    </string-array>
+    <string-array name="set_image_iso_value">
+        <item>image_iso_auto</item>
+        <item>image_iso_lowl</item>
+    </string-array>
+    <string-array name="set_light_mode_name">
+        <item>平均测光</item>
+        <item>中央区域测光</item>
+        <item>中心点测光</item>
+        <item>中心点测光开</item>
+        <item>中心点测光关</item>
+    </string-array>
+    <string-array name="set_light_mode_value">
+        <item>set_light_aver</item>
+        <item>set_light_cenz</item>
+        <item>set_light_cenp</item>
+        <item>set_light_on_</item>
+        <item>set_light_off</item>
+    </string-array>
+    <string-array name="set_gsensor_name">
+        <item>Off</item>
+        <item>On</item>
+    </string-array>
+    <string-array name="set_gsensor_value">
+        <item>set_gsensor_off</item>
+        <item>set_gsensor_on_</item>
+    </string-array>
+    <string-array name="language_name">
+        <item>简体中文</item>
+        <item>繁體中文</item>
+        <item>English</item>
+        <item>俄语</item>
+        <item>German</item>
+        <item>日语</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Spanish</item>
+        <item>Portouguese</item>
+    </string-array>
+    <string-array name="language_value">
+        <item>language_chs</item>
+        <item>language_cht</item>
+        <item>language_eng</item>
+        <item>language_rus</item>
+        <item>language_ger</item>
+        <item>language_jap</item>
+        <item>language_fre</item>
+        <item>language_ita</item>
+        <item>language_spa</item>
+        <item>language_por</item>
+    </string-array>
+    <string-array name="alert_msg">
+        <item>System Self-Diagnostic Test in Progress</item>
+        <item>IMU Error Detected</item>
+        <item>Barometer Error Detected</item>
+        <item>Aircraft Battery Error Detected</item>
+        <item>Large Altitude Deviation Detected</item>
+        <item>IMU Warming Up</item>
+        <item>IMU Calibrating</item>
+        <item>IMU Calibration Finish</item>
+        <item>IMU Deviation Detected</item>
+        <item>IMU Inconsistencies</item>
+        <item>Compass Error Detected</item>
+        <item>Calibrating Compass</item>
+        <item>Calibrating Compass Finish</item>
+        <item>Compass Deviation Detected</item>
+        <item>Compass Error Detected</item>
+        <item>Compass Inconsistencies</item>
+        <item>Aircraft Low Battery</item>
+        <item>Aircraft Battery Power Critical</item>
+        <item>RC Transmitter Signal Lost</item>
+        <item>GPS Error Detected</item>
+        <item>Please Check Vision Positioning Sensor</item>
+        <item>电机解锁</item>
+        <item>Automatic Take-Off</item>
+        <item>Automatic Landing</item>
+        <item>Auto Return to Home</item>
+        <item>Follow me</item>
+        <item>热点环绕</item>
+        <item>航向锁定</item>
+        <item>返航点锁定</item>
+        <item>安全飞行GPS</item>
+        <item>安全飞行光流</item>
+        <item>半安全飞行</item>
+    </string-array>
+    <string-array name="speedlist">
+        <item>低速</item>
+        <item>中速</item>
+        <item>高速</item>
+    </string-array>
+    <string-array name="drone_control_name">
+        <item>Remote Control</item>
+        <item>Phone</item>
+    </string-array>
+    <string-array name="follow_me_mode">
+        <item>Remote Control</item>
+        <item>Phone</item>
+    </string-array>
+    <string-array name="drone_state">
+        <item>GPS</item>
+        <item>VISUAL</item>
+        <item>NORMAL</item>
+    </string-array>
+    <string-array name="low_power_action">
+        <item>Off</item>
+        <item>Land</item>
+        <item>Return to Home</item>
+    </string-array>
+    <string-array name="outof_control_action">
+        <item>Return to Home</item>
+        <item>Mission</item>
+        <item>Land</item>
+    </string-array>
+</resources>

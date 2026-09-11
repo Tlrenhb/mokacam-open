@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/photo_mode_bg" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/tv_signal_shot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo" android:drawableTop="@drawable/btn_photo_n" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+        <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/tv_brust_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/burst" android:drawableTop="@drawable/btn_burst_n" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+        <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/tv_delay_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delay_photo" android:drawableTop="@drawable/btn_time_lapse_n" />
+    </LinearLayout>
+</LinearLayout>

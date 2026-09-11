@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="#ff22201d" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:toggle="http://schemas.android.com/apk/res/com.aee.mokacam">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/video_setting" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/video_resolutions" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@+id/video_resolution" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expand" android:layout_centerInParent="true" android:layout_alignParentEnd="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/my_video_resoultion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_video_resolutions" android:layout_toLeftOf="@+id/video_resolution" android:layout_centerVertical="true" android:layout_marginEnd="50.0dip" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bit_rate" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <com.aee.mokacam.view.ToggleButton android:id="@+id/bit_rate_switch" android:layout_width="43.0dip" android:layout_height="22.0dip" android:layout_marginRight="12.0dip" android:layout_alignParentRight="true" android:layout_centerInParent="true" toggle:isDefaultOn="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/video_stamp" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <com.aee.mokacam.view.ToggleButton android:id="@+id/video_stamp" android:layout_width="43.0dip" android:layout_height="22.0dip" android:layout_marginRight="12.0dip" android:layout_alignParentRight="true" android:layout_centerInParent="true" toggle:isDefaultOn="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:textColor="@color/white" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_setting" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_resolution" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@+id/photo_resolution" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expand" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/my_photo_resolutions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="@string/tv_photo_resolutions" android:layout_toLeftOf="@+id/photo_resolution" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_shot_mode" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@+id/photo_shot_mode" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expand" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/my_photo_shot_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="@string/tv_photo_shot_mode" android:layout_toLeftOf="@+id/photo_shot_mode" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_tlm" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@+id/photo_tlm" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expand" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/my_photo_tlm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="3秒" android:layout_toLeftOf="@+id/photo_tlm" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_stamp" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <com.aee.mokacam.view.ToggleButton android:id="@+id/photo_stamp" android:layout_width="43.0dip" android:layout_height="22.0dip" android:layout_marginRight="12.0dip" android:layout_alignParentRight="true" android:layout_centerInParent="true" toggle:isDefaultOn="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:textColor="@color/white" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/param_setting" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setup_loop_back" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <com.aee.mokacam.view.ToggleButton android:id="@+id/setup_loop_back" android:layout_width="43.0dip" android:layout_height="22.0dip" android:layout_marginRight="12.0dip" android:layout_alignParentRight="true" android:layout_centerInParent="true" toggle:isDefaultOn="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setup_key_tone" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@+id/setup_key_tone" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expand" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/my_setup_key_tone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="标准" android:layout_toLeftOf="@+id/setup_key_tone" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setup_selflamp" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@+id/setup_selflamp" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expand" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/my_setup_selflamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="开" android:layout_toLeftOf="@+id/setup_selflamp" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setup_system_type" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@+id/setup_system_type" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expand" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/my_setup_system_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="NTSC" android:layout_toLeftOf="@+id/setup_system_type" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dv_language" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@+id/dv_language" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expand" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/my_dv_language" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="EN" android:layout_toLeftOf="@+id/dv_language" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setup_time" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@+id/setup_time" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expand" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/my_setup_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="2016-5-20 13:14:52" android:layout_toLeftOf="@+id/setup_time" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/format" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@+id/format" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expand" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nesignation" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@+id/nesignation" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expand" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/tv_pid" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dv_pid" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/dv_pid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CameraType" android:layout_toRightOf="@+id/tv_pid" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/tv_version" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dv_version" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:id="@+id/dv_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Version" android:layout_toRightOf="@+id/tv_version" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:textColor="@color/white" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wifi" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/white" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/set_ssid" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_setting_line" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@+id/set_ssid" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expand" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
