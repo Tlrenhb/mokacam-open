@@ -29,7 +29,7 @@ class bm extends AsyncTask<String, Void, Bitmap> {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public Bitmap doInBackground(String... strArr) {
-        OutputStream outputStreamA;
+        OutputStream outputStreamA = null;
         Bitmap bitmapDecodeStream = null;
         this.b = strArr[0];
         String strA = com.aee.mokacam.utils.o.a(this.b);
@@ -39,39 +39,27 @@ class bm extends AsyncTask<String, Void, Bitmap> {
                 if (gVarB != null) {
                     outputStreamA = gVarB.a(0);
                     try {
-                            if (new File(this.b).exists()) {
-                                if (this.a.b(this.b, outputStreamA)) {
-                                    gVarB.a();
-                                } else {
-                                    gVarB.b();
-                                }
-                            } else if (this.a.a(this.b, outputStreamA)) {
+                        if (new File(this.b).exists()) {
+                            if (this.a.b(this.b, outputStreamA)) {
                                 gVarB.a();
                             } else {
-                                gVarB.a();
+                                gVarB.b();
                             }
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                            if (outputStreamA != null) {
-                                try {
-                                    outputStreamA.close();
-                                } catch (IOException e2) {
-                                    e2.printStackTrace();
-                                }
-                            }
+                        } else if (this.a.a(this.b, outputStreamA)) {
+                            gVarB.a();
+                        } else {
+                            gVarB.a();
                         }
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
-                } else {
-                    outputStreamA = null;
                 }
                 this.a.u.a();
-            } else {
-                outputStreamA = null;
             }
             com.aee.mokacam.utils.j jVarA = this.a.u.a(strA);
             bitmapDecodeStream = jVarA != null ? BitmapFactory.decodeStream(jVarA.a(0)) : null;
         } catch (Exception e4) {
-            outputStreamA = null;
+            e4.printStackTrace();
         }
         if (bitmapDecodeStream == null) {
             if (outputStreamA != null) {
