@@ -20,7 +20,7 @@ public final class x {
     private x() {
     }
 
-    public static Http http() {
+    public static org.xutils.http.Http http() {
         return org.xutils.http.Http.INSTANCE;
     }
 }

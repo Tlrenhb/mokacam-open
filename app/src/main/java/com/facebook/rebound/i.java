@@ -30,7 +30,7 @@ public class i {
         int i = a;
         a = i + 1;
         this.d = sb.append(i).toString();
-        a(k.c);
+        this.b = k.c;
     }
 
     private double a(j jVar) {
