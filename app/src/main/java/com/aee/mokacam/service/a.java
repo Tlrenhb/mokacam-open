@@ -89,6 +89,7 @@ public class a {
     }
 
     public ReceiveMsg a(SendMsg sendMsg) {
+        ReceiveMsg receiveMsg;
         if (!(AeeApplication.a().e == -1000 ? g() : true)) {
             return null;
         }
