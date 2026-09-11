@@ -24,14 +24,12 @@ class ab extends Thread {
         long j = 0;
         com.aee.mokacam.utils.m.b("FlightControl", "20160425---ReceiveThread-- =" + Thread.currentThread().getId());
         while (this.a.F) {
-            try {
-            } catch (IOException e2) {
-                e2.printStackTrace();
-            } catch (Exception e3) {
-                e3.printStackTrace();
-            }
             if (this.a.a) {
-                Thread.sleep(1000L);
+                try {
+                    Thread.sleep(1000L);
+                } catch (InterruptedException e2) {
+                    e2.printStackTrace();
+                }
                 com.aee.mokacam.utils.m.b("FlightControl", "20160223---ReceiveThread()--isPause=" + Thread.currentThread().getId());
                 break;
             }
