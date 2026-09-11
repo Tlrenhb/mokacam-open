@@ -289,7 +289,7 @@ public final class e implements Closeable {
     }
 
     /* JADX INFO: Access modifiers changed from: */
-    public synchronized void e() {
+    public synchronized void e() throws IOException {
         if (this.i != null) {
             this.i.close();
         }
