@@ -24,8 +24,7 @@ class k implements Runnable {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public void run() {
-        ReceiveMsg receiveMsg;
-        Exception e;
+        ReceiveMsg receiveMsg = null;
         if (AeeApplication.a().e == -1000 ? this.a.g() : true) {
             try {
                 String strC = a.a().c(this.b.toJson());
@@ -38,13 +37,12 @@ class k implements Runnable {
                             receiveMsg = (ReceiveMsg) ResolveJson.resolveNormalInfo(a.a().c(this.b.toJson()), ReceiveMsg.class);
                         }
                     } catch (Exception e2) {
-                        e = e2;
-                        e.printStackTrace();
+                        e2.printStackTrace();
                     }
                 }
             } catch (Exception e3) {
                 receiveMsg = null;
-                e = e3;
+                e3.printStackTrace();
             }
         }
         if (this.c != null) {
