@@ -125,6 +125,7 @@ public class SectionHeadersGridView extends RecyclerView {
 
         private final BaseAdapter src;
         private final SectionHeadersGridView.HeaderAdapter headers;
+        private final SectionHeadersGridView grid;
         /** Flat layout: header marker positions encoded as -(srcIndex + 1). */
         private final ArrayList<Integer> flat = new ArrayList<>();
 
