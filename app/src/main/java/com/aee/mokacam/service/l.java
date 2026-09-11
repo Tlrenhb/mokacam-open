@@ -7,7 +7,7 @@ import com.aee.mokacam.bean.ReceiveMsg;
 /* JADX INFO: loaded from: classes.dex */
 class l implements n {
     final /* synthetic */ a a;
-    private final /* synthetic */ Handler b;
+    final /* synthetic */ Handler b;
 
     l(a aVar, Handler handler) {
         this.a = aVar;

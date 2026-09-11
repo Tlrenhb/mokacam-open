@@ -8,19 +8,19 @@ import java.net.Socket;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ac {
-    private static ac b;
-    private static String c = "192.168.1.1";
-    private static int d = 8888;
-    private static InputStream f;
-    private static OutputStream g;
-    private static al h;
-    private static Context i;
-    private Socket e;
-    private boolean j;
+    static ac b;
+    static String c = "192.168.1.1";
+    static int d = 8888;
+    static InputStream f;
+    static OutputStream g;
+    static al h;
+    static Context i;
+    Socket e;
+    boolean j;
     public boolean a = false;
-    private boolean k = false;
-    private boolean l = false;
-    private boolean m = false;
+    boolean k = false;
+    boolean l = false;
+    boolean m = false;
 
     public ac() {
         this.j = false;
@@ -37,7 +37,7 @@ public class ac {
         return b;
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void i() {
         new Thread(new af(this)).start();
     }

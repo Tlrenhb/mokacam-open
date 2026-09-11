@@ -6,7 +6,7 @@ import com.aee.mokacam.bean.ReceiveMsg;
 /* JADX INFO: loaded from: classes.dex */
 class cd implements com.aee.mokacam.service.n {
     final /* synthetic */ SelectLibraryActivity a;
-    private final /* synthetic */ String b;
+    final /* synthetic */ String b;
 
     cd(SelectLibraryActivity selectLibraryActivity, String str) {
         this.a = selectLibraryActivity;

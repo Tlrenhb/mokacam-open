@@ -5,11 +5,11 @@ import com.aee.mokacam.AeeApplication;
 /* JADX INFO: loaded from: classes.dex */
 public class v {
     public static x b;
-    private static v d;
+    static v d;
     protected final String a = "FlightCMD";
     public boolean c = false;
-    private long e = 0;
-    private long f = 100;
+    long e = 0;
+    long f = 100;
 
     public v() {
         b = x.c();

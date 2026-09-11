@@ -12,18 +12,18 @@ import java.util.List;
 
 /* JADX INFO: loaded from: classes.dex */
 public class DroneInSupportActivity extends BaseActivity {
-    private ExpandableListView a;
-    private List<String> b = new ArrayList();
-    private List<String> c = new ArrayList();
-    private List<List<String>> d = new ArrayList();
-    private ImageView e;
+    ExpandableListView a;
+    List<String> b = new ArrayList();
+    List<String> c = new ArrayList();
+    List<List<String>> d = new ArrayList();
+    ImageView e;
 
-    private void a() {
+    void a() {
         this.a = (ExpandableListView) findViewById(R.id.expand_listview);
         this.e = (ImageView) findViewById(R.id.iv_dro_back);
     }
 
-    private void b() {
+    void b() {
         this.b.add("What do I have to bear in mind before my first flight?");
         this.b.add("There is no response when drone is powered on: no sound,indicator light not on.");
         this.b.add("The power light is on, but the drone does not operatre.");
@@ -40,7 +40,7 @@ public class DroneInSupportActivity extends BaseActivity {
         this.a.setAdapter(new aw(this, null));
     }
 
-    private void c() {
+    void c() {
         this.e.setOnClickListener(this);
     }
 

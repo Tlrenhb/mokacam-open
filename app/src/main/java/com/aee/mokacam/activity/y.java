@@ -10,8 +10,8 @@ import java.io.File;
 /* JADX INFO: loaded from: classes.dex */
 class y implements View.OnClickListener {
     final /* synthetic */ AeeCameraSettingActivity a;
-    private final /* synthetic */ PopupWindow b;
-    private final /* synthetic */ int c;
+    final /* synthetic */ PopupWindow b;
+    final /* synthetic */ int c;
 
     y(AeeCameraSettingActivity aeeCameraSettingActivity, PopupWindow popupWindow, int i) {
         this.a = aeeCameraSettingActivity;

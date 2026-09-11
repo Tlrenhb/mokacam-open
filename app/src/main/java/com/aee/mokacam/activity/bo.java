@@ -8,7 +8,7 @@ import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 /** ImageLoadingListener capturing decoded bitmaps into the album model. */
 public class bo implements ImageLoadingListener {
     final /* synthetic */ bn a;
-    private int b;
+    int b;
 
     public bo(bn bnVar, int i) {
         this.a = bnVar;

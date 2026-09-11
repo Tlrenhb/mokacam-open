@@ -11,17 +11,17 @@ import com.aee.mokacam.bean.SendMsg;
 
 /* JADX INFO: loaded from: classes.dex */
 public class AeeCameraWifiConfigActivity extends BaseActivity {
-    private EditText a;
-    private EditText b;
-    private EditText c;
+    EditText a;
+    EditText b;
+    EditText c;
 
-    private void a() {
+    void a() {
         this.a = (EditText) findViewById(R.id.new_ssid);
         this.b = (EditText) findViewById(R.id.new_password);
         this.c = (EditText) findViewById(R.id.confirm_password);
     }
 
-    private void b() {
+    void b() {
         String string = this.a.getText().toString();
         String string2 = this.b.getText().toString();
         String string3 = this.c.getText().toString();

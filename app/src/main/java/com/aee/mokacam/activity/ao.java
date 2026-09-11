@@ -6,8 +6,8 @@ import com.aee.mokacam.constants.AeeConstants;
 /* JADX INFO: loaded from: classes.dex */
 class ao implements Runnable {
     final /* synthetic */ AeeCameraSettingActivity a;
-    private final /* synthetic */ String b;
-    private final /* synthetic */ String c;
+    final /* synthetic */ String b;
+    final /* synthetic */ String c;
 
     ao(AeeCameraSettingActivity aeeCameraSettingActivity, String str, String str2) {
         this.a = aeeCameraSettingActivity;

@@ -14,24 +14,24 @@ import java.io.InputStreamReader;
 
 /* JADX INFO: loaded from: classes.dex */
 public class LegalActivity extends BaseActivity {
-    private ImageView a;
-    private TextView b;
-    private TextView c;
-    private TextView d;
-    private String e;
+    ImageView a;
+    TextView b;
+    TextView c;
+    TextView d;
+    String e;
 
-    private void a() {
+    void a() {
         this.e = getResources().getConfiguration().locale.getLanguage();
     }
 
-    private void b() {
+    void b() {
         this.a = (ImageView) findViewById(R.id.iv_legal_back);
         this.b = (TextView) findViewById(R.id.tv_legal_content);
         this.c = (TextView) findViewById(R.id.tv_content_title);
         this.d = (TextView) findViewById(R.id.tv_legal_title);
     }
 
-    private void c() {
+    void c() {
         this.c.setText(R.string.legal_camera_title);
         this.d.setText(R.string.disclaimer);
         if (this.e.equals("zh")) {
@@ -41,7 +41,7 @@ public class LegalActivity extends BaseActivity {
         }
     }
 
-    private void d() {
+    void d() {
         this.a.setOnClickListener(new ax(this));
     }
 

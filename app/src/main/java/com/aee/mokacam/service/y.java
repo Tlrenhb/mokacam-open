@@ -8,7 +8,7 @@ import org.xutils.BuildConfig;
 /* JADX INFO: loaded from: classes.dex */
 class y implements Runnable {
     final /* synthetic */ x a;
-    private boolean b = false;
+    boolean b = false;
 
     y(x xVar) {
         this.a = xVar;

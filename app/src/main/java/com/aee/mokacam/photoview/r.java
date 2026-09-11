@@ -14,7 +14,6 @@ import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.widget.ImageView;
-import com.alibaba.fastjson.asm.Opcodes;
 import java.lang.ref.WeakReference;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -123,7 +122,7 @@ public class r implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutL
                 if (this.F != ImageView.ScaleType.CENTER_INSIDE) {
                     RectF rectF = new RectF(0.0f, 0.0f, intrinsicWidth, intrinsicHeight);
                     RectF rectF2 = new RectF(0.0f, 0.0f, fC, fD);
-                    if (((int) this.D) % Opcodes.GETFIELD != 0) {
+                    if (((int) this.D) % 180 != 0) {
                         rectF = new RectF(0.0f, 0.0f, intrinsicHeight, intrinsicWidth);
                     }
                     switch (n()[this.F.ordinal()]) {

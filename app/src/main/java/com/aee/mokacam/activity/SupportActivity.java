@@ -20,12 +20,12 @@ import java.util.ArrayList;
 
 /* JADX INFO: loaded from: classes.dex */
 public class SupportActivity extends BaseActivity {
-    private ImageView a;
-    private ListView b;
-    private ListView c;
-    private Dialog d;
+    ImageView a;
+    ListView b;
+    ListView c;
+    Dialog d;
 
-    private void a() {
+    void a() {
         this.a = (ImageView) findViewById(R.id.iv_support_back);
         this.b = (ListView) findViewById(R.id.support_listview1);
         this.c = (ListView) findViewById(R.id.support_listview2);
@@ -35,7 +35,7 @@ public class SupportActivity extends BaseActivity {
         this.c.setDividerHeight(1);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a(TextView textView) {
         String str = textView.getText().toString().split("\\+")[1];
         Intent intent = new Intent();
@@ -44,14 +44,14 @@ public class SupportActivity extends BaseActivity {
         startActivity(intent);
     }
 
-    private void a(TextView textView, TextView textView2, TextView textView3, TextView textView4) {
+    void a(TextView textView, TextView textView2, TextView textView3, TextView textView4) {
         textView.setOnClickListener(new dh(this, textView));
         textView2.setOnClickListener(new di(this, textView2));
         textView3.setOnClickListener(new dj(this, textView3));
         textView4.setOnClickListener(new dk(this));
     }
 
-    private void b() {
+    void b() {
         ArrayList arrayList = new ArrayList();
         arrayList.add(getResources().getString(R.string.support_camera));
         arrayList.add(getResources().getString(R.string.support_app));
@@ -61,13 +61,13 @@ public class SupportActivity extends BaseActivity {
         this.c.setAdapter((ListAdapter) new de(this, this, android.R.layout.simple_list_item_1, arrayList2, arrayList2));
     }
 
-    private void c() {
+    void c() {
         this.a.setOnClickListener(this);
         this.b.setOnItemClickListener(new df(this));
         this.c.setOnItemClickListener(new dg(this));
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void d() {
         View viewInflate = View.inflate(this, R.layout.contactdialog_layout, null);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

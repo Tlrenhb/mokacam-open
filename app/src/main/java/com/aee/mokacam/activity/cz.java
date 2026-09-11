@@ -6,7 +6,7 @@ import android.view.SurfaceHolder;
 class cz implements SurfaceHolder.Callback {
     final /* synthetic */ ShowPicOrVideoActivity a;
 
-    private cz(ShowPicOrVideoActivity showPicOrVideoActivity) {
+    cz(ShowPicOrVideoActivity showPicOrVideoActivity) {
         this.a = showPicOrVideoActivity;
     }
 

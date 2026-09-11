@@ -8,7 +8,7 @@ import org.xutils.common.Callback;
 /* JADX INFO: loaded from: classes.dex */
 class av implements Callback.CommonCallback<File>, Callback.ProgressCallback<File> {
     final /* synthetic */ DownLoadActivity a;
-    private int b;
+    int b;
 
     public av(DownLoadActivity downLoadActivity, int i) {
         this.a = downLoadActivity;

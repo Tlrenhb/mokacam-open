@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 /* JADX INFO: loaded from: classes.dex */
 class ac implements View.OnClickListener {
     final /* synthetic */ AeeCameraSettingActivity a;
-    private final /* synthetic */ PopupWindow b;
+    final /* synthetic */ PopupWindow b;
 
     ac(AeeCameraSettingActivity aeeCameraSettingActivity, PopupWindow popupWindow) {
         this.a = aeeCameraSettingActivity;

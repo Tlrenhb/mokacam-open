@@ -3,7 +3,7 @@ package com.aee.mokacam.activity;
 /* JADX INFO: loaded from: classes.dex */
 class ar implements com.aee.mokacam.widget.f {
     final /* synthetic */ DownLoadActivity a;
-    private final /* synthetic */ com.aee.mokacam.widget.e b;
+    final /* synthetic */ com.aee.mokacam.widget.e b;
 
     ar(DownLoadActivity downLoadActivity, com.aee.mokacam.widget.e eVar) {
         this.a = downLoadActivity;

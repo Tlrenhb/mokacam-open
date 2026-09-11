@@ -7,7 +7,7 @@ import java.io.IOException;
 /* JADX INFO: loaded from: classes.dex */
 class cx implements com.aee.mokacam.service.n {
     final /* synthetic */ ShowPicOrVideoActivity a;
-    private final /* synthetic */ String b;
+    final /* synthetic */ String b;
 
     cx(ShowPicOrVideoActivity showPicOrVideoActivity, String str) {
         this.a = showPicOrVideoActivity;

@@ -12,7 +12,7 @@ import com.aee.mokacam.AeeApplication;
 class bn extends BaseAdapter implements com.tonicartos.widget.stickygridheaders.t {
     final /* synthetic */ LibraryActivity a;
 
-    private bn(LibraryActivity libraryActivity) {
+    bn(LibraryActivity libraryActivity) {
         this.a = libraryActivity;
     }
 

@@ -20,24 +20,24 @@ import org.xutils.BuildConfig;
 
 /* JADX INFO: loaded from: classes.dex */
 public class x {
-    private static InputStream D;
-    private static OutputStream E;
-    private static List<Handler> G;
-    private static al I;
-    private static Context J;
+    static InputStream D;
+    static OutputStream E;
+    static List<Handler> G;
+    static al I;
+    static Context J;
     public static byte[] c;
-    private static x z;
-    private Socket C;
-    private boolean F;
-    private com.aee.mokacam.bean.a K;
-    private long N;
-    private static String A = "192.168.3.60";
-    private static int B = 7978;
+    static x z;
+    Socket C;
+    boolean F;
+    com.aee.mokacam.bean.a K;
+    long N;
+    static String A = "192.168.3.60";
+    static int B = 7978;
     public static int d = 4096;
     public static int e = 0;
     public static int x = 0;
     protected boolean a = false;
-    private long H = 0;
+    long H = 0;
     public int b = 0;
     public String f = BuildConfig.FLAVOR;
     public boolean g = false;
@@ -55,15 +55,15 @@ public class x {
     public int s = 0;
     public long t = 0;
     public boolean u = false;
-    private boolean L = false;
+    boolean L = false;
     public boolean v = false;
     public int w = 0;
-    private boolean M = false;
-    private boolean O = true;
-    private long P = 0;
-    private long Q = 0;
-    private boolean R = false;
-    private boolean S = false;
+    boolean M = false;
+    boolean O = true;
+    long P = 0;
+    long Q = 0;
+    boolean R = false;
+    boolean S = false;
     public String y = BuildConfig.FLAVOR;
 
     public x() {
@@ -71,7 +71,7 @@ public class x {
         this.F = true;
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a(int i, Object obj) {
         for (Handler handler : G) {
             if (handler != null) {
@@ -83,7 +83,7 @@ public class x {
         }
     }
 
-    private int[] a(byte[] bArr, int i) {
+    int[] a(byte[] bArr, int i) {
         int i2 = 0;
         int[] iArr = new int[10];
         byte b = (byte) AeeConstants.q;
@@ -105,7 +105,7 @@ public class x {
         return iArr;
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public int b(byte[] bArr, int i) {
         int[] iArr = new int[10];
         int[] iArrA = a(bArr, i);
@@ -117,7 +117,7 @@ public class x {
         return -1;
     }
 
-    private void b(int i, Object obj) {
+    void b(int i, Object obj) {
         if (G != null) {
             try {
                 for (Handler handler : G) {
@@ -134,7 +134,7 @@ public class x {
         }
     }
 
-    private void b(byte[] bArr) {
+    void b(byte[] bArr) {
         if (!Environment.getExternalStorageState().equals("mounted")) {
             Log.d("TestFile", "SD card is not avaiable/writeable right now.");
             return;
@@ -176,7 +176,7 @@ public class x {
         return ((KeyguardManager) AeeApplication.a().getApplicationContext().getSystemService("keyguard")).inKeyguardRestrictedInputMode();
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void p() {
         com.aee.mokacam.bean.d dVar = new com.aee.mokacam.bean.d(2);
         if (AeeApplication.a().ao) {
@@ -185,7 +185,7 @@ public class x {
         a(dVar.b());
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void q() {
         com.aee.mokacam.bean.d dVar = new com.aee.mokacam.bean.d(2);
         dVar.a();
@@ -194,22 +194,22 @@ public class x {
         com.aee.mokacam.utils.m.b("test", "20161117- msg1 = " + com.aee.mokacam.utils.k.a(com.aee.mokacam.utils.k.a(bArrB).toUpperCase(), 2));
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void r() {
         new Thread(new aa(this)).start();
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void s() {
         new ab(this).start();
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void t() {
         b(32778, (Object) null);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void u() {
         long jCurrentTimeMillis = System.currentTimeMillis();
         if ((this.Q == 0 || jCurrentTimeMillis - this.Q > 1000) && AeeApplication.a().aj) {

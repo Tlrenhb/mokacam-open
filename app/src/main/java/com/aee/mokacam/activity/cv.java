@@ -3,7 +3,7 @@ package com.aee.mokacam.activity;
 /* JADX INFO: loaded from: classes.dex */
 class cv implements Runnable {
     final /* synthetic */ cu a;
-    private final /* synthetic */ String b;
+    final /* synthetic */ String b;
 
     cv(cu cuVar, String str) {
         this.a = cuVar;

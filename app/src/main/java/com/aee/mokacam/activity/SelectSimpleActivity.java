@@ -20,12 +20,12 @@ public class SelectSimpleActivity extends BaseActivity {
     protected ReceiveMsg c;
     protected boolean d = false;
     protected String[] e;
-    private TextView f;
-    private int g;
-    private ListView h;
-    private String k;
+    TextView f;
+    int g;
+    ListView h;
+    String k;
 
-    private void a() {
+    void a() {
         this.f = (TextView) findViewById(R.id.simple_set_title);
         this.h = (ListView) findViewById(R.id.setting_detail);
         this.h.setDivider(new ColorDrawable(-1));
@@ -34,7 +34,7 @@ public class SelectSimpleActivity extends BaseActivity {
         new Thread(new ch(this)).start();
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void b() {
         this.k = AeeApplication.a().bh;
         switch (this.g) {
@@ -71,11 +71,11 @@ public class SelectSimpleActivity extends BaseActivity {
         c();
     }
 
-    private void c() {
+    void c() {
         this.h.setAdapter((ListAdapter) new cj(this, this, android.R.layout.simple_list_item_1, this.a));
     }
 
-    private void d() {
+    void d() {
         this.h.setOnItemClickListener(new ck(this));
     }
 

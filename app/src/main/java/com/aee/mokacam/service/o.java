@@ -19,20 +19,20 @@ import org.xutils.BuildConfig;
 
 /* JADX INFO: loaded from: classes.dex */
 public class o {
-    private static o c;
-    private static InputStream e;
-    private static OutputStream f;
-    private static int l = 8787;
-    private boolean b;
-    private Socket d;
-    private List<Handler> g;
-    private boolean j;
-    private boolean k;
-    private Handler h = new Handler();
-    private boolean i = false;
+    static o c;
+    static InputStream e;
+    static OutputStream f;
+    static int l = 8787;
+    boolean b;
+    Socket d;
+    List<Handler> g;
+    boolean j;
+    boolean k;
+    Handler h = new Handler();
+    boolean i = false;
     Runnable a = new p(this);
 
-    private o() {
+    o() {
         this.b = false;
         this.b = true;
     }
@@ -44,7 +44,7 @@ public class o {
         return c;
     }
 
-    private void a(int i, Object obj) {
+    void a(int i, Object obj) {
         if (this.g != null) {
             for (Handler handler : this.g) {
                 if (handler != null) {
@@ -66,7 +66,7 @@ public class o {
         }
     }
 
-    private String c(String str, long j) {
+    String c(String str, long j) {
         long jCurrentTimeMillis = System.currentTimeMillis();
         while (!a(str) && System.currentTimeMillis() - jCurrentTimeMillis <= j) {
             try {
@@ -86,7 +86,7 @@ public class o {
         return str;
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public int d(ReceiveMsg receiveMsg) {
         String type = receiveMsg.getType();
         int msg_id = receiveMsg.getMsg_id();
@@ -99,7 +99,7 @@ public class o {
         return 0;
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void g() {
         a(32778, (Object) null);
     }

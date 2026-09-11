@@ -48,61 +48,61 @@ import org.xutils.http.RequestParams;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSeekBarChangeListener, MediaPlayer.OnBufferingUpdateListener, MediaPlayer.OnCompletionListener, MediaPlayer.OnPreparedListener, MediaPlayer.OnVideoSizeChangedListener {
-    private Animation A;
-    private int B;
-    private int C;
-    private FrameLayout D;
-    private da E;
-    private RelativeLayout F;
-    private String G;
-    private TimerTask H;
-    private cy I;
-    private Callback.Cancelable J;
-    private SurfaceHolder L;
-    private Timer M;
-    private LinearLayout N;
-    private boolean O;
-    private LinearLayout P;
-    private long Q;
-    private ProgressBar R;
-    private String S;
-    private ImageView T;
-    private ImageView U;
-    private TextView V;
-    private TextView W;
-    private RelativeLayout X;
-    private LinearLayout Y;
-    private RelativeLayout Z;
-    private int ad;
-    private int ae;
-    private LazyViewPager e;
-    private int f;
-    private List<com.aee.mokacam.bean.g> g;
-    private SurfaceView h;
-    private SeekBar k;
-    private TextView l;
-    private ImageView m;
-    private ImageView n;
-    private ImageView o;
-    private String p;
-    private com.aee.mokacam.utils.e s;
-    private MediaPlayer t;
-    private long u;
-    private Animation x;
-    private Animation y;
-    private Animation z;
-    private boolean q = true;
-    private int r = 1;
-    private int v = 0;
-    private boolean w = true;
-    private boolean K = false;
+    Animation A;
+    int B;
+    int C;
+    FrameLayout D;
+    da E;
+    RelativeLayout F;
+    String G;
+    TimerTask H;
+    cy I;
+    Callback.Cancelable J;
+    SurfaceHolder L;
+    Timer M;
+    LinearLayout N;
+    boolean O;
+    LinearLayout P;
+    long Q;
+    ProgressBar R;
+    String S;
+    ImageView T;
+    ImageView U;
+    TextView V;
+    TextView W;
+    RelativeLayout X;
+    LinearLayout Y;
+    RelativeLayout Z;
+    int ad;
+    int ae;
+    LazyViewPager e;
+    int f;
+    List<com.aee.mokacam.bean.g> g;
+    SurfaceView h;
+    SeekBar k;
+    TextView l;
+    ImageView m;
+    ImageView n;
+    ImageView o;
+    String p;
+    com.aee.mokacam.utils.e s;
+    MediaPlayer t;
+    long u;
+    Animation x;
+    Animation y;
+    Animation z;
+    boolean q = true;
+    int r = 1;
+    int v = 0;
+    boolean w = true;
+    boolean K = false;
     public boolean a = false;
     public boolean b = false;
     public boolean c = false;
     boolean d = false;
-    private boolean aa = false;
-    private boolean ab = false;
-    private long ac = 0;
+    boolean aa = false;
+    boolean ab = false;
+    long ac = 0;
 
     public static String a(long j) {
         boolean z = j < 0;
@@ -120,7 +120,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         return String.valueOf(z ? "-" : BuildConfig.FLAVOR) + i2 + ":" + decimalFormat.format(i);
     }
 
-    private Callback.Cancelable a(String str, String str2, Callback.CommonCallback<File> commonCallback) {
+    Callback.Cancelable a(String str, String str2, Callback.CommonCallback<File> commonCallback) {
         if (new File(str2).exists()) {
             return null;
         }
@@ -129,7 +129,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         return org.xutils.x.http().get(requestParams, commonCallback);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a(int i) {
         File file = new File(String.valueOf(AeeConstants.a) + File.separator + this.g.get(i).f() + ".tmp");
         if (file.exists()) {
@@ -137,7 +137,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a(boolean z, int i) {
         if (!z) {
             com.aee.mokacam.utils.w.a(R.string.delete_failed, true);
@@ -156,12 +156,12 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         com.aee.mokacam.utils.w.a(R.string.delete_success, true);
     }
 
-    private String b(int i) {
+    String b(int i) {
         String str = String.valueOf(AeeConstants.a) + File.separator + this.g.get(i).a();
         return new File(str).exists() ? "file:///" + str : String.valueOf(AeeApplication.a().h) + this.g.get(i).b + this.g.get(i).a();
     }
 
-    private void b() {
+    void b() {
         this.e = (LazyViewPager) findViewById(R.id.showpic_viewpager);
         this.T = (ImageView) findViewById(R.id.iv_showPic_del);
         this.U = (ImageView) findViewById(R.id.iv_showPic_download);
@@ -180,7 +180,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         this.F = (RelativeLayout) findViewById(R.id.rl_bottom);
     }
 
-    private void c() {
+    void c() {
         q();
         this.f = getIntent().getIntExtra("position", 0);
         this.G = getIntent().getStringExtra("fromWhere");
@@ -198,19 +198,19 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         this.A = AnimationUtils.loadAnimation(this, R.anim.slide_bottom_out);
     }
 
-    private void d() {
+    void d() {
         this.L = this.h.getHolder();
         this.L.addCallback(new cz(this, null));
         this.L.setFormat(1);
     }
 
-    private void e() {
+    void e() {
         this.o.setOnClickListener(this);
         this.k.setOnSeekBarChangeListener(this);
         this.N.setOnTouchListener(new cs(this));
     }
 
-    private void f() {
+    void f() {
         int width;
         int height = 0;
         this.O = com.aee.mokacam.utils.a.b(this);
@@ -236,7 +236,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         m();
     }
 
-    private void g() {
+    void g() {
         i();
         try {
             this.t = new MediaPlayer(this);
@@ -257,7 +257,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void h() {
         if (this.t != null) {
             this.t.release();
@@ -265,13 +265,13 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void i() {
         this.c = false;
         this.a = false;
     }
 
-    private void j() {
+    void j() {
         int width;
         int height = 0;
         if (this.D != null) {
@@ -290,7 +290,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         this.h.invalidate();
     }
 
-    private void k() {
+    void k() {
         int width;
         int height = 0;
         if (this.D != null) {
@@ -309,7 +309,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         this.h.invalidate();
     }
 
-    private void l() {
+    void l() {
         int height;
         int width = 0;
         if (this.D != null) {
@@ -328,7 +328,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         this.h.invalidate();
     }
 
-    private void m() {
+    void m() {
         if (this.M == null) {
             this.M = new Timer();
         }
@@ -338,7 +338,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void n() {
         if (new File(String.valueOf(AeeConstants.a) + File.separator + this.g.get(this.f).a()).exists()) {
             com.aee.mokacam.utils.w.a(R.string.singleisdownloadedwarning, true);
@@ -347,7 +347,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         }
     }
 
-    private void o() {
+    void o() {
         if (!this.q) {
             com.aee.mokacam.utils.w.a(R.string.singledownloadwarning, true);
             return;
@@ -373,7 +373,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         com.aee.mokacam.utils.w.a(R.string.singlestartDownlad, true);
     }
 
-    private Bitmap p() {
+    Bitmap p() {
         try {
             com.aee.mokacam.utils.j jVarA = this.s.a(com.aee.mokacam.utils.o.a(b(this.f)));
             if (jVarA != null) {
@@ -386,7 +386,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         }
     }
 
-    private void q() {
+    void q() {
         File fileA = com.aee.mokacam.utils.t.a(this.j, "videoThumbnailCache");
         if (!fileA.exists()) {
             fileA.mkdirs();
@@ -398,7 +398,7 @@ public class ShowPicOrVideoActivity extends BaseActivity implements SeekBar.OnSe
         }
     }
 
-    private void r() {
+    void r() {
         com.aee.mokacam.widget.e eVar = new com.aee.mokacam.widget.e((Context) this, false);
         eVar.show();
         eVar.d(R.string.cancel);

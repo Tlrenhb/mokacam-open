@@ -6,7 +6,7 @@ import android.widget.TextView;
 /* JADX INFO: loaded from: classes.dex */
 class di implements View.OnClickListener {
     final /* synthetic */ SupportActivity a;
-    private final /* synthetic */ TextView b;
+    final /* synthetic */ TextView b;
 
     di(SupportActivity supportActivity, TextView textView) {
         this.a = supportActivity;

@@ -13,27 +13,27 @@ import com.aee.mokacam.widget.WifiPswChangeView;
 
 /* JADX INFO: loaded from: classes.dex */
 public class WifiPswChangeActivity extends BaseActivity {
-    private WifiPswChangeView a;
-    private WifiPswChangeView b;
-    private ImageView c;
-    private TextView d;
-    private String e;
-    private String f;
-    private String g;
-    private String h;
+    WifiPswChangeView a;
+    WifiPswChangeView b;
+    ImageView c;
+    TextView d;
+    String e;
+    String f;
+    String g;
+    String h;
 
-    private void a() {
+    void a() {
         this.a = (WifiPswChangeView) findViewById(R.id.remotecontroll);
         this.b = (WifiPswChangeView) findViewById(R.id.wflightcontrol);
         this.c = (ImageView) findViewById(R.id.iv_backup);
         this.d = (TextView) findViewById(R.id.tv_finish);
     }
 
-    private void b() {
+    void b() {
         this.a.setProductTitle(R.string.remotecontroll);
     }
 
-    private void c() {
+    void c() {
         this.c.setOnClickListener(this);
         this.d.setOnClickListener(this);
     }

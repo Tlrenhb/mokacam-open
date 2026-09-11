@@ -32,7 +32,7 @@ public class BaseActivity extends FragmentActivity implements Handler.Callback, 
 
     /* Runtime permissions required on API 23+: storage for the local album
      * and fine location for reading the Wi-Fi SSID (camera detection). */
-    private void d() {
+    void d() {
         if (android.os.Build.VERSION.SDK_INT < 23) {
             return;
         }

@@ -10,20 +10,20 @@ import com.aee.mokacam.photoview.PhotoView;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ProductParamsActivity extends BaseActivity {
-    private ImageView a;
-    private PhotoView b;
-    private String c;
+    ImageView a;
+    PhotoView b;
+    String c;
 
-    private void a() {
+    void a() {
         this.c = getResources().getConfiguration().locale.getLanguage();
     }
 
-    private void b() {
+    void b() {
         this.a = (ImageView) findViewById(R.id.iv_params_back);
         this.b = (PhotoView) findViewById(R.id.pv_params);
     }
 
-    private void c() {
+    void c() {
         if (this.c.equals("zh")) {
             this.b.setImageResource(R.drawable.lyfe_titan_zh);
         } else if (this.c.equals("en")) {
@@ -33,7 +33,7 @@ public class ProductParamsActivity extends BaseActivity {
         }
     }
 
-    private void d() {
+    void d() {
         this.a.setOnClickListener(new bu(this));
     }
 

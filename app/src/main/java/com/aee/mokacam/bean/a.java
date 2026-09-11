@@ -2,14 +2,13 @@ package com.aee.mokacam.bean;
 
 import androidx.core.view.MotionEventCompat;
 import com.aee.mokacam.AeeApplication;
-import com.alibaba.fastjson.asm.Opcodes;
 import java.util.Arrays;
 
 /* JADX INFO: loaded from: classes.dex */
 public class a {
     public static final byte[] a = {-2, 18, 98, -1, 2};
     public static final byte[] b = {-2, -1, -1, 1, 1};
-    public static final int[] c = {16, 70, 15, Opcodes.IFNE};
+    public static final int[] c = {16, 70, 15, 154};
     public byte[] d;
     public int e;
     public int f;

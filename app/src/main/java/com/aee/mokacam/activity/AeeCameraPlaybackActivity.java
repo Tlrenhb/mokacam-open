@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class AeeCameraPlaybackActivity extends BaseActivity {
     boolean a;
 
-    private void a() {
+    void a() {
         AeeApplication.a();
         if (AeeApplication.a().f) {
             com.aee.mokacam.service.a.a().a(new t(this), new SendMsg(AeeConstants.l, "/tmp/SD0/moka/", null));
@@ -28,7 +28,7 @@ public class AeeCameraPlaybackActivity extends BaseActivity {
         }
     }
 
-    private void b() {
+    void b() {
         com.aee.mokacam.service.a.a().a(new u(this), new SendMsg(AeeConstants.m, null, null));
     }
 

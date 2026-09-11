@@ -20,31 +20,31 @@ import com.facebook.rebound.q;
 /* JADX INFO: loaded from: classes.dex */
 public class ToggleButton extends View {
     h a;
-    private o b;
-    private i c;
-    private float d;
-    private int e;
-    private int f;
-    private int g;
-    private int h;
-    private int i;
-    private Paint j;
-    private boolean k;
-    private int l;
-    private float m;
-    private float n;
-    private float o;
-    private float p;
-    private float q;
-    private int r;
-    private float s;
-    private float t;
-    private RectF u;
-    private boolean v;
-    private boolean w;
-    private c x;
+    o b;
+    i c;
+    float d;
+    int e;
+    int f;
+    int g;
+    int h;
+    int i;
+    Paint j;
+    boolean k;
+    int l;
+    float m;
+    float n;
+    float o;
+    float p;
+    float q;
+    int r;
+    float s;
+    float t;
+    RectF u;
+    boolean v;
+    boolean w;
+    c x;
 
-    private ToggleButton(Context context) {
+    ToggleButton(Context context) {
         super(context);
         this.e = Color.parseColor("#4ebb7f");
         this.f = Color.parseColor("#dadbda");
@@ -91,11 +91,11 @@ public class ToggleButton extends View {
         setup(attributeSet);
     }
 
-    private int a(int i, int i2, int i3) {
+    int a(int i, int i2, int i3) {
         return Math.min(Math.max(i, i2), i3);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a(double d) {
         this.s = (float) q.a(d, 0.0d, 1.0d, this.p, this.q);
         this.t = (float) q.a(1.0d - d, 0.0d, 1.0d, 10.0d, this.r);
@@ -110,7 +110,7 @@ public class ToggleButton extends View {
         postInvalidate();
     }
 
-    private void b(boolean z) {
+    void b(boolean z) {
         if (z) {
             this.c.b(this.k ? 1 : 0);
         } else {

@@ -8,8 +8,8 @@ import com.aee.mokacam.bean.ReceiveMsg;
 /* JADX INFO: loaded from: classes.dex */
 class m implements n {
     final /* synthetic */ a a;
-    private final /* synthetic */ Handler b;
-    private final /* synthetic */ int c;
+    final /* synthetic */ Handler b;
+    final /* synthetic */ int c;
 
     m(a aVar, Handler handler, int i) {
         this.a = aVar;

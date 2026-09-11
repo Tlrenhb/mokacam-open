@@ -22,78 +22,77 @@ import com.aee.mokacam.R;
 import com.aee.mokacam.AeeApplication;
 import com.aee.mokacam.bean.ReceiveMsg;
 import com.aee.mokacam.bean.SendMsg;
-import com.alibaba.fastjson.asm.Opcodes;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 /* JADX INFO: loaded from: classes.dex */
 public class AeeCameraActivty extends BaseActivity implements View.OnClickListener {
-    private static TextView Y;
-    private static String u;
-    private static String v;
-    private MediaPlayer A;
-    private MediaPlayer B;
-    private String D;
-    private String E;
-    private boolean H;
-    private int I;
-    private String J;
-    private String K;
-    private String L;
-    private String M;
-    private boolean S;
-    private ImageView V;
-    private ImageView W;
-    private ImageView X;
-    private TextView Z;
-    private TextView aa;
-    private ImageView ab;
-    private ImageView ac;
-    private ImageView ad;
-    private PopupWindow ae;
-    private ImageView l;
-    private LinearLayout m;
-    private TextView n;
-    private TextView o;
-    private FrameLayout p;
-    private com.android.gl2jni.a r;
-    private String s;
-    private Timer w;
-    private TimerTask x;
-    private static int t = 0;
+    static TextView Y;
+    static String u;
+    static String v;
+    MediaPlayer A;
+    MediaPlayer B;
+    String D;
+    String E;
+    boolean H;
+    int I;
+    String J;
+    String K;
+    String L;
+    String M;
+    boolean S;
+    ImageView V;
+    ImageView W;
+    ImageView X;
+    TextView Z;
+    TextView aa;
+    ImageView ab;
+    ImageView ac;
+    ImageView ad;
+    PopupWindow ae;
+    ImageView l;
+    LinearLayout m;
+    TextView n;
+    TextView o;
+    FrameLayout p;
+    com.android.gl2jni.a r;
+    String s;
+    Timer w;
+    TimerTask x;
+    static int t = 0;
     public static Handler a = new e();
-    private boolean f = true;
-    private boolean g = true;
-    private boolean h = false;
-    private boolean k = false;
-    private boolean q = false;
-    private int y = 0;
-    private int z = 0;
-    private boolean C = true;
-    private boolean F = false;
-    private boolean G = true;
+    boolean f = true;
+    boolean g = true;
+    boolean h = false;
+    boolean k = false;
+    boolean q = false;
+    int y = 0;
+    int z = 0;
+    boolean C = true;
+    boolean F = false;
+    boolean G = true;
     public String b = "0.0.0.0";
-    private int N = 999;
-    private int O = 999;
-    private int P = 0;
+    int N = 999;
+    int O = 999;
+    int P = 0;
     public final int c = 60000;
-    private int Q = 0;
+    int Q = 0;
     public int d = 0;
-    private boolean R = false;
-    private long T = 0;
-    private long U = 0;
-    private boolean af = false;
+    boolean bRecording = false;
+    long T = 0;
+    long U = 0;
+    boolean af = false;
     View.OnClickListener e = new k(this);
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a(String str, String str2) {
         com.aee.mokacam.service.a.a().a(new i(this), new SendMsg(2, str, str2));
     }
 
-    private void a(boolean z) {
+    void a(boolean z) {
         this.af = false;
-        if (this.R) {
+        if (this.bRecording) {
             com.aee.mokacam.utils.w.a(R.string.please_stop_record, true);
         } else {
             if (this.S) {
@@ -106,7 +105,7 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
         }
     }
 
-    private void d(int i) {
+    void d(int i) {
         this.X.setImageResource(R.drawable.operate_pressed);
         this.m.setAlpha(0.5f);
         this.X.setEnabled(false);
@@ -117,7 +116,7 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
         this.A.start();
     }
 
-    private void f() {
+    void f() {
         this.o = (TextView) findViewById(R.id.tv_video_time);
         ImageView imageView = (ImageView) findViewById(R.id.iv_cam_home);
         Y = (TextView) findViewById(R.id.tv_cam_resolution);
@@ -146,19 +145,19 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
         this.p.addView(this.r);
     }
 
-    private void g() {
+    void g() {
         this.z = 0;
         this.A = MediaPlayer.create(this, R.raw.captureburst);
         this.B = MediaPlayer.create(this, R.raw.camera_timer);
         a();
     }
 
-    private void h() {
+    void h() {
         this.H = true;
         new Thread(new l(this)).start();
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void i() {
         this.U = System.currentTimeMillis();
         if (this.T == 0) {
@@ -170,12 +169,12 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void j() {
         new o(this).start();
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void k() {
         if (this.w == null) {
             this.w = new Timer();
@@ -184,7 +183,7 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
         }
     }
 
-    private void l() {
+    void l() {
         if (this.w != null) {
             this.w.cancel();
             this.x.cancel();
@@ -196,11 +195,11 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
         this.l.setVisibility(4);
     }
 
-    private void m() {
+    void m() {
         com.aee.mokacam.service.a.a().a(new r(this), new SendMsg(2, "nil", "Switch_mode"));
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void n() {
         ReceiveMsg receiveMsgA = com.aee.mokacam.service.a.a().a(new SendMsg("获取主机所有信息", 1, (String) null, "app_status", 21));
         if (receiveMsgA == null || receiveMsgA.getRval() < 0 || !receiveMsgA.getType().equals("app_status")) {
@@ -217,11 +216,11 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
         }
     }
 
-    private void o() {
+    void o() {
         new f(this).start();
     }
 
-    private void p() {
+    void p() {
         if (this.w == null) {
             this.w = new Timer();
             this.x = new g(this);
@@ -230,7 +229,7 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
     }
 
     @SuppressLint({"InflateParams"})
-    private void q() {
+    void q() {
         View viewInflate = getLayoutInflater().inflate(R.layout.photo_mode_window, (ViewGroup) null);
         TextView textView = (TextView) viewInflate.findViewById(R.id.tv_signal_shot);
         TextView textView2 = (TextView) viewInflate.findViewById(R.id.tv_brust_mode);
@@ -247,7 +246,7 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
         this.ae.setOnDismissListener(new h(this));
     }
 
-    private void r() {
+    void r() {
         com.aee.mokacam.service.a.a().b(new j(this));
         AeeApplication.a().f = false;
         com.aee.mokacam.service.a.a().f();
@@ -273,7 +272,7 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
     @Override // com.aee.mokacam.activity.BaseActivity, android.os.Handler.Callback
     public boolean handleMessage(Message message) {
         switch (message.what) {
-            case Opcodes.ISUB /* 100 */:
+            case 100:
                 if ("adapter".equals(this.K)) {
                     this.ac.setImageResource(R.drawable.battery_charge);
                 } else if (this.J.length() < 2) {
@@ -316,15 +315,15 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
                     this.ad.setEnabled(false);
                 } else if (i2 == -17) {
                     Toast.makeText(this, getResources().getString(R.string.take_photo_failed_sd_full), 0).show();
-                    this.R = false;
+                    this.bRecording = false;
                     this.z = 0;
                 } else if (i2 != -30) {
                     Toast.makeText(this, getResources().getString(R.string.failed), 0).show();
-                    this.R = false;
+                    this.bRecording = false;
                     this.z = 0;
                 } else {
                     Toast.makeText(this, getResources().getString(R.string.no_sdCard), 0).show();
-                    this.R = false;
+                    this.bRecording = false;
                     this.z = 0;
                 }
                 break;
@@ -338,7 +337,7 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
                 }
                 break;
             case 103:
-                if (!this.R) {
+                if (!this.bRecording) {
                     this.z++;
                     if (AeeApplication.aW.equals("off")) {
                         o();
@@ -346,17 +345,17 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
                         p();
                     }
                     this.X.setImageResource(R.drawable.btn_stop);
-                    this.R = true;
+                    this.bRecording = true;
                     this.F = false;
                     this.G = false;
                 }
                 break;
             case 104:
-                if (this.R) {
+                if (this.bRecording) {
                     this.z++;
                     l();
                     this.X.setImageResource(R.drawable.btn_video_mode);
-                    this.R = false;
+                    this.bRecording = false;
                     this.G = true;
                     this.F = false;
                 }
@@ -406,7 +405,7 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_camera_setting /* 2131427388 */:
-                if (this.R) {
+                if (this.bRecording) {
                     com.aee.mokacam.utils.w.a(R.string.please_stop_record, true);
                 } else if (!this.S) {
                     Intent intent = new Intent();
@@ -435,8 +434,8 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
                         d(2);
                     }
                 } else {
-                    this.R = this.R ? false : true;
-                    com.aee.mokacam.service.a.a().a(this.R, this.i, true);
+                    this.bRecording = this.bRecording ? false : true;
+                    com.aee.mokacam.service.a.a().a(this.bRecording, this.i, true);
                     this.B.start();
                     this.z++;
                 }
@@ -472,7 +471,7 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
                 q();
                 break;
             case R.id.iv_libary /* 2131427500 */:
-                if (this.R) {
+                if (this.bRecording) {
                     com.aee.mokacam.utils.w.a(R.string.please_stop_record, true);
                 } else if (!this.S) {
                     Intent intent2 = new Intent();
@@ -511,9 +510,9 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
 
     @Override // com.aee.mokacam.activity.BaseActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
     protected void onDestroy() {
-        if (t == 0 && this.R) {
-            this.R = false;
-            com.aee.mokacam.service.a.a().a(this.R, this.i, true);
+        if (t == 0 && this.bRecording) {
+            this.bRecording = false;
+            com.aee.mokacam.service.a.a().a(this.bRecording, this.i, true);
             this.z++;
             try {
                 TimeUnit.MILLISECONDS.sleep(200L);

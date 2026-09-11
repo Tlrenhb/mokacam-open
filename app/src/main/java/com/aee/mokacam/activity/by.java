@@ -9,7 +9,7 @@ import com.aee.mokacam.R;
 class by extends PagerAdapter {
     final /* synthetic */ RegisterActivity a;
 
-    private by(RegisterActivity registerActivity) {
+    by(RegisterActivity registerActivity) {
         this.a = registerActivity;
     }
 

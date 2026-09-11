@@ -8,8 +8,8 @@ import com.aee.mokacam.utils.ResolveJson;
 /* JADX INFO: loaded from: classes.dex */
 class j implements Runnable {
     final /* synthetic */ a a;
-    private final /* synthetic */ int b;
-    private final /* synthetic */ n c;
+    final /* synthetic */ int b;
+    final /* synthetic */ n c;
 
     j(a aVar, int i, n nVar) {
         this.a = aVar;

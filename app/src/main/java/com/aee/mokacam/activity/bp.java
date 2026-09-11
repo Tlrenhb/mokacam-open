@@ -10,7 +10,7 @@ class bp {
     ImageView d;
     final /* synthetic */ bn e;
 
-    private bp(bn bnVar) {
+    bp(bn bnVar) {
         this.e = bnVar;
     }
 

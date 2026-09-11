@@ -16,7 +16,6 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import com.aee.mokacam.R;
-import com.alibaba.fastjson.asm.Opcodes;
 
 /* JADX INFO: loaded from: classes.dex */
 public class AppSingleRocker extends SurfaceView implements SurfaceHolder.Callback {
@@ -71,7 +70,7 @@ public class AppSingleRocker extends SurfaceView implements SurfaceHolder.Callba
 
     private int a(float f) {
         int iRound = (int) Math.round((((double) f) / 3.141592653589793d) * 180.0d);
-        return iRound < 0 ? -iRound : (180 - iRound) + Opcodes.GETFIELD;
+        return iRound < 0 ? -iRound : (180 - iRound) + 180;
     }
 
     private void c() {

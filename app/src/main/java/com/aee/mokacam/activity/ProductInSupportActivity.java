@@ -14,19 +14,19 @@ import java.util.List;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ProductInSupportActivity extends BaseActivity {
-    private ExpandableListView a;
-    private ImageView c;
-    private TextView e;
-    private List<String> b = new ArrayList();
-    private HashMap<Integer, String> d = new HashMap<>();
+    ExpandableListView a;
+    ImageView c;
+    TextView e;
+    List<String> b = new ArrayList();
+    HashMap<Integer, String> d = new HashMap<>();
 
-    private void a() {
+    void a() {
         this.a = (ExpandableListView) findViewById(R.id.expand_listview);
         this.c = (ImageView) findViewById(R.id.iv_dro_back);
         this.e = (TextView) findViewById(R.id.tv_supportproduct_title);
     }
 
-    private void b() {
+    void b() {
         this.b.clear();
         this.d.clear();
         this.e.setText(R.string.support_camera);
@@ -43,7 +43,7 @@ public class ProductInSupportActivity extends BaseActivity {
         this.a.setAdapter(new bt(this, null));
     }
 
-    private void c() {
+    void c() {
         this.c.setOnClickListener(this);
     }
 

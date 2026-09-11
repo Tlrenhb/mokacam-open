@@ -24,23 +24,23 @@ import org.xutils.http.RequestParams;
 /* JADX INFO: loaded from: classes.dex */
 public class UpdateManager {
     HashMap<String, String> a;
-    private int c;
-    private Context e;
-    private ProgressBar f;
-    private TextView h;
-    private ak i;
-    private com.aee.mokacam.widget.p j;
-    private com.aee.mokacam.widget.p k;
-    private Callback.Cancelable l;
-    private boolean d = false;
+    int c;
+    Context e;
+    ProgressBar f;
+    TextView h;
+    ak i;
+    com.aee.mokacam.widget.p j;
+    com.aee.mokacam.widget.p k;
+    Callback.Cancelable l;
+    boolean d = false;
     public boolean b = true;
-    private Handler g = new ag(this);
+    Handler g = new ag(this);
 
     public UpdateManager(Context context) {
         this.e = context;
     }
 
-    private int a(Context context) {
+    int a(Context context) {
         try {
             return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode;
         } catch (Exception e) {
@@ -59,7 +59,7 @@ public class UpdateManager {
         return null;
     }
 
-    private Callback.Cancelable a(String str, String str2, Callback.CommonCallback<File> commonCallback) {
+    Callback.Cancelable a(String str, String str2, Callback.CommonCallback<File> commonCallback) {
         if (new File(str2).exists()) {
             e();
             return null;
@@ -69,7 +69,7 @@ public class UpdateManager {
         return org.xutils.x.http().get(requestParams, commonCallback);
     }
 
-    private void b() {
+    void b() {
         this.j = new com.aee.mokacam.widget.p(this.e, new ah(this), 1, R.string.soft_update_title, R.string.network_err1);
         this.j.setTitle(R.string.soft_update_title);
         this.j.a(String.valueOf(this.e.getResources().getString(R.string.soft_update_info)) + "\n" + this.a.get("info"));
@@ -77,7 +77,7 @@ public class UpdateManager {
         this.j.a(R.string.soft_update_later);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void c() {
         View viewInflate = LayoutInflater.from(this.e).inflate(R.layout.softupdate_progress, (ViewGroup) null);
         this.f = (ProgressBar) viewInflate.findViewById(R.id.update_progress);
@@ -85,12 +85,12 @@ public class UpdateManager {
         this.k = new com.aee.mokacam.widget.p(this.e, new ai(this), viewInflate, 3, R.string.soft_updating);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void d() {
         this.l = a(this.a.get("url"), String.valueOf(AeeConstants.e) + "/" + this.a.get("name"), new aj(this, null));
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void e() {
         File file = new File(AeeConstants.e, this.a.get("name"));
         if (file.exists()) {

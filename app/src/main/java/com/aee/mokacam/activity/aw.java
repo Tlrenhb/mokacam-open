@@ -12,7 +12,7 @@ import java.util.List;
 class aw extends BaseExpandableListAdapter {
     final /* synthetic */ DroneInSupportActivity a;
 
-    private aw(DroneInSupportActivity droneInSupportActivity) {
+    aw(DroneInSupportActivity droneInSupportActivity) {
         this.a = droneInSupportActivity;
     }
 

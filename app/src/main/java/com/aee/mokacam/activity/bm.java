@@ -12,9 +12,9 @@ import org.xutils.BuildConfig;
 /* JADX INFO: loaded from: classes.dex */
 class bm extends AsyncTask<String, Void, Bitmap> {
     final /* synthetic */ LibraryActivity a;
-    private String b = null;
-    private String c = BuildConfig.FLAVOR;
-    private int d;
+    String b = null;
+    String c = BuildConfig.FLAVOR;
+    int d;
 
     public bm(LibraryActivity libraryActivity, int i) {
         this.a = libraryActivity;

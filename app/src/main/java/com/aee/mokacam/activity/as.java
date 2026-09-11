@@ -12,9 +12,9 @@ import com.aee.mokacam.AeeApplication;
 /* JADX INFO: loaded from: classes.dex */
 class as extends BaseAdapter {
     final /* synthetic */ DownLoadActivity a;
-    private int b;
+    int b;
 
-    private as(DownLoadActivity downLoadActivity) {
+    as(DownLoadActivity downLoadActivity) {
         this.a = downLoadActivity;
         this.b = 0;
     }

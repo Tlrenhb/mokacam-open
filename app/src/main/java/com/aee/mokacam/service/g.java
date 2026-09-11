@@ -8,8 +8,8 @@ import java.util.concurrent.TimeUnit;
 /* JADX INFO: loaded from: classes.dex */
 class g implements Runnable {
     final /* synthetic */ a a;
-    private final /* synthetic */ String b;
-    private final /* synthetic */ Handler c;
+    final /* synthetic */ String b;
+    final /* synthetic */ Handler c;
 
     g(a aVar, String str, Handler handler) {
         this.a = aVar;

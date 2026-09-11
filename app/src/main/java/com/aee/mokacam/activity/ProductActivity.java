@@ -17,26 +17,26 @@ import java.util.List;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ProductActivity extends BaseActivity implements AdapterView.OnItemClickListener {
-    private ListView a;
-    private UpdateManager b;
-    private List<com.aee.mokacam.bean.b> c = new ArrayList();
-    private com.aee.mokacam.bean.b d;
-    private com.aee.mokacam.bean.b e;
-    private com.aee.mokacam.bean.b f;
-    private com.aee.mokacam.bean.b g;
+    ListView a;
+    UpdateManager b;
+    List<com.aee.mokacam.bean.b> c = new ArrayList();
+    com.aee.mokacam.bean.b d;
+    com.aee.mokacam.bean.b e;
+    com.aee.mokacam.bean.b f;
+    com.aee.mokacam.bean.b g;
 
-    private void a() {
+    void a() {
         new Thread(new bs(this)).start();
     }
 
-    private void b() {
+    void b() {
         this.a = (ListView) findViewById(R.id.list_product);
         this.a.setDivider(new ColorDrawable(0));
         this.a.setDividerHeight(0);
         c();
     }
 
-    private void c() {
+    void c() {
         this.c.clear();
         this.d = new com.aee.mokacam.bean.b(R.drawable.btn_drones_selector);
         this.c.add(this.d);

@@ -15,12 +15,12 @@ import java.util.concurrent.TimeUnit;
 /* JADX INFO: loaded from: classes.dex */
 public class a {
     public static o a;
-    private static a b;
-    private String c = "000";
-    private boolean d = false;
-    private int e = 0;
+    static a b;
+    String c = "000";
+    boolean d = false;
+    int e = 0;
 
-    private a() {
+    a() {
         a = o.a();
     }
 
@@ -34,7 +34,7 @@ public class a {
         return b;
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public boolean g() {
         String strSubstring;
         AeeApplication.a().c = true;
@@ -74,7 +74,7 @@ public class a {
         return false;
     }
 
-    private boolean h() {
+    boolean h() {
         try {
             ReceiveMsg receiveMsgA = a().a(new SendMsg(3, AeeApplication.a().e, null, null));
             if (receiveMsgA == null || receiveMsgA.getRval() < 0 || receiveMsgA.getMsg_id() != 3) {

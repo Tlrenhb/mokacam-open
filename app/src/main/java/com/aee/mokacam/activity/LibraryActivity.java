@@ -37,36 +37,36 @@ import wseemann.media.FFmpegMediaMetadataRetriever;
 /* JADX INFO: loaded from: classes.dex */
 public class LibraryActivity extends BaseActivity {
     public static int a = 0;
-    private List<com.aee.mokacam.bean.l> A;
-    private Bitmap C;
-    private FFmpegMediaMetadataRetriever D;
+    List<com.aee.mokacam.bean.l> A;
+    Bitmap C;
+    FFmpegMediaMetadataRetriever D;
     protected com.aee.mokacam.widget.c e;
-    private GridView f;
-    private ImageView g;
-    private ImageView h;
-    private TextView k;
-    private DotSelectedNumView n;
-    private bn p;
-    private Dialog q;
-    private String r;
-    private LruCache<String, Bitmap> t;
-    private com.aee.mokacam.utils.e u;
-    private ImageView v;
-    private TextView w;
-    private com.nostra13.universalimageloader.core.DisplayImageOptions x;
-    private com.nostra13.universalimageloader.core.ImageLoader y;
-    private com.aee.mokacam.utils.z z;
-    private boolean l = false;
-    private boolean m = true;
-    private int o = 0;
-    private List<com.aee.mokacam.bean.g> s = new ArrayList();
+    GridView f;
+    ImageView g;
+    ImageView h;
+    TextView k;
+    DotSelectedNumView n;
+    bn p;
+    Dialog q;
+    String r;
+    LruCache<String, Bitmap> t;
+    com.aee.mokacam.utils.e u;
+    ImageView v;
+    TextView w;
+    com.nostra13.universalimageloader.core.DisplayImageOptions x;
+    com.nostra13.universalimageloader.core.ImageLoader y;
+    com.aee.mokacam.utils.z z;
+    boolean l = false;
+    boolean m = true;
+    int o = 0;
+    List<com.aee.mokacam.bean.g> s = new ArrayList();
     HashMap<Integer, bm> b = new HashMap<>();
     public int c = 0;
     public int d = 0;
-    private List<com.aee.mokacam.bean.l> B = new ArrayList();
-    private boolean E = false;
+    List<com.aee.mokacam.bean.l> B = new ArrayList();
+    boolean E = false;
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public String a(boolean z, int i) {
         if (!z) {
             return String.valueOf(AeeApplication.a().h) + this.s.get(i).b + this.s.get(i).a();
@@ -75,12 +75,12 @@ public class LibraryActivity extends BaseActivity {
         return file.exists() ? file.getAbsolutePath() : BuildConfig.FLAVOR;
     }
 
-    private void a(TextView textView, TextView textView2) {
+    void a(TextView textView, TextView textView2) {
         textView.setOnClickListener(new bf(this));
         textView2.setOnClickListener(new bg(this));
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a(com.aee.mokacam.bean.g gVar, String str) {
         if (!str.endsWith(".JPG")) {
             Message message = new Message();
@@ -96,13 +96,13 @@ public class LibraryActivity extends BaseActivity {
         }
     }
 
-    private void a(String str, ImageView imageView, int i) {
+    void a(String str, ImageView imageView, int i) {
         bm bmVar = new bm(this, i);
         bmVar.execute(str);
         this.b.put(Integer.valueOf(i), bmVar);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a(String str, ImageView imageView, ImageView imageView2, int i) {
         Bitmap bitmap = this.t.get(str);
         if (bitmap == null) {
@@ -113,7 +113,7 @@ public class LibraryActivity extends BaseActivity {
         }
     }
 
-    private boolean a(List<com.aee.mokacam.bean.g> list) {
+    boolean a(List<com.aee.mokacam.bean.g> list) {
         com.aee.mokacam.bean.l lVar;
         if (list == null || list.size() == 0) {
             return false;
@@ -138,7 +138,7 @@ public class LibraryActivity extends BaseActivity {
         }
     }
 
-    private Bitmap b(String str) {
+    Bitmap b(String str) {
         try {
             try {
                 this.D = new FFmpegMediaMetadataRetriever();
@@ -158,7 +158,7 @@ public class LibraryActivity extends BaseActivity {
         }
     }
 
-    private List<com.aee.mokacam.bean.l> b(List<com.aee.mokacam.bean.l> list) {
+    List<com.aee.mokacam.bean.l> b(List<com.aee.mokacam.bean.l> list) {
         HashMap map = new HashMap();
         ListIterator<com.aee.mokacam.bean.l> listIterator = list.listIterator();
         int i = 1;
@@ -176,7 +176,7 @@ public class LibraryActivity extends BaseActivity {
         return list;
     }
 
-    private void b() {
+    void b() {
         this.f = (GridView) findViewById(R.id.library_gv);
         this.g = (ImageView) findViewById(R.id.library_delete_iv);
         this.h = (ImageView) findViewById(R.id.library_right_iv);
@@ -186,7 +186,7 @@ public class LibraryActivity extends BaseActivity {
         this.w = (TextView) findViewById(R.id.tv_done);
     }
 
-    private void c() {
+    void c() {
         e();
         d();
         this.x = new com.nostra13.universalimageloader.core.DisplayImageOptions.Builder().showStubImage(R.drawable.loading_libpic).imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2).cacheInMemory(true).cacheOnDisc(true).bitmapConfig(Bitmap.Config.RGB_565).build();
@@ -208,7 +208,7 @@ public class LibraryActivity extends BaseActivity {
         }
     }
 
-    private void d() {
+    void d() {
         File fileA = com.aee.mokacam.utils.t.a(this.j, "videoThumbnailCache");
         if (!fileA.exists()) {
             fileA.mkdirs();
@@ -220,11 +220,11 @@ public class LibraryActivity extends BaseActivity {
         }
     }
 
-    private void e() {
+    void e() {
         this.t = new ay(this, ((int) Runtime.getRuntime().maxMemory()) / 8);
     }
 
-    private void f() {
+    void f() {
         n();
         m();
         j();
@@ -233,23 +233,23 @@ public class LibraryActivity extends BaseActivity {
         g();
     }
 
-    private void g() {
+    void g() {
         this.w.setOnClickListener(new bb(this));
     }
 
-    private void h() {
+    void h() {
         this.v.setOnClickListener(new bc(this));
     }
 
-    private void i() {
+    void i() {
         this.h.setOnClickListener(new bd(this));
     }
 
-    private void j() {
+    void j() {
         this.g.setOnClickListener(new be(this));
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void k() {
         View viewInflate = View.inflate(this, R.layout.deletedialog_layout, null);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -262,7 +262,7 @@ public class LibraryActivity extends BaseActivity {
         a((TextView) viewInflate.findViewById(R.id.confirmdelete_tv), (TextView) viewInflate.findViewById(R.id.canceldelete_tv));
     }
 
-    private void l() {
+    void l() {
         if (this.e == null) {
             this.e = new com.aee.mokacam.widget.c(this.j);
         }
@@ -272,17 +272,17 @@ public class LibraryActivity extends BaseActivity {
         this.e.show();
     }
 
-    private void m() {
+    void m() {
         this.f.setOnItemClickListener(new bk(this));
         this.f.setOnScrollListener(new com.nostra13.universalimageloader.core.listener.PauseOnScrollListener(this.y, false, true));
         this.f.setOnItemLongClickListener(new az(this));
     }
 
-    private void n() {
+    void n() {
         this.k.setOnClickListener(new ba(this));
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void o() {
         if (this.o == 0) {
             this.g.setImageResource(R.drawable.library_delete_unpressed);

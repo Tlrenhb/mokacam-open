@@ -1,6 +1,6 @@
 package com.aee.mokacam.utils;
 
-import com.nostra13.universalimageloader.core.cache.disc.naming.FileNameGenerator;
+import com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator;
 
 /** Obfuscated original: file name generator returning uri hash. */
 public class z implements FileNameGenerator {

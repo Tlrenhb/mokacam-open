@@ -25,20 +25,20 @@ import org.xutils.BuildConfig;
 /* JADX INFO: loaded from: classes.dex */
 public class AeeAppSettingActivity extends BaseActivity {
     public ProgressDialog b;
-    private RelativeLayout d;
-    private RelativeLayout e;
-    private TextView f;
-    private TextView g;
-    private ImageView h;
-    private RelativeLayout k;
-    private String l;
-    private RelativeLayout m;
-    private RelativeLayout n;
-    private String o = BuildConfig.FLAVOR;
+    RelativeLayout d;
+    RelativeLayout e;
+    TextView f;
+    TextView g;
+    ImageView h;
+    RelativeLayout k;
+    String l;
+    RelativeLayout m;
+    RelativeLayout n;
+    String o = BuildConfig.FLAVOR;
     int[] a = new int[10];
     public boolean c = false;
 
-    private void b(String str) {
+    void b(String str) {
         long jA = a();
         if (this.b == null) {
             this.b = new ProgressDialog(this);
@@ -52,13 +52,13 @@ public class AeeAppSettingActivity extends BaseActivity {
         this.b.show();
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void c() {
         b();
         new Thread(new a(this)).start();
     }
 
-    private void c(String str) {
+    void c(String str) {
         com.aee.mokacam.widget.e eVar = new com.aee.mokacam.widget.e((Context) this, false);
         eVar.show();
         eVar.d(com.aee.mokacam.R.string.cancel);
@@ -67,7 +67,7 @@ public class AeeAppSettingActivity extends BaseActivity {
         eVar.a(new c(this, eVar));
     }
 
-    private void d() {
+    void d() {
         this.d = (RelativeLayout) findViewById(com.aee.mokacam.R.id.rl_version);
         this.e = (RelativeLayout) findViewById(com.aee.mokacam.R.id.clear_appcache);
         this.f = (TextView) findViewById(com.aee.mokacam.R.id.tv_version);
@@ -83,7 +83,7 @@ public class AeeAppSettingActivity extends BaseActivity {
         }
     }
 
-    private void e() {
+    void e() {
         try {
             this.g.setText(b(com.aee.mokacam.utils.t.a(this)));
         } catch (Exception e) {
@@ -106,7 +106,7 @@ public class AeeAppSettingActivity extends BaseActivity {
         this.f.setText("V" + com.aee.mokacam.utils.a.a(this));
     }
 
-    private void f() {
+    void f() {
         this.d.setOnClickListener(this);
         this.e.setOnClickListener(this);
         this.h.setOnClickListener(this);

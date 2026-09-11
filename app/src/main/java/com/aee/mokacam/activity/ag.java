@@ -7,8 +7,8 @@ import com.aee.mokacam.bean.ReceiveMsg;
 /* JADX INFO: loaded from: classes.dex */
 class ag implements com.aee.mokacam.service.n {
     final /* synthetic */ AeeCameraSettingActivity a;
-    private final /* synthetic */ int b;
-    private final /* synthetic */ String c;
+    final /* synthetic */ int b;
+    final /* synthetic */ String c;
 
     ag(AeeCameraSettingActivity aeeCameraSettingActivity, int i, String str) {
         this.a = aeeCameraSettingActivity;

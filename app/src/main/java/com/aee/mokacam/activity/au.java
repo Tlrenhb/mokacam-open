@@ -14,7 +14,7 @@ class au {
     ImageView f;
     final /* synthetic */ as g;
 
-    private au(as asVar) {
+    au(as asVar) {
         this.g = asVar;
     }
 

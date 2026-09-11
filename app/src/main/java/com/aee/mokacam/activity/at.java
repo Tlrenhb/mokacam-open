@@ -5,7 +5,7 @@ import android.view.View;
 /* JADX INFO: loaded from: classes.dex */
 class at implements View.OnClickListener {
     final /* synthetic */ as a;
-    private final /* synthetic */ int b;
+    final /* synthetic */ int b;
 
     at(as asVar, int i) {
         this.a = asVar;

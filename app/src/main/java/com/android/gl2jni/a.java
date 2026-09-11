@@ -55,14 +55,14 @@ public class a extends FrameLayout {
         player.setPlayWhenReady(true);
     }
 
-    @Override
+
     public void onPause() {
         if (player != null) {
             player.pause();
         }
     }
 
-    @Override
+
     public void onResume() {
         if (player != null) {
             player.play();

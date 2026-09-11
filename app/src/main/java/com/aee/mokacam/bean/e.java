@@ -51,12 +51,12 @@ public class e extends m {
         eVar.l = com.aee.mokacam.utils.k.b(10, eVar.d);
         eVar.m = com.aee.mokacam.utils.k.a(eVar.d, 12);
         eVar.n = com.aee.mokacam.utils.k.d(16, eVar.d);
-        s.a("video_resolution_id", eVar.n);
+        com.aee.mokacam.utils.s.a("video_resolution_id", eVar.n);
         eVar.o = com.aee.mokacam.utils.k.d(17, eVar.d);
-        s.a("photo_size_id", eVar.o);
+        com.aee.mokacam.utils.s.a("photo_size_id", eVar.o);
         eVar.p = com.aee.mokacam.utils.k.d(18, eVar.d);
         eVar.q = com.aee.mokacam.utils.k.d(19, eVar.d);
-        s.a("tv_output", eVar.q);
+        com.aee.mokacam.utils.s.a("tv_output", eVar.q);
         System.out.println("N制---P制----》iTVOutput：" + eVar.q);
         eVar.r = com.aee.mokacam.utils.k.d(20, eVar.d);
         System.out.println("画面显示时间-----》iVideoStamp：" + eVar.r);

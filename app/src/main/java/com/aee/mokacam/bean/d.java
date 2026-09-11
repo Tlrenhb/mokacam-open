@@ -1,7 +1,6 @@
 package com.aee.mokacam.bean;
 
 import androidx.core.view.MotionEventCompat;
-import com.alibaba.fastjson.asm.Opcodes;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,14 +26,14 @@ public class d extends m {
     public boolean o = false;
     public boolean p = false;
     public float q = 0.0f;
-    public final int t = Opcodes.IFLT;
+    public final int t = 155;
 
     public d() {
     }
 
     public d(int i) {
         this.w = a;
-        this.y = Opcodes.IFLT;
+        this.y = 155;
         byte[] bArr = new byte[r];
         byte[] bArr2 = new byte[4];
         bArr2[0] = 40;
@@ -68,7 +67,7 @@ public class d extends m {
 
     public void a() {
         this.w = a;
-        this.y = Opcodes.IFLT;
+        this.y = 155;
         byte[] bArr = new byte[r];
         byte[] bArr2 = new byte[4];
         bArr[0] = 0;
@@ -83,7 +82,7 @@ public class d extends m {
     public void a(int i) {
         long jCurrentTimeMillis = System.currentTimeMillis() / 1000;
         this.w = a;
-        this.y = Opcodes.IFLT;
+        this.y = 155;
         byte[] bArr = new byte[r];
         byte[] bArr2 = new byte[4];
         bArr[0] = 0;

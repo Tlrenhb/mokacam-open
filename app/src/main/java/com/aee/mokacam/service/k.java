@@ -9,8 +9,8 @@ import com.aee.mokacam.utils.ResolveJson;
 /* JADX INFO: loaded from: classes.dex */
 class k implements Runnable {
     final /* synthetic */ a a;
-    private final /* synthetic */ SendMsg b;
-    private final /* synthetic */ n c;
+    final /* synthetic */ SendMsg b;
+    final /* synthetic */ n c;
 
     k(a aVar, SendMsg sendMsg, n nVar) {
         this.a = aVar;

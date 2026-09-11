@@ -3,7 +3,7 @@ package com.aee.mokacam.service;
 /* JADX INFO: loaded from: classes.dex */
 class b implements Runnable {
     final /* synthetic */ a a;
-    private final /* synthetic */ n b;
+    final /* synthetic */ n b;
 
     b(a aVar, n nVar) {
         this.a = aVar;

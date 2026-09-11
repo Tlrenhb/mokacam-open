@@ -8,7 +8,7 @@ import org.xutils.common.Callback;
 class aj implements Callback.CommonCallback<File>, Callback.ProgressCallback<File> {
     final /* synthetic */ UpdateManager a;
 
-    private aj(UpdateManager updateManager) {
+    aj(UpdateManager updateManager) {
         this.a = updateManager;
     }
 

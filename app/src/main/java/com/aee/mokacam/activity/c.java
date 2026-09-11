@@ -6,7 +6,7 @@ import com.aee.mokacam.constants.AeeConstants;
 /* JADX INFO: loaded from: classes.dex */
 class c implements com.aee.mokacam.widget.f {
     final /* synthetic */ AeeAppSettingActivity a;
-    private final /* synthetic */ com.aee.mokacam.widget.e b;
+    final /* synthetic */ com.aee.mokacam.widget.e b;
 
     c(AeeAppSettingActivity aeeAppSettingActivity, com.aee.mokacam.widget.e eVar) {
         this.a = aeeAppSettingActivity;

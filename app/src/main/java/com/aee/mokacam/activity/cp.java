@@ -6,7 +6,7 @@ import java.io.File;
 /* JADX INFO: loaded from: classes.dex */
 class cp implements com.aee.mokacam.widget.f {
     final /* synthetic */ co a;
-    private final /* synthetic */ com.aee.mokacam.widget.e b;
+    final /* synthetic */ com.aee.mokacam.widget.e b;
 
     cp(co coVar, com.aee.mokacam.widget.e eVar) {
         this.a = coVar;

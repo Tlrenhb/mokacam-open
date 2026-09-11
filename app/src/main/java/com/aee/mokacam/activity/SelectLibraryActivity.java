@@ -28,30 +28,30 @@ import wseemann.media.FFmpegMediaMetadataRetriever;
 /* JADX INFO: loaded from: classes.dex */
 public class SelectLibraryActivity extends BaseActivity {
     boolean a;
-    private RelativeLayout b;
-    private RelativeLayout c;
-    private com.aee.mokacam.widget.g d;
-    private ImageView e;
-    private List<com.aee.mokacam.bean.g> f;
-    private List<com.aee.mokacam.bean.g> g;
-    private ImageView h;
-    private ImageView k;
-    private com.nostra13.universalimageloader.core.ImageLoader l;
-    private com.aee.mokacam.utils.e m;
-    private ImageView n;
-    private ImageView o;
-    private Bitmap p;
-    private List<com.aee.mokacam.bean.g> q = new ArrayList();
-    private String r;
+    RelativeLayout b;
+    RelativeLayout c;
+    com.aee.mokacam.widget.g d;
+    ImageView e;
+    List<com.aee.mokacam.bean.g> f;
+    List<com.aee.mokacam.bean.g> g;
+    ImageView h;
+    ImageView k;
+    com.nostra13.universalimageloader.core.ImageLoader l;
+    com.aee.mokacam.utils.e m;
+    ImageView n;
+    ImageView o;
+    Bitmap p;
+    List<com.aee.mokacam.bean.g> q = new ArrayList();
+    String r;
 
-    private void a() {
+    void a() {
         if (ContextCompat.checkSelfPermission(this, "android.permission.READ_EXTERNAL_STORAGE") == 0 && ContextCompat.checkSelfPermission(this, "android.permission.WRITE_EXTERNAL_STORAGE") == 0) {
             return;
         }
         ActivityCompat.requestPermissions(this, new String[]{"android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"}, 1);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a(List<com.aee.mokacam.bean.g> list, int i) {
         String strB = b(list, i);
         try {
@@ -66,13 +66,13 @@ public class SelectLibraryActivity extends BaseActivity {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public String b(List<com.aee.mokacam.bean.g> list, int i) {
         File file = new File(list.get(i).a());
         return file.exists() ? file.getAbsolutePath() : String.valueOf(AeeApplication.a().h) + this.r + list.get(i).a();
     }
 
-    private void b() {
+    void b() {
         this.b = (RelativeLayout) findViewById(R.id.rl_camera_library);
         this.c = (RelativeLayout) findViewById(R.id.rl_local_library);
         this.e = (ImageView) findViewById(R.id.iv_selectlib_back);
@@ -82,7 +82,7 @@ public class SelectLibraryActivity extends BaseActivity {
         this.o = (ImageView) findViewById(R.id.iv_locallib_play);
     }
 
-    private void b(String str) {
+    void b(String str) {
         com.aee.mokacam.service.a.a().a(new cd(this, str), new SendMsg(AeeConstants.m, "/tmp/SD0/moka/" + str, null));
         try {
             TimeUnit.MILLISECONDS.sleep(300L);
@@ -91,7 +91,7 @@ public class SelectLibraryActivity extends BaseActivity {
         }
     }
 
-    private Bitmap c(String str) {
+    Bitmap c(String str) {
         try {
             FFmpegMediaMetadataRetriever fFmpegMediaMetadataRetriever = new FFmpegMediaMetadataRetriever();
             fFmpegMediaMetadataRetriever.setDataSource(str);
@@ -106,20 +106,20 @@ public class SelectLibraryActivity extends BaseActivity {
         }
     }
 
-    private void c() {
+    void c() {
         com.aee.mokacam.service.a.a().d();
         this.l = com.nostra13.universalimageloader.core.ImageLoader.getInstance();
         h();
         g();
     }
 
-    private void d() {
+    void d() {
         this.b.setOnClickListener(new bz(this));
         this.c.setOnClickListener(new ca(this));
         this.e.setOnClickListener(new cb(this));
     }
 
-    private void e() {
+    void e() {
         AeeApplication.a();
         try {
             com.aee.mokacam.service.a.a().a(new cc(this), new SendMsg(AeeConstants.m, "/tmp/SD0/moka/", null));
@@ -129,7 +129,7 @@ public class SelectLibraryActivity extends BaseActivity {
         this.c.setVisibility(0);
     }
 
-    private void f() {
+    void f() {
         this.f = null;
         this.f = AeeApplication.a().r;
         if (this.f == null || this.f.size() == 0) {
@@ -145,7 +145,7 @@ public class SelectLibraryActivity extends BaseActivity {
         }
     }
 
-    private void g() {
+    void g() {
         this.g = com.aee.mokacam.utils.t.a(AeeConstants.a);
         if (this.g == null || this.g.size() == 0) {
             this.o.setVisibility(8);
@@ -159,7 +159,7 @@ public class SelectLibraryActivity extends BaseActivity {
         }
     }
 
-    private void h() {
+    void h() {
         File fileA = com.aee.mokacam.utils.t.a(this.j, "videoThumbnailCache");
         if (!fileA.exists()) {
             fileA.mkdirs();

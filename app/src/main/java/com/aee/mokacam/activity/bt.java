@@ -13,7 +13,7 @@ import com.aee.mokacam.R;
 class bt extends BaseExpandableListAdapter {
     final /* synthetic */ ProductInSupportActivity a;
 
-    private bt(ProductInSupportActivity productInSupportActivity) {
+    bt(ProductInSupportActivity productInSupportActivity) {
         this.a = productInSupportActivity;
     }
 

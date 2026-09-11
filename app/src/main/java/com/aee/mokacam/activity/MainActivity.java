@@ -26,29 +26,29 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public class MainActivity extends BaseActivity {
     protected boolean a;
-    private ImageView c;
-    private ImageView d;
-    private ImageView e;
-    private TextView h;
-    private com.aee.mokacam.widget.g k;
-    private TextView l;
-    private TextView m;
-    private TextView n;
-    private TextView o;
-    private TextView p;
-    private SlidingMenuView r;
-    private RelativeLayout s;
-    private LinearLayout t;
-    private TextView u;
-    private RelativeLayout v;
-    private boolean f = false;
-    private List<Object> g = new ArrayList();
-    private boolean q = false;
+    ImageView c;
+    ImageView d;
+    ImageView e;
+    TextView h;
+    com.aee.mokacam.widget.g k;
+    TextView l;
+    TextView m;
+    TextView n;
+    TextView o;
+    TextView p;
+    SlidingMenuView r;
+    RelativeLayout s;
+    LinearLayout t;
+    TextView u;
+    RelativeLayout v;
+    boolean f = false;
+    List<Object> g = new ArrayList();
+    boolean q = false;
     public String b = "0.0.0.0";
-    private boolean w = true;
-    private BroadcastReceiver x = new bq(this);
+    boolean w = true;
+    BroadcastReceiver x = new bq(this);
 
-    private void a() {
+    void a() {
         this.k = new com.aee.mokacam.widget.g(this.j);
         this.d = (ImageView) findViewById(R.id.iv_library);
         this.e = (ImageView) findViewById(R.id.iv_arrow_back);
@@ -71,7 +71,7 @@ public class MainActivity extends BaseActivity {
         this.s.setBackgroundResource(R.drawable.connect);
     }
 
-    private void a(WifiManager wifiManager) {
+    void a(WifiManager wifiManager) {
         if (com.aee.mokacam.utils.aa.a(wifiManager)) {
             if (!AeeApplication.a().b) {
                 com.aee.mokacam.service.a.a();
@@ -82,7 +82,7 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    private void b() {
+    void b() {
         this.c.setOnClickListener(this);
         this.d.setOnClickListener(this);
         this.e.setOnClickListener(this);
@@ -96,11 +96,11 @@ public class MainActivity extends BaseActivity {
         this.t.setOnClickListener(new br(this));
     }
 
-    private void c() {
+    void c() {
         AeeApplication.a().b(((WifiManager) getSystemService("wifi")).getConnectionInfo().getSSID());
     }
 
-    private void d() {
+    void d() {
         AeeApplication.a().a = -1;
         Process.killProcess(Process.myPid());
     }

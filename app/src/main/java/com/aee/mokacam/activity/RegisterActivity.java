@@ -12,26 +12,26 @@ import com.aee.mokacam.widget.NoScrollViewPager;
 
 /* JADX INFO: loaded from: classes.dex */
 public class RegisterActivity extends BaseActivity {
-    private NoScrollViewPager a;
-    private View b;
-    private View c;
-    private View d;
-    private TextView e;
-    private TextView f;
-    private TextView g;
-    private ImageView h;
-    private int k = 0;
+    NoScrollViewPager a;
+    View b;
+    View c;
+    View d;
+    TextView e;
+    TextView f;
+    TextView g;
+    ImageView h;
+    int k = 0;
 
-    private void g() {
+    void g() {
         this.a = (NoScrollViewPager) findViewById(R.id.vp_register);
         this.h = (ImageView) findViewById(R.id.iv_register_back);
     }
 
-    private void h() {
+    void h() {
         this.a.setAdapter(new by(this, null));
     }
 
-    private void i() {
+    void i() {
         this.h.setOnClickListener(this);
     }
 

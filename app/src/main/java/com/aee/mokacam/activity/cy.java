@@ -12,9 +12,9 @@ import org.xutils.common.Callback;
 /* JADX INFO: loaded from: classes.dex */
 class cy implements Callback.CommonCallback<File>, Callback.ProgressCallback<File> {
     final /* synthetic */ ShowPicOrVideoActivity a;
-    private RemoteViews b;
-    private NotificationManager c;
-    private NotificationCompat.Builder d;
+    RemoteViews b;
+    NotificationManager c;
+    NotificationCompat.Builder d;
 
     public cy(ShowPicOrVideoActivity showPicOrVideoActivity, RemoteViews remoteViews, NotificationManager notificationManager, NotificationCompat.Builder builder) {
         this.a = showPicOrVideoActivity;

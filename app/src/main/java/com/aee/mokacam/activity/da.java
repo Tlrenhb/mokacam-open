@@ -15,7 +15,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 class da extends PagerAdapter {
     final /* synthetic */ ShowPicOrVideoActivity a;
-    private List<com.aee.mokacam.bean.g> b;
+    List<com.aee.mokacam.bean.g> b;
 
     public da(ShowPicOrVideoActivity showPicOrVideoActivity, List<com.aee.mokacam.bean.g> list) {
         this.a = showPicOrVideoActivity;

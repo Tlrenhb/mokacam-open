@@ -5,7 +5,7 @@ import com.aee.mokacam.AeeApplication;
 /* JADX INFO: loaded from: classes.dex */
 public class w {
     public static ac b;
-    private static w d;
+    static w d;
     protected final String a = "FlightCMD";
     public boolean c = false;
 

@@ -10,7 +10,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 class de extends ArrayAdapter<String> {
     final /* synthetic */ SupportActivity a;
-    private final /* synthetic */ List b;
+    final /* synthetic */ List b;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     de(SupportActivity supportActivity, Context context, int i, List list, List list2) {

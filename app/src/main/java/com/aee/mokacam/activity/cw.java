@@ -3,7 +3,7 @@ package com.aee.mokacam.activity;
 /* JADX INFO: loaded from: classes.dex */
 class cw implements com.aee.mokacam.widget.f {
     final /* synthetic */ ShowPicOrVideoActivity a;
-    private final /* synthetic */ com.aee.mokacam.widget.e b;
+    final /* synthetic */ com.aee.mokacam.widget.e b;
 
     cw(ShowPicOrVideoActivity showPicOrVideoActivity, com.aee.mokacam.widget.e eVar) {
         this.a = showPicOrVideoActivity;

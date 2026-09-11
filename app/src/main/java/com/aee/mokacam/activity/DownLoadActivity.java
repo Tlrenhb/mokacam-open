@@ -18,13 +18,13 @@ import org.xutils.http.RequestParams;
 
 /* JADX INFO: loaded from: classes.dex */
 public class DownLoadActivity extends BaseActivity {
-    private ImageView a;
-    private ListView b;
-    private List<com.aee.mokacam.bean.g> c;
-    private as d;
-    private View e;
+    ImageView a;
+    ListView b;
+    List<com.aee.mokacam.bean.g> c;
+    as d;
+    View e;
 
-    private Callback.Cancelable a(String str, String str2, Callback.CommonCallback<File> commonCallback) {
+    Callback.Cancelable a(String str, String str2, Callback.CommonCallback<File> commonCallback) {
         if (new File(str2).exists()) {
             return null;
         }
@@ -33,12 +33,12 @@ public class DownLoadActivity extends BaseActivity {
         return org.xutils.x.http().get(requestParams, commonCallback);
     }
 
-    private void a() {
+    void a() {
         this.a = (ImageView) findViewById(R.id.iv_download_back);
         this.b = (ListView) findViewById(R.id.download_file_list);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a(int i) {
         File file = new File(String.valueOf(AeeConstants.a) + File.separator + this.c.get(i).a() + ".tmp");
         if (file.exists()) {
@@ -50,7 +50,7 @@ public class DownLoadActivity extends BaseActivity {
         }
     }
 
-    private void b() {
+    void b() {
         this.c = AeeApplication.a().t;
         this.d = new as(this, null);
         this.b.setAdapter((ListAdapter) this.d);
@@ -70,11 +70,11 @@ public class DownLoadActivity extends BaseActivity {
         }
     }
 
-    private void c() {
+    void c() {
         this.a.setOnClickListener(new aq(this));
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void d() {
         com.aee.mokacam.widget.e eVar = new com.aee.mokacam.widget.e((Context) this, false);
         eVar.show();

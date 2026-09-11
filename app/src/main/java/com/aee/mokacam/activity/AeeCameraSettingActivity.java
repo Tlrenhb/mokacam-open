@@ -37,87 +37,87 @@ import org.xutils.BuildConfig;
 
 /* JADX INFO: loaded from: classes.dex */
 public class AeeCameraSettingActivity extends BaseActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
-    private TextView E;
-    private TextView F;
-    private TextView G;
-    private TextView H;
-    private TextView I;
-    private TextView J;
-    private TextView K;
-    private TextView L;
-    private TextView M;
-    private TextView N;
-    private com.aee.mokacam.widget.g O;
-    private ListView P;
-    private LinearLayout R;
-    private LinearLayout S;
-    private int T;
-    private int U;
-    private float V;
-    private float W;
-    private View X;
-    private RelativeLayout Y;
-    private RelativeLayout Z;
+    TextView E;
+    TextView F;
+    TextView G;
+    TextView H;
+    TextView I;
+    TextView J;
+    TextView K;
+    TextView L;
+    TextView M;
+    TextView N;
+    com.aee.mokacam.widget.g O;
+    ListView P;
+    LinearLayout R;
+    LinearLayout S;
+    int T;
+    int U;
+    float V;
+    float W;
+    View X;
+    RelativeLayout Y;
+    RelativeLayout Z;
     protected String[] a;
-    private EditText aA;
-    private EditText aB;
-    private EditText aC;
-    private RelativeLayout aa;
-    private RelativeLayout ab;
-    private RelativeLayout ac;
-    private RelativeLayout ad;
-    private RelativeLayout ae;
-    private RelativeLayout af;
-    private RelativeLayout ag;
-    private RelativeLayout ah;
-    private RelativeLayout ai;
-    private RelativeLayout aj;
-    private RelativeLayout ak;
-    private RelativeLayout al;
-    private RelativeLayout am;
-    private RelativeLayout an;
-    private RelativeLayout ao;
-    private ToggleButton aq;
-    private LinearLayout ar;
-    private TextView as;
-    private TextView at;
-    private TextView au;
-    private TextView av;
-    private TextView aw;
-    private int ax;
-    private int ay;
-    private ImageView az;
+    EditText aA;
+    EditText aB;
+    EditText aC;
+    RelativeLayout aa;
+    RelativeLayout ab;
+    RelativeLayout ac;
+    RelativeLayout ad;
+    RelativeLayout ae;
+    RelativeLayout af;
+    RelativeLayout ag;
+    RelativeLayout ah;
+    RelativeLayout ai;
+    RelativeLayout aj;
+    RelativeLayout ak;
+    RelativeLayout al;
+    RelativeLayout am;
+    RelativeLayout an;
+    RelativeLayout ao;
+    ToggleButton aq;
+    LinearLayout ar;
+    TextView as;
+    TextView at;
+    TextView au;
+    TextView av;
+    TextView aw;
+    int ax;
+    int ay;
+    ImageView az;
     protected SendMsg b;
     protected ReceiveMsg c;
     protected String[] e;
-    private String k = BuildConfig.FLAVOR;
-    private String l = BuildConfig.FLAVOR;
-    private String m = BuildConfig.FLAVOR;
-    private String n = BuildConfig.FLAVOR;
-    private String o = BuildConfig.FLAVOR;
-    private String p = BuildConfig.FLAVOR;
-    private String q = BuildConfig.FLAVOR;
-    private String r = BuildConfig.FLAVOR;
-    private String s = BuildConfig.FLAVOR;
-    private String t = BuildConfig.FLAVOR;
-    private String u = BuildConfig.FLAVOR;
-    private String v = BuildConfig.FLAVOR;
-    private String w = BuildConfig.FLAVOR;
-    private String x = BuildConfig.FLAVOR;
-    private String y = BuildConfig.FLAVOR;
-    private String z = BuildConfig.FLAVOR;
-    private String A = BuildConfig.FLAVOR;
-    private String B = BuildConfig.FLAVOR;
-    private String C = BuildConfig.FLAVOR;
-    private String D = BuildConfig.FLAVOR;
+    String k = BuildConfig.FLAVOR;
+    String l = BuildConfig.FLAVOR;
+    String m = BuildConfig.FLAVOR;
+    String n = BuildConfig.FLAVOR;
+    String o = BuildConfig.FLAVOR;
+    String p = BuildConfig.FLAVOR;
+    String q = BuildConfig.FLAVOR;
+    String r = BuildConfig.FLAVOR;
+    String s = BuildConfig.FLAVOR;
+    String t = BuildConfig.FLAVOR;
+    String u = BuildConfig.FLAVOR;
+    String v = BuildConfig.FLAVOR;
+    String w = BuildConfig.FLAVOR;
+    String x = BuildConfig.FLAVOR;
+    String y = BuildConfig.FLAVOR;
+    String z = BuildConfig.FLAVOR;
+    String A = BuildConfig.FLAVOR;
+    String B = BuildConfig.FLAVOR;
+    String C = BuildConfig.FLAVOR;
+    String D = BuildConfig.FLAVOR;
     protected boolean d = false;
     boolean f = false;
-    private int Q = -1;
+    int Q = -1;
     boolean g = false;
-    private List<RelativeLayout> ap = new ArrayList();
+    List<RelativeLayout> ap = new ArrayList();
     protected boolean h = false;
 
-    private void a(int i) {
+    void a(int i) {
         String string = getString(R.string.sure_format);
         String string2 = getString(R.string.sure);
         String string3 = getString(R.string.cancel);
@@ -128,7 +128,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
         }
     }
 
-    private void a(String str, String str2, String str3) {
+    void a(String str, String str2, String str3) {
         new Thread(new x(this, str, str2, str3)).start();
         try {
             TimeUnit.MILLISECONDS.sleep(300L);
@@ -137,7 +137,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
         }
     }
 
-    private void a(String str, String str2, String str3, int i) {
+    void a(String str, String str2, String str3, int i) {
         View viewInflate = View.inflate(this, R.layout.dialog_warning, null);
         TextView textView = (TextView) viewInflate.findViewById(R.id.warn_tv);
         TextView textView2 = (TextView) viewInflate.findViewById(R.id.sure_tv);
@@ -154,17 +154,17 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
         textView3.setOnClickListener(new ac(this, popupWindow));
     }
 
-    private boolean a(int i, String str, String str2) {
+    boolean a(int i, String str, String str2) {
         com.aee.mokacam.service.a.a().a(new ag(this, i, str2), new SendMsg(2, str, str2));
         return this.f;
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public boolean a(String str) {
         return !TextUtils.isEmpty(str);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public boolean a(String str, String str2) {
         if (TextUtils.isEmpty(str) || TextUtils.isEmpty(str2)) {
             return false;
@@ -180,12 +180,12 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
         return false;
     }
 
-    private void b() {
+    void b() {
         this.ay = getIntent().getIntExtra("currentProduct", 0);
         this.ax = getIntent().getIntExtra("currentMode", 0);
     }
 
-    private void b(String str, String str2) {
+    void b(String str, String str2) {
         new Thread(new ao(this, str, str2)).start();
         try {
             TimeUnit.MILLISECONDS.sleep(300L);
@@ -194,13 +194,13 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public boolean b(String str) {
         com.aee.mokacam.service.a.a().a(new am(this), new SendMsg(2, str, "wifi_ssid"));
         return this.g;
     }
 
-    private void c() {
+    void c() {
         this.Y = (RelativeLayout) findViewById(R.id.video_resolution_bg);
         this.Z = (RelativeLayout) findViewById(R.id.rl_bitrate);
         this.aa = (RelativeLayout) findViewById(R.id.rl_video_stamp);
@@ -257,20 +257,20 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
         this.ap.add(this.an);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public boolean c(String str) {
         com.aee.mokacam.service.a.a().a(new an(this), new SendMsg(2, str, "wifi_password"));
         return this.g;
     }
 
-    private void d() {
+    void d() {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         ((WindowManager) getSystemService("window")).getDefaultDisplay().getMetrics(displayMetrics);
         this.T = displayMetrics.widthPixels;
         this.U = displayMetrics.heightPixels;
     }
 
-    private void e() {
+    void e() {
         this.Y.setOnClickListener(this);
         this.Z.setOnClickListener(this);
         this.aa.setOnClickListener(this);
@@ -291,7 +291,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
         this.an.setOnClickListener(this);
     }
 
-    private void f() {
+    void f() {
         new Thread(new v(this)).start();
         try {
             TimeUnit.MILLISECONDS.sleep(289L);
@@ -300,7 +300,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void g() {
         this.G.setText(this.k);
         this.at.setText(com.aee.mokacam.utils.q.a("video_quality", this.m));
@@ -325,14 +325,14 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
         this.F.setText(this.o);
     }
 
-    private void h() {
+    void h() {
         AeeApplication.a().a = -1;
         com.aee.mokacam.service.a.a().b(new ae(this));
         com.aee.mokacam.service.a.a().f();
         AeeApplication.a().f = false;
     }
 
-    private void i() {
+    void i() {
         this.P.setAdapter((ListAdapter) new af(this, this, android.R.layout.simple_list_item_1, this.a));
     }
 

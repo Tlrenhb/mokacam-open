@@ -6,8 +6,8 @@ import android.net.wifi.WifiManager;
 
 /* JADX INFO: loaded from: classes.dex */
 public class al {
-    private WifiManager a;
-    private WifiInfo b;
+    WifiManager a;
+    WifiInfo b;
 
     public al(Context context) {
         this.a = (WifiManager) context.getSystemService("wifi");
