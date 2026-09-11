@@ -212,7 +212,7 @@ public final class e implements Closeable {
         }
     }
 
-    void c() {
+    void c() throws IOException {
         BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(this.c), 8192);
         try {
             String strA = a((InputStream) bufferedInputStream);
