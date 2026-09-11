@@ -89,8 +89,6 @@ public class a {
     }
 
     public ReceiveMsg a(SendMsg sendMsg) {
-        ReceiveMsg receiveMsg;
-        Exception e;
         if (!(AeeApplication.a().e == -1000 ? g() : true)) {
             return null;
         }
@@ -99,13 +97,12 @@ public class a {
             try {
                 return !ResolveJson.checkRval(receiveMsg, sendMsg.getMsg_id()) ? (ReceiveMsg) ResolveJson.resolveNormalInfo(a().c(sendMsg.toJson()), ReceiveMsg.class) : receiveMsg;
             } catch (Exception e2) {
-                e = e2;
-                e.printStackTrace();
+                e2.printStackTrace();
                 return receiveMsg;
             }
         } catch (Exception e3) {
-            receiveMsg = null;
-            e = e3;
+            e3.printStackTrace();
+            return null;
         }
     }
 
