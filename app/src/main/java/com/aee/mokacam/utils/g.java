@@ -18,7 +18,7 @@ public final class g {
         this(eVar, iVar);
     }
 
-    public OutputStream a(int i) {
+    public OutputStream a(int i) throws IOException {
         h hVar;
         synchronized (this.a) {
             if (this.b.e != this) {
@@ -29,7 +29,7 @@ public final class g {
         return hVar;
     }
 
-    public void a() {
+    public void a() throws IOException {
         if (!this.c) {
             this.a.a(this, true);
         } else {
@@ -38,7 +38,7 @@ public final class g {
         }
     }
 
-    public void b() {
+    public void b() throws IOException {
         this.a.a(this, false);
     }
 }
