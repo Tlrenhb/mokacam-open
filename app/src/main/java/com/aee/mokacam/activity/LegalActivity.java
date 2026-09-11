@@ -46,28 +46,23 @@ public class LegalActivity extends BaseActivity {
     }
 
     public String a(String str) {
-        InputStream inputStreamOpen;
-        BufferedReader bufferedReader;
         StringBuffer stringBuffer = new StringBuffer();
         try {
-            inputStreamOpen = getAssets().open(str);
-            bufferedReader = new BufferedReader(new InputStreamReader(inputStreamOpen));
+            InputStream inputStreamOpen = getAssets().open(str);
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStreamOpen));
+            while (true) {
+                String line = bufferedReader.readLine();
+                if (line == null) {
+                    break;
+                }
+                stringBuffer.append(line);
+                stringBuffer.append("\n");
+            }
+            bufferedReader.close();
+            inputStreamOpen.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        while (true) {
-            String line = bufferedReader.readLine();
-            if (line == null) {
-                break;
-            }
-            stringBuffer.append(String.valueOf(line) + "\n");
-            return stringBuffer.toString();
-        }
-        bufferedReader.close();
-        inputStreamOpen.close();
-        return stringBuffer.toString();
-    }
-
     @Override // com.aee.mokacam.activity.BaseActivity, androidx.fragment.app.FragmentActivity, android.support.v4.app.BaseFragmentActivityDonut, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
