@@ -2,9 +2,13 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="64dp" android:height="64dp"
     android:viewportWidth="64" android:viewportHeight="64">
-    <path android:fillColor="#FF333333"
-        android:pathData="M8,12 h48 a4,4 0 0 1 4,4 v32 a4,4 0 0 1 -4,4 h-48 a4,4 0 0 1 -4,-4 v-32 a4,4 0 0 1 4,-4 z"/>
-    <path android:fillColor="#FF777777"
-        android:pathData="M12,44 l12,-14 l9,10 l7,-7 l12,11 z"/>
-    <circle android:fillColor="#FFAAAAAA" android:centerX="20" android:centerY="24" android:radius="5"/>
+    <path
+        android:fillColor="#FF333333"
+        android:pathData="M12,12 h40 a4,4 0 0 1 4,4 v32 a4,4 0 0 1 -4,4 h-40 a4,4 0 0 1 -4,-4 v-32 a4,4 0 0 1 4,-4 z" />
+    <path
+        android:fillColor="#FF777777"
+        android:pathData="M16,44 l10,-12 l8,9 l6,-6 l10,9 z" />
+    <path
+        android:fillColor="#FFAAAAAA"
+        android:pathData="M20,26 a4,4 0 1 0 8,0 a4,4 0 1 0 -8,0 z" />
 </vector>
