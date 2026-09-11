@@ -49,7 +49,7 @@ public class UpdateManager {
         }
     }
 
-    public static InputStream a(String str, String str2) throws ProtocolException {
+    public static InputStream a(String str, String str2) throws Exception {
         HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(str).openConnection();
         httpURLConnection.setRequestMethod("GET");
         httpURLConnection.setReadTimeout(6000);
