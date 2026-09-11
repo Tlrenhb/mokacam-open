@@ -11,10 +11,10 @@ import com.zcw.togglebutton.ToggleButton;
 
 /* JADX INFO: loaded from: classes.dex */
 public class SettingsItemViewWithToggle extends RelativeLayout {
-    private Context a;
-    private String b;
-    private TextView c;
-    private ToggleButton d;
+    Context a;
+    String b;
+    TextView c;
+    ToggleButton d;
 
     public SettingsItemViewWithToggle(Context context) {
         super(context);
@@ -33,7 +33,7 @@ public class SettingsItemViewWithToggle extends RelativeLayout {
         super(context, attributeSet, i);
     }
 
-    private void a() {
+    void a() {
         View viewInflate = View.inflate(this.a, R.layout.item_settings_toggle, this);
         this.c = (TextView) viewInflate.findViewById(R.id.tv_itemtoggle);
         this.d = (ToggleButton) viewInflate.findViewById(R.id.toggle_item_setting);

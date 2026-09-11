@@ -15,20 +15,20 @@ import java.util.List;
 
 /* JADX INFO: loaded from: classes.dex */
 public class PinchImageView extends ImageView {
-    private View.OnClickListener a;
-    private View.OnLongClickListener b;
-    private Matrix c;
-    private RectF d;
-    private int e;
-    private List<m> f;
-    private List<m> g;
-    private int h;
-    private PointF i;
-    private PointF j;
-    private float k;
-    private o l;
-    private i m;
-    private GestureDetector n;
+    View.OnClickListener a;
+    View.OnLongClickListener b;
+    Matrix c;
+    RectF d;
+    int e;
+    List<m> f;
+    List<m> g;
+    int h;
+    PointF i;
+    PointF j;
+    float k;
+    o l;
+    i m;
+    GestureDetector n;
 
     public PinchImageView(Context context) {
         super(context);
@@ -63,7 +63,7 @@ public class PinchImageView extends ImageView {
         b();
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a() {
         if (this.f == null) {
             return;
@@ -81,13 +81,13 @@ public class PinchImageView extends ImageView {
         this.g = null;
     }
 
-    private void a(float f, float f2, float f3, float f4) {
+    void a(float f, float f2, float f3, float f4) {
         this.k = j.c(this.c)[0] / j.b(f, f2, f3, f4);
         float[] fArrA = j.a(j.c(f, f2, f3, f4), this.c);
         this.j.set(fArrA[0], fArrA[1]);
     }
 
-    private void a(PointF pointF, float f, float f2, PointF pointF2) {
+    void a(PointF pointF, float f, float f2, PointF pointF2) {
         if (c()) {
             float f3 = f * f2;
             Matrix matrixA = j.a();
@@ -100,11 +100,11 @@ public class PinchImageView extends ImageView {
         }
     }
 
-    private void b() {
+    void b() {
         super.setScaleType(ImageView.ScaleType.MATRIX);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public boolean b(float f, float f2) {
         if (!c()) {
             return false;
@@ -134,7 +134,7 @@ public class PinchImageView extends ImageView {
         return (f == 0.0f && f2 == 0.0f) ? false : true;
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void c(float f, float f2) {
         float f3 = 0.0f;
         if (c()) {
@@ -179,11 +179,11 @@ public class PinchImageView extends ImageView {
         }
     }
 
-    private boolean c() {
+    boolean c() {
         return getDrawable() != null && getDrawable().getIntrinsicWidth() > 0 && getDrawable().getIntrinsicHeight() > 0 && getWidth() > 0 && getHeight() > 0;
     }
 
-    private void d() {
+    void d() {
         if (c()) {
             Matrix matrixA = j.a();
             b(matrixA);
@@ -219,7 +219,7 @@ public class PinchImageView extends ImageView {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void d(float f, float f2) {
         if (c()) {
             e();
@@ -228,7 +228,7 @@ public class PinchImageView extends ImageView {
         }
     }
 
-    private void e() {
+    void e() {
         if (this.l != null) {
             this.l.cancel();
             this.l = null;

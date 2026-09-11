@@ -9,8 +9,8 @@ import com.aee.mokacam.R;
 
 /* JADX INFO: loaded from: classes.dex */
 public class RatioLayout extends FrameLayout {
-    private float a;
-    private int b;
+    float a;
+    int b;
 
     public RatioLayout(Context context) {
         this(context, null);

@@ -5,8 +5,8 @@ import java.util.Queue;
 
 /* JADX INFO: loaded from: classes.dex */
 abstract class l<T> {
-    private int a;
-    private Queue<T> b = new LinkedList();
+    int a;
+    Queue<T> b = new LinkedList();
 
     public l(int i) {
         this.a = i;

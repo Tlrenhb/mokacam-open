@@ -24,22 +24,22 @@ public class AppSingleRocker extends SurfaceView implements SurfaceHolder.Callba
     Bitmap c;
     Bitmap d;
     int e;
-    private SurfaceHolder f;
-    private Paint g;
-    private Point h;
-    private int i;
-    private int j;
-    private a k;
-    private Point l;
-    private SensorEventListener m;
-    private SensorManager n;
-    private int o;
-    private int p;
-    private TextPaint q;
-    private int r;
-    private float s;
-    private float t;
-    private float u;
+    SurfaceHolder f;
+    Paint g;
+    Point h;
+    int i;
+    int j;
+    a k;
+    Point l;
+    SensorEventListener m;
+    SensorManager n;
+    int o;
+    int p;
+    TextPaint q;
+    int r;
+    float s;
+    float t;
+    float u;
 
     public AppSingleRocker(Context context) {
         super(context);
@@ -68,12 +68,12 @@ public class AppSingleRocker extends SurfaceView implements SurfaceHolder.Callba
         c();
     }
 
-    private int a(float f) {
+    int a(float f) {
         int iRound = (int) Math.round((((double) f) / 3.141592653589793d) * 180.0d);
         return iRound < 0 ? -iRound : (180 - iRound) + 180;
     }
 
-    private void c() {
+    void c() {
         setKeepScreenOn(true);
         this.f = getHolder();
         this.f.addCallback(this);

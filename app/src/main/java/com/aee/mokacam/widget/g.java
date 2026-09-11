@@ -13,9 +13,9 @@ import com.aee.mokacam.R;
 
 /* JADX INFO: loaded from: classes.dex */
 public class g extends Dialog {
-    private Animation a;
-    private ImageView b;
-    private TextView c;
+    Animation a;
+    ImageView b;
+    TextView c;
 
     public g(Context context) {
         super(context, R.style.loading_dialog);

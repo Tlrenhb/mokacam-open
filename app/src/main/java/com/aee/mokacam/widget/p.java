@@ -14,12 +14,12 @@ import com.aee.mokacam.R;
 
 /* JADX INFO: loaded from: classes.dex */
 public class p extends Dialog {
-    private int a;
-    private int b;
-    private TextView c;
-    private TextView d;
-    private TextView e;
-    private TextView f;
+    int a;
+    int b;
+    TextView c;
+    TextView d;
+    TextView e;
+    TextView f;
 
     public p(Context context, View.OnClickListener onClickListener, int i, int i2, int i3) {
         super(context, R.style.TransparentDialog);
@@ -123,7 +123,7 @@ public class p extends Dialog {
         show();
     }
 
-    private void a(Context context) {
+    void a(Context context) {
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
         this.a = displayMetrics.widthPixels;
         this.b = displayMetrics.heightPixels;

@@ -6,8 +6,8 @@ import java.util.Map;
 
 /* JADX INFO: loaded from: classes.dex */
 public class l {
-    private static final l a = new l(true);
-    private final Map<k, String> b = new HashMap();
+    static final l a = new l(true);
+    final Map<k, String> b = new HashMap();
 
     l(boolean z) {
         if (z) {

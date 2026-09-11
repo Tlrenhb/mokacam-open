@@ -5,7 +5,7 @@ import android.animation.ValueAnimator;
 /* JADX INFO: loaded from: classes.dex */
 class i extends ValueAnimator implements ValueAnimator.AnimatorUpdateListener {
     final /* synthetic */ PinchImageView a;
-    private float[] b;
+    float[] b;
 
     public i(PinchImageView pinchImageView, float f, float f2) {
         this.a = pinchImageView;

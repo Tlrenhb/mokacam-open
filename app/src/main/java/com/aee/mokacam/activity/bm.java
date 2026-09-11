@@ -52,7 +52,6 @@ class bm extends AsyncTask<String, Void, Bitmap> {
                                 gVarB.a();
                             }
                         } catch (Exception e) {
-                            e = e;
                             e.printStackTrace();
                             if (outputStreamA != null) {
                                 try {
@@ -83,7 +82,6 @@ class bm extends AsyncTask<String, Void, Bitmap> {
             com.aee.mokacam.utils.j jVarA = this.a.u.a(strA);
             bitmapDecodeStream = jVarA != null ? BitmapFactory.decodeStream(jVarA.a(0)) : null;
         } catch (Exception e4) {
-            e = e4;
             outputStreamA = null;
         }
         if (bitmapDecodeStream == null) {

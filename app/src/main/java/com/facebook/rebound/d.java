@@ -5,10 +5,10 @@ import android.os.SystemClock;
 
 /* JADX INFO: loaded from: classes.dex */
 class d extends n {
-    private final Handler b;
-    private final Runnable c = new e(this);
-    private boolean d;
-    private long e;
+    final Handler b;
+    final Runnable c = new e(this);
+    boolean d;
+    long e;
 
     public d(Handler handler) {
         this.b = handler;

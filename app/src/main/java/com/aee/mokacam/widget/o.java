@@ -6,9 +6,9 @@ import android.graphics.Matrix;
 /* JADX INFO: loaded from: classes.dex */
 class o extends ValueAnimator implements ValueAnimator.AnimatorUpdateListener {
     final /* synthetic */ PinchImageView a;
-    private float[] b;
-    private float[] c;
-    private float[] d;
+    float[] b;
+    float[] c;
+    float[] d;
 
     public o(PinchImageView pinchImageView, Matrix matrix, Matrix matrix2) {
         this(pinchImageView, matrix, matrix2, 200L);

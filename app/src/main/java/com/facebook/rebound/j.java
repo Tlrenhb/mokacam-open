@@ -5,7 +5,7 @@ class j {
     double a;
     double b;
 
-    private j() {
+    j() {
     }
 
     /* synthetic */ j(j jVar) {

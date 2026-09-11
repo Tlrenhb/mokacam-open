@@ -9,7 +9,7 @@ import com.aee.mokacam.R;
 
 /* JADX INFO: loaded from: classes.dex */
 public class DotSelectedNumView extends RelativeLayout {
-    private TextView a;
+    TextView a;
 
     public DotSelectedNumView(Context context) {
         this(context, null);

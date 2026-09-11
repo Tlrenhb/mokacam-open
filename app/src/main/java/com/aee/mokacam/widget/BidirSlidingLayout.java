@@ -12,25 +12,25 @@ import android.widget.RelativeLayout;
 
 /* JADX INFO: loaded from: classes.dex */
 public class BidirSlidingLayout extends RelativeLayout implements View.OnTouchListener {
-    private int a;
-    private int b;
-    private int c;
-    private float d;
-    private float e;
-    private float f;
-    private float g;
-    private float h;
-    private boolean i;
-    private boolean j;
-    private boolean k;
-    private View l;
-    private View m;
-    private View n;
-    private View o;
-    private ViewGroup.MarginLayoutParams p;
-    private ViewGroup.MarginLayoutParams q;
-    private RelativeLayout.LayoutParams r;
-    private VelocityTracker s;
+    int a;
+    int b;
+    int c;
+    float d;
+    float e;
+    float f;
+    float g;
+    float h;
+    boolean i;
+    boolean j;
+    boolean k;
+    View l;
+    View m;
+    View n;
+    View o;
+    ViewGroup.MarginLayoutParams p;
+    ViewGroup.MarginLayoutParams q;
+    RelativeLayout.LayoutParams r;
+    VelocityTracker s;
 
     public BidirSlidingLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
@@ -38,7 +38,7 @@ public class BidirSlidingLayout extends RelativeLayout implements View.OnTouchLi
         this.c = ViewConfiguration.get(context).getScaledTouchSlop();
     }
 
-    private void a(int i, int i2) {
+    void a(int i, int i2) {
         if (this.j) {
             if (this.k || Math.abs(i) < this.c || i <= 0) {
                 return;
@@ -55,7 +55,7 @@ public class BidirSlidingLayout extends RelativeLayout implements View.OnTouchLi
         c();
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a(long j) {
         try {
             Thread.sleep(j);
@@ -64,14 +64,14 @@ public class BidirSlidingLayout extends RelativeLayout implements View.OnTouchLi
         }
     }
 
-    private void a(MotionEvent motionEvent) {
+    void a(MotionEvent motionEvent) {
         if (this.s == null) {
             this.s = VelocityTracker.obtain();
         }
         this.s.addMovement(motionEvent);
     }
 
-    private void d() {
+    void d() {
         if (this.r.leftMargin > 0) {
             this.r.leftMargin = 0;
         } else if (this.r.leftMargin < (-this.q.width)) {
@@ -79,25 +79,25 @@ public class BidirSlidingLayout extends RelativeLayout implements View.OnTouchLi
         }
     }
 
-    private boolean e() {
+    boolean e() {
         return this.d - this.h > ((float) (this.q.width / 2)) || getScrollVelocity() > 200;
     }
 
-    private boolean f() {
+    boolean f() {
         return this.h - this.d > ((float) (this.q.width / 2)) || getScrollVelocity() > 200;
     }
 
-    private void g() {
+    void g() {
         this.s.recycle();
         this.s = null;
     }
 
-    private int getScrollVelocity() {
+    int getScrollVelocity() {
         this.s.computeCurrentVelocity(1000);
         return Math.abs((int) this.s.getXVelocity());
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void h() {
         if (this.o != null) {
             this.o.setPressed(false);

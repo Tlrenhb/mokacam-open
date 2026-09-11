@@ -5,21 +5,21 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 /* JADX INFO: loaded from: classes.dex */
 public class i {
-    private static int a = 0;
-    private k b;
-    private boolean c;
-    private final String d;
-    private double h;
-    private double i;
-    private final f o;
-    private final j e = new j(null);
-    private final j f = new j(null);
-    private final j g = new j(null);
-    private boolean j = true;
-    private double k = 0.005d;
-    private double l = 0.005d;
-    private CopyOnWriteArraySet<m> m = new CopyOnWriteArraySet<>();
-    private double n = 0.0d;
+    static int a = 0;
+    k b;
+    boolean c;
+    final String d;
+    double h;
+    double i;
+    final f o;
+    final j e = new j(null);
+    final j f = new j(null);
+    final j g = new j(null);
+    boolean j = true;
+    double k = 0.005d;
+    double l = 0.005d;
+    CopyOnWriteArraySet<m> m = new CopyOnWriteArraySet<>();
+    double n = 0.0d;
 
     i(f fVar) {
         if (fVar == null) {
@@ -30,14 +30,14 @@ public class i {
         int i = a;
         a = i + 1;
         this.d = sb.append(i).toString();
-        this.b = k.c;
+        this.b = com.facebook.rebound.k.c;
     }
 
-    private double a(j jVar) {
+    double a(j jVar) {
         return Math.abs(this.i - jVar.a);
     }
 
-    private void e(double d) {
+    void e(double d) {
         this.e.a = (this.e.a * d) + (this.f.a * (1.0d - d));
         this.e.b = (this.e.b * d) + (this.f.b * (1.0d - d));
     }

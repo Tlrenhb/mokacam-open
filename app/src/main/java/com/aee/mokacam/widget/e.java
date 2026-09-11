@@ -10,12 +10,12 @@ import com.aee.mokacam.R;
 
 /* JADX INFO: loaded from: classes.dex */
 public class e extends Dialog implements View.OnClickListener {
-    private boolean a;
-    private ImageView b;
-    private TextView c;
-    private TextView d;
-    private TextView e;
-    private f f;
+    boolean a;
+    ImageView b;
+    TextView c;
+    TextView d;
+    TextView e;
+    f f;
 
     public e(Context context) {
         this(context, R.style.TransparentDialog);
@@ -30,7 +30,7 @@ public class e extends Dialog implements View.OnClickListener {
         this.a = z;
     }
 
-    private void a() {
+    void a() {
         this.b = (ImageView) findViewById(R.id.icon_iv);
         this.c = (TextView) findViewById(R.id.warn_tv);
         this.d = (TextView) findViewById(R.id.sure_tv);
@@ -38,7 +38,7 @@ public class e extends Dialog implements View.OnClickListener {
         a(R.drawable.icon_circlewarning);
     }
 
-    private void b() {
+    void b() {
         this.d.setOnClickListener(this);
         this.e.setOnClickListener(this);
     }

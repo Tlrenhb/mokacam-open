@@ -10,13 +10,13 @@ import android.widget.Scroller;
 
 /* JADX INFO: loaded from: classes.dex */
 public class SlidingMenuView extends ViewGroup {
-    private View a;
-    private View b;
-    private int c;
-    private int d;
-    private int e;
-    private Scroller f;
-    private boolean g;
+    View a;
+    View b;
+    int c;
+    int d;
+    int e;
+    Scroller f;
+    boolean g;
 
     public SlidingMenuView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);

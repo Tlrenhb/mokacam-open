@@ -17,24 +17,24 @@ import org.xutils.BuildConfig;
 
 /* JADX INFO: loaded from: classes.dex */
 public class c extends AlertDialog {
-    private ProgressBar a;
-    private TextView b;
-    private TextView c;
-    private Handler d;
-    private String e;
-    private NumberFormat f;
-    private int g;
-    private int h;
-    private boolean i;
-    private ImageView j;
-    private Animation k;
+    ProgressBar a;
+    TextView b;
+    TextView c;
+    Handler d;
+    String e;
+    NumberFormat f;
+    int g;
+    int h;
+    boolean i;
+    ImageView j;
+    Animation k;
 
     public c(Context context) {
         super(context);
         a(context);
     }
 
-    private void a() {
+    void a() {
         this.j = (ImageView) findViewById(R.id.deleting_img);
         this.a = (ProgressBar) findViewById(R.id.pb_delete);
         this.b = (TextView) findViewById(R.id.tv_progress_precent);
@@ -50,14 +50,14 @@ public class c extends AlertDialog {
         b();
     }
 
-    private void a(Context context) {
+    void a(Context context) {
         this.e = "%1d/%2d";
         this.f = NumberFormat.getPercentInstance();
         this.f.setMaximumFractionDigits(0);
         this.k = AnimationUtils.loadAnimation(context, R.anim.load_animation);
     }
 
-    private void b() {
+    void b() {
         if (this.d == null || this.d.hasMessages(0)) {
             return;
         }

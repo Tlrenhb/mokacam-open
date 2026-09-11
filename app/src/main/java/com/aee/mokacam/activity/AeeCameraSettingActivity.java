@@ -49,7 +49,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
     TextView N;
     com.aee.mokacam.widget.g O;
     ListView P;
-    LinearLayout R;
+    LinearLayout rlWifiSetting;
     LinearLayout S;
     int T;
     int U;
@@ -236,7 +236,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
         this.N = (TextView) findViewById(R.id.my_setup_time);
         this.E = (TextView) findViewById(R.id.dv_pid);
         this.F = (TextView) findViewById(R.id.dv_version);
-        this.R = (LinearLayout) findViewById(R.id.wifisetting_ll);
+        this.rlWifiSetting = (LinearLayout) findViewById(R.id.wifisetting_ll);
         this.S = (LinearLayout) findViewById(R.id.wifi_psw_setting_ll);
         this.ap.add(this.Y);
         this.ap.add(this.Z);
@@ -471,7 +471,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                     this.aC.setText(BuildConfig.FLAVOR);
                     com.aee.mokacam.utils.w.a(R.string.wifi_setting_fail, true);
                 } else {
-                    this.R.setVisibility(8);
+                    this.rlWifiSetting.setVisibility(8);
                     this.S.setVisibility(8);
                     AeeApplication.a().f = false;
                     com.aee.mokacam.service.a.a().f();
@@ -587,7 +587,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                     this.Q = 1;
                     this.Y.setBackgroundResource(R.drawable.settings_item_pressed);
                     this.ar.setVisibility(0);
-                    this.R.setVisibility(8);
+                    this.rlWifiSetting.setVisibility(8);
                     this.S.setVisibility(8);
                     this.as.setText(R.string.video_resolutions);
                     b("获取主机视频参数  配置", "video_resolution");
@@ -600,7 +600,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                     this.Q = 2;
                     this.Z.setBackgroundResource(R.drawable.settings_item_pressed);
                     this.ar.setVisibility(0);
-                    this.R.setVisibility(8);
+                    this.rlWifiSetting.setVisibility(8);
                     this.S.setVisibility(8);
                     this.as.setText(R.string.bit_rate);
                     b("获取主机视频参数配置", "video_quality");
@@ -613,7 +613,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                     this.Q = 3;
                     this.aa.setBackgroundResource(R.drawable.settings_item_pressed);
                     this.ar.setVisibility(0);
-                    this.R.setVisibility(8);
+                    this.rlWifiSetting.setVisibility(8);
                     this.S.setVisibility(8);
                     this.as.setText(R.string.video_stamp);
                     b("获取主机视频参数配置", "video_stamp");
@@ -626,7 +626,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                     this.Q = 7;
                     this.ad.setBackgroundResource(R.drawable.settings_item_pressed);
                     this.ar.setVisibility(0);
-                    this.R.setVisibility(8);
+                    this.rlWifiSetting.setVisibility(8);
                     this.S.setVisibility(8);
                     this.as.setText(R.string.photo_resolution);
                     b("获取主机视频参数配置", "photo_size");
@@ -639,7 +639,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                     this.Q = 8;
                     this.ae.setBackgroundResource(R.drawable.settings_item_pressed);
                     this.ar.setVisibility(0);
-                    this.R.setVisibility(8);
+                    this.rlWifiSetting.setVisibility(8);
                     this.S.setVisibility(8);
                     this.as.setText(R.string.photo_shot_mode);
                     a("快拍设置配置", "photo_burstRate", (String) null);
@@ -652,7 +652,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                     this.Q = 9;
                     this.af.setBackgroundResource(R.drawable.settings_item_pressed);
                     this.ar.setVisibility(0);
-                    this.R.setVisibility(8);
+                    this.rlWifiSetting.setVisibility(8);
                     this.S.setVisibility(8);
                     this.as.setText(R.string.photo_delay);
                     a("延迟拍照配置", "photo_selfTimer", (String) null);
@@ -665,7 +665,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                     this.Q = 10;
                     this.aa.setBackgroundResource(R.drawable.settings_item_pressed);
                     this.ar.setVisibility(0);
-                    this.R.setVisibility(8);
+                    this.rlWifiSetting.setVisibility(8);
                     this.S.setVisibility(8);
                     this.as.setText(R.string.video_stamp);
                     b("获取主机视频参数配置", "photo_stamp");
@@ -677,7 +677,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                 this.Q = 11;
                 this.aa.setBackgroundResource(R.drawable.settings_item_pressed);
                 this.ar.setVisibility(0);
-                this.R.setVisibility(8);
+                this.rlWifiSetting.setVisibility(8);
                 this.S.setVisibility(8);
                 this.as.setText(R.string.setup_loop_back);
                 a("获取主机循环录像", "Loop_Record", (String) null);
@@ -686,7 +686,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                 this.Q = 15;
                 this.ag.setBackgroundResource(R.drawable.settings_item_pressed);
                 this.ar.setVisibility(0);
-                this.R.setVisibility(8);
+                this.rlWifiSetting.setVisibility(8);
                 this.S.setVisibility(8);
                 this.as.setText(R.string.setup_key_tone);
                 a("设置提示音", "Beep", (String) null);
@@ -695,7 +695,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                 this.Q = 17;
                 this.ah.setBackgroundResource(R.drawable.settings_item_pressed);
                 this.ar.setVisibility(0);
-                this.R.setVisibility(8);
+                this.rlWifiSetting.setVisibility(8);
                 this.S.setVisibility(8);
                 this.as.setText(R.string.setup_system_type);
                 this.a = new String[]{"NTSC", "PAL"};
@@ -705,13 +705,13 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                 this.Q = 18;
                 this.ai.setBackgroundResource(R.drawable.settings_item_pressed);
                 this.ar.setVisibility(0);
-                this.R.setVisibility(8);
+                this.rlWifiSetting.setVisibility(8);
                 this.S.setVisibility(8);
                 this.as.setText(R.string.dv_language);
                 a("DV端语言设置", "Language", (String) null);
                 break;
             case R.id.setup_time_bg /* 2131427412 */:
-                this.R.setVisibility(8);
+                this.rlWifiSetting.setVisibility(8);
                 this.ar.setVisibility(8);
                 this.S.setVisibility(8);
                 if (com.aee.mokacam.service.a.a().e()) {
@@ -746,14 +746,14 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                 break;
             case R.id.format_bg /* 2131427415 */:
                 this.ak.setBackgroundResource(R.drawable.settings_item_pressed);
-                this.R.setVisibility(8);
+                this.rlWifiSetting.setVisibility(8);
                 this.ar.setVisibility(8);
                 this.S.setVisibility(8);
                 a(0);
                 break;
             case R.id.nesignation_bg /* 2131427416 */:
                 this.al.setBackgroundResource(R.drawable.settings_item_pressed);
-                this.R.setVisibility(8);
+                this.rlWifiSetting.setVisibility(8);
                 this.ar.setVisibility(8);
                 this.S.setVisibility(8);
                 a(1);
@@ -767,7 +767,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                     Button button2 = (Button) findViewById(R.id.wifisetting_confirm);
                     this.aA = (EditText) findViewById(R.id.new_ssid);
                     this.aA.setText(BuildConfig.FLAVOR);
-                    this.R.setVisibility(0);
+                    this.rlWifiSetting.setVisibility(0);
                     this.S.setVisibility(8);
                     this.ar.setVisibility(8);
                     button2.setOnClickListener(new ai(this));
@@ -785,7 +785,7 @@ public class AeeCameraSettingActivity extends BaseActivity implements View.OnCli
                     this.aC = (EditText) findViewById(R.id.confirm_password);
                     this.aB.setText(BuildConfig.FLAVOR);
                     this.aC.setText(BuildConfig.FLAVOR);
-                    this.R.setVisibility(8);
+                    this.rlWifiSetting.setVisibility(8);
                     this.S.setVisibility(0);
                     this.ar.setVisibility(8);
                     button4.setOnClickListener(new ak(this));

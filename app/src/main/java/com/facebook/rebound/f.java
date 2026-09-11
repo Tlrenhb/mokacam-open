@@ -8,11 +8,11 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 /* JADX INFO: loaded from: classes.dex */
 public class f {
-    private final n c;
-    private final Map<String, i> a = new HashMap();
-    private final Set<i> b = new CopyOnWriteArraySet();
-    private final CopyOnWriteArraySet<p> d = new CopyOnWriteArraySet<>();
-    private boolean e = true;
+    final n c;
+    final Map<String, i> a = new HashMap();
+    final Set<i> b = new CopyOnWriteArraySet();
+    final CopyOnWriteArraySet<p> d = new CopyOnWriteArraySet<>();
+    boolean e = true;
 
     public f(n nVar) {
         if (nVar == null) {

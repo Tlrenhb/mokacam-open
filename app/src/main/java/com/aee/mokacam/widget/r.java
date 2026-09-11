@@ -3,12 +3,12 @@ package com.aee.mokacam.widget;
 /* JADX INFO: loaded from: classes.dex */
 class r implements Runnable {
     final /* synthetic */ ZoomImageView a;
-    private float b;
-    private float c;
-    private float d;
-    private float e;
-    private float f = 1.07f;
-    private float g = 0.93f;
+    float b;
+    float c;
+    float d;
+    float e;
+    float f = 1.07f;
+    float g = 0.93f;
 
     public r(ZoomImageView zoomImageView, float f, float f2, float f3) {
         this.a = zoomImageView;

@@ -11,12 +11,12 @@ import com.aee.mokacam.R;
 
 /* JADX INFO: loaded from: classes.dex */
 public class SettingsItemViewWithArrow extends RelativeLayout {
-    private Context a;
-    private String b;
-    private String c;
-    private TextView d;
-    private TextView e;
-    private ImageView f;
+    Context a;
+    String b;
+    String c;
+    TextView d;
+    TextView e;
+    ImageView f;
 
     public SettingsItemViewWithArrow(Context context) {
         this(context, null);
@@ -36,7 +36,7 @@ public class SettingsItemViewWithArrow extends RelativeLayout {
         super(context, attributeSet, i);
     }
 
-    private void a() {
+    void a() {
         View viewInflate = View.inflate(this.a, R.layout.item_settings_arrow, this);
         this.d = (TextView) viewInflate.findViewById(R.id.item_left);
         this.e = (TextView) viewInflate.findViewById(R.id.item_right);

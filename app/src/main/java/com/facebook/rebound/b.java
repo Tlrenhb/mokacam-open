@@ -7,10 +7,10 @@ import android.view.Choreographer;
 /* JADX INFO: loaded from: classes.dex */
 @TargetApi(16)
 class b extends n {
-    private final Choreographer b;
-    private final Choreographer.FrameCallback c = new c(this);
-    private boolean d;
-    private long e;
+    final Choreographer b;
+    final Choreographer.FrameCallback c = new c(this);
+    boolean d;
+    long e;
 
     public b(Choreographer choreographer) {
         this.b = choreographer;

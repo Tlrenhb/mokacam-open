@@ -17,19 +17,19 @@ import android.widget.ImageView;
 
 /* JADX INFO: loaded from: classes.dex */
 public class ZoomImageView extends ImageView implements ScaleGestureDetector.OnScaleGestureListener, View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutListener {
-    private boolean a;
-    private float b;
-    private float c;
-    private float d;
-    private Matrix e;
-    private ScaleGestureDetector f;
-    private int g;
-    private float h;
-    private float i;
-    private int j;
-    private boolean k;
-    private GestureDetector l;
-    private boolean m;
+    boolean a;
+    float b;
+    float c;
+    float d;
+    Matrix e;
+    ScaleGestureDetector f;
+    int g;
+    float h;
+    float i;
+    int j;
+    boolean k;
+    GestureDetector l;
+    boolean m;
 
     public ZoomImageView(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0);
@@ -47,7 +47,7 @@ public class ZoomImageView extends ImageView implements ScaleGestureDetector.OnS
         this.l = new GestureDetector(context, new q(this));
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public void a() {
         float fWidth;
         RectF drawableRectF = getDrawableRectF();
@@ -76,11 +76,11 @@ public class ZoomImageView extends ImageView implements ScaleGestureDetector.OnS
         this.e.postTranslate(fWidth, fHeight);
     }
 
-    private boolean a(float f, float f2) {
+    boolean a(float f, float f2) {
         return Math.sqrt((double) ((f * f) + (f2 * f2))) > ((double) this.j);
     }
 
-    private void b() {
+    void b() {
         float f = 0.0f;
         RectF drawableRectF = getDrawableRectF();
         int width = getWidth();
@@ -98,7 +98,7 @@ public class ZoomImageView extends ImageView implements ScaleGestureDetector.OnS
         this.e.postTranslate(f2, f);
     }
 
-    private RectF getDrawableRectF() {
+    RectF getDrawableRectF() {
         Matrix matrix = this.e;
         RectF rectF = new RectF();
         if (getDrawable() != null) {
@@ -108,7 +108,7 @@ public class ZoomImageView extends ImageView implements ScaleGestureDetector.OnS
         return rectF;
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public float getDrawableScale() {
         float[] fArr = new float[9];
         this.e.getValues(fArr);

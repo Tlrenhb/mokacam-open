@@ -10,12 +10,12 @@ import com.aee.mokacam.R;
 
 /* JADX INFO: loaded from: classes.dex */
 public class WifiPswChangeView extends LinearLayout {
-    private Context a;
-    private View b;
-    private TextView c;
-    private TextView d;
-    private EditText e;
-    private EditText f;
+    Context a;
+    View b;
+    TextView c;
+    TextView d;
+    EditText e;
+    EditText f;
 
     public WifiPswChangeView(Context context) {
         super(context);
@@ -31,7 +31,7 @@ public class WifiPswChangeView extends LinearLayout {
         super(context, attributeSet, i);
     }
 
-    private void a() {
+    void a() {
         this.b = View.inflate(this.a, R.layout.wifi_pswchange_page, this);
         this.c = (TextView) this.b.findViewById(R.id.tv_products_title);
         this.d = (TextView) this.b.findViewById(R.id.tv_product_model);

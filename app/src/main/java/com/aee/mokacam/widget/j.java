@@ -5,8 +5,8 @@ import android.graphics.RectF;
 
 /* JADX INFO: loaded from: classes.dex */
 public class j {
-    private static k a = new k(16);
-    private static n b = new n(16);
+    static k a = new k(16);
+    static n b = new n(16);
 
     public static Matrix a() {
         return a.c();
