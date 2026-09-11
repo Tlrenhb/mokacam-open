@@ -1,6 +1,7 @@
 package com.aee.mokacam.utils;
 
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
 
 /* JADX INFO: loaded from: classes.dex */
