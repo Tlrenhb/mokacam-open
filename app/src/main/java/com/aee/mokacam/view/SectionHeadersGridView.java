@@ -43,6 +43,7 @@ public class SectionHeadersGridView extends RecyclerView {
 
     public void setGridAdapter(BaseAdapter base) {
         GridLayoutManager lm = new GridLayoutManager(getContext(), 4);
+        gridLayoutManager = lm;
         final Wrapper w = new Wrapper(base);
         lm.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
@@ -56,6 +57,69 @@ public class SectionHeadersGridView extends RecyclerView {
     }
 
     private Wrapper wrapper;
+    private GridLayoutManager gridLayoutManager;
+    private android.widget.AdapterView.OnItemClickListener itemClickListener;
+    private android.widget.AdapterView.OnItemLongClickListener itemLongClickListener;
+    private android.widget.AbsListView.OnScrollListener scrollListener;
+
+    /** GridView-compat: number of columns. */
+    public void setNumColumns(int numColumns) {
+        if (gridLayoutManager != null) {
+            gridLayoutManager.setSpanCount(numColumns);
+        }
+        requestLayout();
+    }
+
+    /** GridView-compat: accepted for source compatibility; cell width is fluid. */
+    public void setColumnWidth(int px) {
+    }
+
+    /** GridView-compat: scroll to a source-adapter position. */
+    public void setSelection(int position) {
+        if (wrapper != null) {
+            int flat = wrapper.flatPositionOf(position);
+            if (flat >= 0) {
+                scrollToPosition(flat);
+            }
+        }
+    }
+
+    /** GridView-compat item click bridge. */
+    public void setOnItemClickListener(android.widget.AdapterView.OnItemClickListener l) {
+        itemClickListener = l;
+    }
+
+    /** GridView-compat long click bridge. */
+    public void setOnItemLongClickListener(android.widget.AdapterView.OnItemLongClickListener l) {
+        itemLongClickListener = l;
+    }
+
+    /** GridView-compat scroll listener bridge (AbsListView style). */
+    public void setOnScrollListener(final android.widget.AbsListView.OnScrollListener l) {
+        scrollListener = l;
+        super.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                int state;
+                switch (newState) {
+                    case SCROLL_STATE_SETTLING:
+                        state = android.widget.AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL;
+                        break;
+                    case SCROLL_STATE_DRAGGING:
+                        state = android.widget.AbsListView.OnScrollListener.SCROLL_STATE_FLING;
+                        break;
+                    default:
+                        state = android.widget.AbsListView.OnScrollListener.SCROLL_STATE_IDLE;
+                }
+                l.onScrollStateChanged(null, state);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                l.onScroll(null, 0, 0, 0);
+            }
+        });
+    }
 
     private static final class Wrapper extends RecyclerView.Adapter<VH> {
 
@@ -120,16 +184,49 @@ public class SectionHeadersGridView extends RecyclerView {
             return new VH(container);
         }
 
+        int flatPositionOf(int srcIndex) {
+            for (int i = 0; i < flat.size(); i++) {
+                if (flat.get(i) == srcIndex) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         @Override
         public void onBindViewHolder(@NonNull VH holder, int position) {
             FrameLayout container = (FrameLayout) holder.itemView;
             container.removeAllViews();
             View v;
-            if (isHeader(position)) {
-                v = headers.headerView(sourceIndex(position), null, container);
+            final int srcIndex = sourceIndex(position);
+            final boolean header = isHeader(position);
+            if (header) {
+                v = headers.headerView(srcIndex, null, container);
             } else {
-                v = src.getView(sourceIndex(position), null, container);
+                v = src.getView(srcIndex, null, container);
             }
+            container.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (header) {
+                        return;
+                    }
+                    if (SectionHeadersGridView.this.itemClickListener != null) {
+                        SectionHeadersGridView.this.itemClickListener.onItemClick(null, view, srcIndex, srcIndex);
+                    }
+                }
+            });
+            container.setOnLongClickListener(new OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    if (header) {
+                        return false;
+                    }
+                    return SectionHeadersGridView.this.itemLongClickListener != null
+                            && SectionHeadersGridView.this.itemLongClickListener
+                            .onItemLongClick(null, view, srcIndex, srcIndex);
+                }
+            });
             if (v.getParent() instanceof ViewGroup) {
                 ((ViewGroup) v.getParent()).removeView(v);
             }

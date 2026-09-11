@@ -18,7 +18,7 @@ class ab extends Thread {
             try {
                 x.D = this.a.C.getInputStream();
             } catch (IOException e) {
-                e.printStackTrace();
+            e4.printStackTrace();
             }
         }
         long j = 0;
@@ -147,13 +147,11 @@ class ab extends Thread {
                 }
             } catch (IOException e4) {
                 j = jCurrentTimeMillis;
-                e = e4;
-                e.printStackTrace();
+                                e4.printStackTrace();
                 com.aee.mokacam.utils.m.b("FlightControl", "20160223---ReceiveThread() error=" + Thread.currentThread().getId());
             } catch (Exception e5) {
                 j = jCurrentTimeMillis;
-                e = e5;
-                e.printStackTrace();
+                                e4.printStackTrace();
                 com.aee.mokacam.utils.m.b("FlightControl", "20160223---ReceiveThread() error1=" + e.getMessage());
             }
         }
