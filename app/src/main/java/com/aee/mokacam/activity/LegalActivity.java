@@ -63,6 +63,8 @@ public class LegalActivity extends BaseActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
     @Override // com.aee.mokacam.activity.BaseActivity, androidx.fragment.app.FragmentActivity, android.support.v4.app.BaseFragmentActivityDonut, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
