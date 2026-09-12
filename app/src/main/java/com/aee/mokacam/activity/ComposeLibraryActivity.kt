@@ -1,6 +1,7 @@
 package com.aee.mokacam.activity
 
 import android.content.Intent
+import android.webkit.MimeTypeMap
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -33,6 +34,8 @@ import com.aee.mokacam.bean.SendMsg
 import com.aee.mokacam.bean.g
 import com.aee.mokacam.constants.AeeConstants
 import com.aee.mokacam.service.n
+import androidx.core.content.FileProvider
+import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -77,6 +80,21 @@ class ComposeLibraryActivity : ComponentActivity() {
                                 Button(onClick = {
                                     startActivity(Intent(context, ComposeDownloadActivity::class.java).putStringArrayListExtra("files", ArrayList(selected)))
                                 }) { Text("下载") }
+                                Button(onClick = {
+                                    val file = selected.firstOrNull()?.let { name -> files.find { it.a() == name } }
+                                    if (file != null) {
+                                        val local = File(AeeConstants.a, file.a())
+                                        if (local.exists()) {
+                                            val uri = FileProvider.getUriForFile(context, context.packageName + ".fileprovider", local)
+                                            val mime = MimeTypeMap.getSingleton().getMimeTypeFromExtension(MimeTypeMap.getFileExtensionFromUrl(local.name)) ?: "*/*"
+                                            context.startActivity(Intent.createChooser(Intent(Intent.ACTION_SEND).apply {
+                                                type = mime
+                                                putExtra(Intent.EXTRA_STREAM, uri)
+                                                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                                            }, "分享"))
+                                        } else status = "请先下载文件再分享"
+                                    }
+                                }) { Text("分享") }
                             }
                         }
                         if (status.isNotEmpty()) Text(status)
