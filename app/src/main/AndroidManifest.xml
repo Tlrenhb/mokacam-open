@@ -103,6 +103,11 @@
             android:screenOrientation="fullSensor" />
 
         <activity
+            android:name="com.aee.mokacam.activity.ComposeSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name="com.aee.mokacam.activity.SelectLibraryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"

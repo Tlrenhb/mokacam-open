@@ -113,7 +113,7 @@ class ComposeMainActivity : ComponentActivity() {
                         modifier = Modifier.padding(24.dp))
                     HorizontalDivider(color = Color.White.copy(alpha = .25f))
                     DrawerItem("产品参数") { navigate(ProductParamsActivity::class.java) }
-                    DrawerItem("设置") { navigate(AeeAppSettingActivity::class.java) }
+                    DrawerItem("设置") { navigate(ComposeSettingsActivity::class.java) }
                     DrawerItem("支持") { navigate(SupportActivity::class.java) }
                     DrawerItem("法律信息") { navigate(LegalActivity::class.java) }
                     DrawerItem("官网") {
