@@ -69,7 +69,7 @@ class ComposeLibraryActivity : ComponentActivity() {
                                             Text(file.b ?: "", style = MaterialTheme.typography.bodySmall)
                                         }
                                         Button(onClick = {
-                                            startActivity(Intent(this@ComposeLibraryActivity, ShowPicOrVideoActivity::class.java).apply {
+                                            startActivity(Intent(this@ComposeLibraryActivity, ComposeMediaActivity::class.java).apply {
                                                 putExtra("filePath", file.a())
                                             })
                                         }) { Text(if (file.a().endsWith(".MP4", true)) "播放" else "查看") }
