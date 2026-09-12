@@ -106,8 +106,8 @@ class ComposeCameraActivity : ComponentActivity() {
                         Text("模式：$mode", color = Color.White, style = MaterialTheme.typography.labelLarge)
                         Spacer(Modifier.height(8.dp))
                         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                            FilledTonalButton(onClick = { mode = "录像"; com.aee.mokacam.service.a.a().a("nil", "Switch_mode") }, modifier = Modifier.weight(1f)) { Text("录像模式") }
-                            FilledTonalButton(onClick = { mode = "拍照"; com.aee.mokacam.service.a.a().a("nil", "Switch_mode") }, modifier = Modifier.weight(1f)) { Text("拍照模式") }
+                            FilledTonalButton(onClick = { mode = "录像"; com.aee.mokacam.service.a.a().a(object : com.aee.mokacam.service.n { override fun a(value: Any?) {} }, com.aee.mokacam.bean.SendMsg(2, "nil", "Switch_mode")) }, modifier = Modifier.weight(1f)) { Text("录像模式") }
+                            FilledTonalButton(onClick = { mode = "拍照"; com.aee.mokacam.service.a.a().a(object : com.aee.mokacam.service.n { override fun a(value: Any?) {} }, com.aee.mokacam.bean.SendMsg(2, "nil", "Switch_mode")) }, modifier = Modifier.weight(1f)) { Text("拍照模式") }
                         }
                         Spacer(Modifier.height(8.dp))
                         Button(
