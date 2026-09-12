@@ -14,7 +14,7 @@
             <RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="55.0dip">
                 <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
                     <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffff0000" android:id="@+id/select_tv" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lib_select" android:layout_centerInParent="true" />
-                    <com.aee.mokacam.view.DotSelectedNumView android:id="@+id/dotSelectedNumView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_toRightOf="@+id/select_tv" />
+                    <com.aee.mokacam.widget.DotSelectedNumView android:id="@+id/dotSelectedNumView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_toRightOf="@+id/select_tv" />
                 </RelativeLayout>
                 <ImageView android:id="@+id/library_delete_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/library_delete_unpressed" android:layout_centerVertical="true" />
                 <ImageView android:id="@+id/library_right_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/library_share_unpressed" android:layout_alignParentRight="true" android:layout_centerVertical="true" />

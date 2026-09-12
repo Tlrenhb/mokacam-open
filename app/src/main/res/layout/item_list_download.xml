@@ -2,9 +2,9 @@
 <LinearLayout android:orientation="horizontal" android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:aee="http://schemas.android.com/apk/res/com.aee.mokacam">
-    <com.aee.mokacam.view.RatioLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" aee:picRatio="1.0">
+    <com.aee.mokacam.widget.RatioLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" aee:picRatio="1.0">
         <ImageView android:id="@+id/iv_file_image" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_margin="5.0dip" android:src="@drawable/download_video_pic" android:scaleType="fitXY" />
-    </com.aee.mokacam.view.RatioLayout>
+    </com.aee.mokacam.widget.RatioLayout>
     <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:paddingLeft="10.0dip" android:layout_width="0.0dip" android:layout_height="70.0dip" android:layout_weight="8.0">
         <TextView android:id="@+id/tv_file_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="FileName" android:maxLines="1" />
         <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">

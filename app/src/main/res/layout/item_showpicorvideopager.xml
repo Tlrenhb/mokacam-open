@@ -8,6 +8,6 @@
         </FrameLayout>
     </FrameLayout>
     <FrameLayout android:id="@+id/fl_image" android:background="#ff000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <com.aee.mokacam.view.PinchImageView android:layout_gravity="center" android:id="@+id/pv_show" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.aee.mokacam.widget.PinchImageView android:layout_gravity="center" android:id="@+id/pv_show" android:layout_width="fill_parent" android:layout_height="wrap_content" />
     </FrameLayout>
 </FrameLayout>

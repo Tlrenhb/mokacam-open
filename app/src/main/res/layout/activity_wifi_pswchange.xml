@@ -9,6 +9,6 @@
     <View android:background="#ffadaaad" android:layout_width="fill_parent" android:layout_height="0.5dip" />
     <TextView android:textColor="#ffb8babc" android:ellipsize="marquee" android:gravity="center_vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/wifipswchange_warning" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
     <View android:background="#ffadaaad" android:layout_width="fill_parent" android:layout_height="0.5dip" />
-    <com.aee.mokacam.view.WifiPswChangeView android:id="@+id/wflightcontrol" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <com.aee.mokacam.view.WifiPswChangeView android:id="@+id/remotecontroll" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" />
+    <com.aee.mokacam.widget.WifiPswChangeView android:id="@+id/wflightcontrol" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.aee.mokacam.widget.WifiPswChangeView android:id="@+id/remotecontroll" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" />
 </LinearLayout>
