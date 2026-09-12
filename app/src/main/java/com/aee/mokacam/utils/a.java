@@ -14,15 +14,23 @@ import org.xutils.BuildConfig;
 /* JADX INFO: loaded from: classes.dex */
 public class a {
     public static String a() {
-        // The original wrote to /sdcard/DCIM; on API 29+ scoped storage makes
-        // that read-only, so prefer the app-specific external directory.
         if (com.aee.mokacam.AeeApplication.b() != null) {
-            java.io.File dir = com.aee.mokacam.AeeApplication.b().getExternalFilesDir(null);
+            return storageRoot(com.aee.mokacam.AeeApplication.b());
+        }
+        return Environment.getExternalStorageState().equals("mounted") ? Environment.getExternalStorageDirectory().toString() : Environment.getDownloadCacheDirectory().toString();
+    }
+
+    /** Resolves storage with an explicit context, safe during Application startup. */
+    public static String storageRoot(Context context) {
+        if (context != null) {
+            java.io.File dir = context.getExternalFilesDir(null);
             if (dir != null) {
                 return dir.toString();
             }
         }
-        return Environment.getExternalStorageState().equals("mounted") ? Environment.getExternalStorageDirectory().toString() : Environment.getDownloadCacheDirectory().toString();
+        return Environment.getExternalStorageState().equals("mounted")
+                ? Environment.getExternalStorageDirectory().toString()
+                : Environment.getDownloadCacheDirectory().toString();
     }
 
     public static String a(Context context) {
@@ -35,21 +43,24 @@ public class a {
     }
 
     public static String a(File file) {
-        if (!file.isFile()) {
+        if (file == null || !file.isFile()) {
             return null;
         }
-        byte[] bArr = new byte[1024];
+        byte[] bArr = new byte[8192];
         try {
             MessageDigest messageDigest = MessageDigest.getInstance("MD5");
-            FileInputStream fileInputStream = new FileInputStream(file);
-            while (true) {
-                int i = fileInputStream.read(bArr, 0, 1024);
-                if (i == -1) {
-                    fileInputStream.close();
-                    return new BigInteger(1, messageDigest.digest()).toString(16);
+            try (FileInputStream fileInputStream = new FileInputStream(file)) {
+                int i;
+                while ((i = fileInputStream.read(bArr)) != -1) {
+                    messageDigest.update(bArr, 0, i);
                 }
-                messageDigest.update(bArr, 0, i);
             }
+            byte[] digest = messageDigest.digest();
+            StringBuilder result = new StringBuilder(digest.length * 2);
+            for (byte value : digest) {
+                result.append(String.format(java.util.Locale.US, "%02x", value & 255));
+            }
+            return result.toString();
         } catch (Exception e) {
             e.printStackTrace();
             return null;

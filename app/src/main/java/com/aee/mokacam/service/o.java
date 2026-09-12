@@ -88,6 +88,7 @@ public class o {
 
     /* JADX INFO: Access modifiers changed from: */
     public int d(ReceiveMsg receiveMsg) {
+        if (receiveMsg == null) return 0;
         String type = receiveMsg.getType();
         int msg_id = receiveMsg.getMsg_id();
         if (msg_id == 1798 && type.contains("z09")) {

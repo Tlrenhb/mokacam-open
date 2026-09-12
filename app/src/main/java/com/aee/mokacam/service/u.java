@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 /* JADX INFO: loaded from: classes.dex */
 class u implements Runnable {
     final /* synthetic */ o a;
+    private final JsonStreamDecoder decoder = new JsonStreamDecoder();
 
     u(o oVar) {
         this.a = oVar;
@@ -29,21 +30,26 @@ class u implements Runnable {
                         break;
                     }
                     int iAvailable = o.e.available();
-                    byte[] bArr = new byte[iAvailable];
-                    if (o.e.read(bArr, 0, iAvailable - 0) + 0 > 0) {
-                        ReceiveMsg receiveMsg = (ReceiveMsg) ResolveJson.resolveNormalInfo(new String(bArr), ReceiveMsg.class);
-                        receiveMsg.getMsg_id();
-                        receiveMsg.getType();
-                        if (receiveMsg != null) {
-                            if (this.a.c(receiveMsg)) {
-                                AeeApplication.a().m = true;
-                            } else if (this.a.b(receiveMsg)) {
-                                AeeApplication.a().i = true;
-                            } else if (this.a.a(receiveMsg)) {
-                                AeeApplication.a().j = true;
-                            } else if (this.a.d(receiveMsg) != 0) {
-                                AeeApplication.a().k = this.a.d(receiveMsg);
-                            }
+                    if (iAvailable <= 0) {
+                        TimeUnit.MILLISECONDS.sleep(20L);
+                        continue;
+                    }
+                    byte[] bArr = new byte[Math.min(iAvailable, 8192)];
+                    int count = o.e.read(bArr);
+                    if (count <= 0) continue;
+                    decoder.append(new String(bArr, 0, count, java.nio.charset.StandardCharsets.UTF_8));
+                    String json;
+                    while ((json = decoder.poll()) != null) {
+                        ReceiveMsg receiveMsg = (ReceiveMsg) ResolveJson.resolveNormalInfo(json, ReceiveMsg.class);
+                        if (receiveMsg == null) continue;
+                        if (this.a.c(receiveMsg)) {
+                            AeeApplication.a().m = true;
+                        } else if (this.a.b(receiveMsg)) {
+                            AeeApplication.a().i = true;
+                        } else if (this.a.a(receiveMsg)) {
+                            AeeApplication.a().j = true;
+                        } else if (this.a.d(receiveMsg) != 0) {
+                            AeeApplication.a().k = this.a.d(receiveMsg);
                         }
                     }
                 }

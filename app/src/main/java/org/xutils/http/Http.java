@@ -55,11 +55,12 @@ public final class Http {
                 String path = params.getSaveFilePath();
                 File out = path != null ? new File(path)
                         : File.createTempFile("xutils_", ".tmp");
-                File parent = out.getParentFile();
+                File part = path != null ? new File(path + ".part") : out;
+                File parent = part.getParentFile();
                 if (parent != null && !parent.exists()) {
                     parent.mkdirs();
                 }
-                FileOutputStream fos = new FileOutputStream(out);
+                FileOutputStream fos = new FileOutputStream(part);
                 byte[] buf = new byte[16384];
                 long done = 0;
                 int n;
@@ -70,22 +71,30 @@ public final class Http {
                         ((Callback.ProgressCallback) callback).onLoading(total, done, true);
                     }
                 }
+                fos.flush();
+                fos.getFD().sync();
                 fos.close();
                 in.close();
                 conn.disconnect();
                 if (cancelled.get()) {
-                    out.delete();
+                    part.delete();
                     if (callback != null) {
                         callback.onCancelled(new Callback.CancelledException("user"));
                         callback.onFinished();
                     }
                     return;
                 }
+                if (path != null && !part.renameTo(out)) {
+                    part.delete();
+                    throw new java.io.IOException("atomic download rename failed");
+                }
                 if (callback != null) {
                     callback.onSuccess((T) out);
                     callback.onFinished();
                 }
             } catch (Exception e) {
+                String failedPath = params.getSaveFilePath();
+                if (failedPath != null) new File(failedPath + ".part").delete();
                 Log.w(TAG, "get failed: " + e.getMessage());
                 if (callback != null) {
                     callback.onError(e, false);

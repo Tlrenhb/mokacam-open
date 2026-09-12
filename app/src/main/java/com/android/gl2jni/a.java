@@ -12,6 +12,7 @@ import androidx.media3.exoplayer.ExoPlayer;
 import androidx.media3.exoplayer.rtsp.RtspMediaSource;
 import androidx.media3.exoplayer.source.MediaSource;
 import androidx.media3.ui.PlayerView;
+import com.aee.mokacam.constants.AeeConstants;
 
 /**
  * The original class was a GLSurfaceView driven by the closed-source
@@ -25,6 +26,8 @@ public class a extends FrameLayout {
     private static final String RTSP_URL = "rtsp://192.168.42.1/live";
 
     private ExoPlayer player;
+    private PlayerView playerView;
+    private boolean started;
 
     public a(Context context) {
         super(context);
@@ -42,17 +45,35 @@ public class a extends FrameLayout {
     }
 
     private void init() {
-        PlayerView view = new PlayerView(getContext());
-        view.setUseController(false);
-        addView(view, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+        playerView = new PlayerView(getContext());
+        playerView.setUseController(false);
+        addView(playerView, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
         player = new ExoPlayer.Builder(getContext()).build();
-        view.setPlayer(player);
+        playerView.setPlayer(player);
+        player.addListener(new androidx.media3.common.Player.Listener() {
+            @Override
+            public void onPlayerError(androidx.media3.PlaybackException error) {
+                if (!started) return;
+                player.release();
+                player = new ExoPlayer.Builder(getContext()).build();
+                playerView.setPlayer(player);
+                MediaSource retry = new RtspMediaSource.Factory()
+                        .setForceUseRtpTcp(true)
+                        .setTimeoutMs(8000)
+                        .createMediaSource(MediaItem.fromUri(AeeConstants.CAMERA_RTSP_URL));
+                player.setMediaSource(retry);
+                player.prepare();
+                player.setPlayWhenReady(true);
+            }
+        });
         MediaSource source = new RtspMediaSource.Factory()
+                .setForceUseRtpTcp(true)
                 .setTimeoutMs(8000)
-                .createMediaSource(MediaItem.fromUri(RTSP_URL));
+                .createMediaSource(MediaItem.fromUri(AeeConstants.CAMERA_RTSP_URL));
         player.setMediaSource(source);
         player.prepare();
         player.setPlayWhenReady(true);
+        started = true;
     }
 
 

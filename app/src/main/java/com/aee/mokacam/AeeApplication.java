@@ -188,17 +188,35 @@ public class AeeApplication extends Application {
         file4.mkdirs();
     }
 
-    public native int DeviceInit(int i, String str, String str2);
+    /** Native firmware/flight hooks existed in the APK but their library is not
+     * shipped by this source port. Keep safe fallbacks so opening the app never
+     * throws UnsatisfiedLinkError; camera JSON control remains fully Java-based. */
+    public int DeviceInit(int i, String str, String str2) {
+        return -1;
+    }
 
-    public native int DeviceLogout(int i);
+    public int DeviceLogout(int i) {
+        return 0;
+    }
 
-    public native int GetCrc(byte[] bArr);
+    public int GetCrc(byte[] bArr) {
+        if (bArr == null) return 0;
+        int crc = 0;
+        for (byte value : bArr) crc ^= value & 255;
+        return crc & 255;
+    }
 
-    public native int[] GetUpdateInfo();
+    public int[] GetUpdateInfo() {
+        return new int[]{0, 0, 0};
+    }
 
-    public native int SetCommand(String str, int i, int i2);
+    public int SetCommand(String str, int i, int i2) {
+        return -1;
+    }
 
-    public native String UpdateInit(String str);
+    public String UpdateInit(String str) {
+        return null;
+    }
 
     public int a(String str) {
         int i = 2;
@@ -281,6 +299,7 @@ public class AeeApplication extends Application {
     public void onCreate() {
         super.onCreate();
         bp = this;
+        com.aee.mokacam.constants.AeeConstants.init(this);
         g();
         org.xutils.x.Ext.init(this);
         f();

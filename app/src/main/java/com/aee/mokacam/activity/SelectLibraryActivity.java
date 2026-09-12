@@ -45,10 +45,13 @@ public class SelectLibraryActivity extends BaseActivity {
     String r;
 
     void a() {
-        if (ContextCompat.checkSelfPermission(this, "android.permission.READ_EXTERNAL_STORAGE") == 0 && ContextCompat.checkSelfPermission(this, "android.permission.WRITE_EXTERNAL_STORAGE") == 0) {
-            return;
+        // Downloads are stored under getExternalFilesDir via AeeConstants.
+        // No legacy storage permission is required on API 29+.
+        if (android.os.Build.VERSION.SDK_INT < 29
+                && ContextCompat.checkSelfPermission(this, "android.permission.WRITE_EXTERNAL_STORAGE") != 0) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 1);
         }
-        ActivityCompat.requestPermissions(this, new String[]{"android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"}, 1);
     }
 
     /* JADX INFO: Access modifiers changed from: */

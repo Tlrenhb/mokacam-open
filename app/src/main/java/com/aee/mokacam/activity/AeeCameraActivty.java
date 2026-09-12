@@ -522,6 +522,9 @@ public class AeeCameraActivty extends BaseActivity implements View.OnClickListen
         }
         r();
         t = 0;
+        if (this.r != null) {
+            this.r.release();
+        }
         super.onDestroy();
     }
 

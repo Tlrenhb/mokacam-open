@@ -8,6 +8,7 @@ import com.aee.mokacam.R;
 import com.aee.mokacam.AeeApplication;
 import com.aee.mokacam.constants.AeeConstants;
 import java.io.File;
+import android.webkit.MimeTypeMap;
 
 /* JADX INFO: loaded from: classes.dex */
 class bd implements View.OnClickListener {
@@ -34,7 +35,9 @@ class bd implements View.OnClickListener {
                         Uri shareUri = FileProvider.getUriForFile(this.a,
                                 this.a.getPackageName() + ".fileprovider", shareFile);
                         Intent share = new Intent(Intent.ACTION_SEND);
-                        share.setType("image/*");
+                        String extension = MimeTypeMap.getFileExtensionFromUrl(shareFile.getName());
+                        String mime = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+                        share.setType(mime == null ? "*/*" : mime);
                         share.putExtra(Intent.EXTRA_STREAM, shareUri);
                         share.putExtra(Intent.EXTRA_TEXT, gVar.f());
                         share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
