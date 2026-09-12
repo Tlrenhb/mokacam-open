@@ -28,7 +28,7 @@ public class AeeApplication extends Application {
     public e B;
     public n C;
     public boolean M;
-    public List<q> aM;
+    /* camera-only build: drone list removed */
     public List<Activity> aX;
     public k ad;
     public Map<String, String> af;
