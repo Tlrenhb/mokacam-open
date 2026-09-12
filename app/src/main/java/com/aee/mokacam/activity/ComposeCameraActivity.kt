@@ -21,8 +21,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -51,6 +53,13 @@ class ComposeCameraActivity : ComponentActivity() {
         var recording by remember { mutableStateOf(false) }
         var mode by remember { mutableStateOf("录像") }
         var status by remember { mutableStateOf("正在加载预览") }
+        var seconds by remember { mutableLongStateOf(0L) }
+        LaunchedEffect(recording) {
+            while (recording) {
+                kotlinx.coroutines.delay(1000L)
+                seconds++
+            }
+        }
         val preview = remember { a(context, this) }
         val handler = remember {
             Handler(Looper.getMainLooper()) { msg ->
@@ -91,14 +100,14 @@ class ComposeCameraActivity : ComponentActivity() {
                     ) {
                         Button(onClick = { finish() }) { Text("返回") }
                         Spacer(Modifier.weight(1f))
-                        Text(status, color = Color.White)
+                        Text(if (recording) "录像中 ${seconds / 60}:${(seconds % 60).toString().padStart(2, '0')}" else status, color = Color.White)
                     }
                     Column(Modifier.fillMaxWidth().background(Color.Black.copy(alpha = .72f)).padding(12.dp)) {
                         Text("模式：$mode", color = Color.White, style = MaterialTheme.typography.labelLarge)
                         Spacer(Modifier.height(8.dp))
                         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                            FilledTonalButton(onClick = { mode = "录像" }, modifier = Modifier.weight(1f)) { Text("录像模式") }
-                            FilledTonalButton(onClick = { mode = "拍照" }, modifier = Modifier.weight(1f)) { Text("拍照模式") }
+                            FilledTonalButton(onClick = { mode = "录像"; com.aee.mokacam.service.a.a().a("nil", "Switch_mode") }, modifier = Modifier.weight(1f)) { Text("录像模式") }
+                            FilledTonalButton(onClick = { mode = "拍照"; com.aee.mokacam.service.a.a().a("nil", "Switch_mode") }, modifier = Modifier.weight(1f)) { Text("拍照模式") }
                         }
                         Spacer(Modifier.height(8.dp))
                         Button(
