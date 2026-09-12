@@ -33,7 +33,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="com.aee.mokacam.activity.SplashActivity"
+            android:name="com.aee.mokacam.activity.ComposeMainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
