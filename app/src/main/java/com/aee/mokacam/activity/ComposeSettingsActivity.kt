@@ -54,7 +54,10 @@ class ComposeSettingsActivity : ComponentActivity() {
                             modifier = Modifier.fillMaxWidth().clickable { startActivity(Intent(this@ComposeSettingsActivity, ComposeFirmwareActivity::class.java)) }, leadingContent = { Text("↑") }, trailingContent = { Text("›") })
                         HorizontalDivider()
                         ListItem(headlineContent = { Text("清除缓存") }, supportingContent = { Text("应用设置与缓存") },
-                            modifier = Modifier.fillMaxWidth(), trailingContent = { Text("清除") })
+                            modifier = Modifier.fillMaxWidth().clickable {
+                                cacheDir.deleteRecursively()
+                                externalCacheDir?.deleteRecursively()
+                            }, trailingContent = { Text("清除") })
                     }
                 }
             }
