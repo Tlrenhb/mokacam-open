@@ -24,8 +24,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.aee.mokacam.utils.FileUtils
-import com.aee.mokacam.utils.LogUtils
+import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
 class ComposeSettingsActivity : ComponentActivity() {
@@ -54,7 +53,7 @@ class ComposeSettingsActivity : ComponentActivity() {
                         ListItem(headlineContent = { Text("固件升级") }, supportingContent = { Text("从 Mokacam/fwupdate/firmware.bin 上传") },
                             modifier = Modifier.fillMaxWidth(), leadingContent = { Text("↑") }, trailingContent = { Text("›") })
                         HorizontalDivider()
-                        ListItem(headlineContent = { Text("清除缓存") }, supportingContent = { Text("${FileUtils.humanSize(LogUtils.logDirSize(this@ComposeSettingsActivity))}") },
+                        ListItem(headlineContent = { Text("清除缓存") }, supportingContent = { Text("应用设置与缓存") },
                             modifier = Modifier.fillMaxWidth(), trailingContent = { Text("清除") })
                     }
                 }
