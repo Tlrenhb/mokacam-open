@@ -122,6 +122,7 @@ class ComposeMainActivity : ComponentActivity() {
                     DrawerItem("无人机控制") { navigate(ComposeDroneActivity::class.java) }
                     DrawerItem("支持") { openInfo("support") }
                     DrawerItem("法律信息") { openInfo("legal") }
+                    DrawerItem("产品注册") { navigate(ComposeRegisterActivity::class.java) }
                     DrawerItem("官网") {
                         context.startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://www.aee.com")))
                         scope.launch { drawerState.close() }
