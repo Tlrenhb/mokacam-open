@@ -299,12 +299,27 @@ public class AeeApplication extends Application {
     public void onCreate() {
         super.onCreate();
         bp = this;
-        com.aee.mokacam.constants.AeeConstants.init(this);
-        g();
-        org.xutils.x.Ext.init(this);
-        f();
-        g();
-        com.aee.mokacam.utils.p.a().a(this);
+        try {
+            com.aee.mokacam.constants.AeeConstants.init(this);
+        } catch (Throwable error) {
+            android.util.Log.e("Mokacam", "constants init failed", error);
+        }
+        try {
+            g();
+        } catch (Throwable error) {
+            android.util.Log.e("Mokacam", "storage init failed", error);
+        }
+        try {
+            org.xutils.x.Ext.init(this);
+            f();
+        } catch (Throwable error) {
+            android.util.Log.e("Mokacam", "image/http init failed", error);
+        }
+        try {
+            com.aee.mokacam.utils.p.a().a(this);
+        } catch (Throwable error) {
+            android.util.Log.e("Mokacam", "crash handler init failed", error);
+        }
     }
 
     @Override // android.app.Application, android.content.ComponentCallbacks

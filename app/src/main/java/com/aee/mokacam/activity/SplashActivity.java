@@ -1,6 +1,7 @@
 package com.aee.mokacam.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
@@ -12,7 +13,18 @@ public class SplashActivity extends BaseActivity {
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_splash);
-        new dc(this).start();
+        new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
+            if (isFinishing()) return;
+            try {
+                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                finish();
+            } catch (Throwable error) {
+                android.util.Log.e("Mokacam", "main activity launch failed", error);
+                setContentView(R.layout.activity_start_error);
+                View retry = findViewById(R.id.start_retry);
+                if (retry != null) retry.setOnClickListener(v -> recreate());
+            }
+        }, 3200L);
     }
 
     @Override // com.aee.mokacam.activity.BaseActivity, androidx.fragment.app.FragmentActivity, android.support.v4.app.BaseFragmentActivityHoneycomb, android.app.Activity, android.view.LayoutInflater.Factory2
