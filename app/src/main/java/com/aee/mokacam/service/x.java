@@ -259,6 +259,22 @@ public class x {
         this.K.b();
     }
 
+    /** Sends the four RC channels through the original AEE flight frame. */
+    public synchronized void sendSticks(int throttle, int roll, int pitch, int yaw) {
+        if (this.K == null) {
+            this.K = new com.aee.mokacam.bean.a(com.aee.mokacam.bean.a.c[1], a());
+        }
+        this.K.h = clampChannel(throttle);
+        this.K.i = clampChannel(roll);
+        this.K.j = clampChannel(pitch);
+        this.K.k = clampChannel(yaw);
+        this.K.b();
+    }
+
+    private int clampChannel(int value) {
+        return Math.max(1000, Math.min(2000, value));
+    }
+
     public boolean d() {
         return AeeApplication.a().F == AeeConstants.DataAction.receive || AeeApplication.a().F == AeeConstants.DataAction.receive_send;
     }
