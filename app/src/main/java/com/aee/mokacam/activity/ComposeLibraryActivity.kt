@@ -75,7 +75,7 @@ class ComposeLibraryActivity : ComponentActivity() {
                                     refresh()
                                 }) { Text("删除") }
                                 Button(onClick = {
-                                    startActivity(Intent(context, DownLoadActivity::class.java))
+                                    startActivity(Intent(context, ComposeDownloadActivity::class.java).putStringArrayListExtra("files", ArrayList(selected)))
                                 }) { Text("下载") }
                             }
                         }
