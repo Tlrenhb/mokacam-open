@@ -10,7 +10,6 @@ import android.content.pm.ResolveInfo;
 import android.os.Build;
 import androidx.core.app.NotificationCompat;
 import com.aee.mokacam.R;
-import com.aee.mokacam.activity.MainActivity;
 import java.lang.reflect.Field;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -76,7 +75,7 @@ public class b {
                     builder.setDefaults(4);
                     notificationBuild = builder.build();
                     notificationBuild.flags |= 16;
-                    notificationBuild.contentIntent = PendingIntent.getActivity(context, 0, new Intent(context, (Class<?>) MainActivity.class), 0);
+                    notificationBuild.contentIntent = PendingIntent.getActivity(context, 0, new Intent(context, com.aee.mokacam.activity.ComposeMainActivity.class), 0);
                     Object objNewInstance = Class.forName("android.app.MiuiNotification").newInstance();
                     Field declaredField = objNewInstance.getClass().getDeclaredField("messageCount");
                     declaredField.setAccessible(true);

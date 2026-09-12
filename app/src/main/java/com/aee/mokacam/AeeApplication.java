@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import com.aee.mokacam.R;
-import com.aee.mokacam.activity.ProductActivity;
 import com.aee.mokacam.bean.c;
 import com.aee.mokacam.bean.e;
 import com.aee.mokacam.bean.f;
@@ -12,8 +11,6 @@ import com.aee.mokacam.bean.g;
 import com.aee.mokacam.bean.i;
 import com.aee.mokacam.bean.k;
 import com.aee.mokacam.bean.n;
-import com.aee.mokacam.bean.o;
-import com.aee.mokacam.bean.q;
 import com.aee.mokacam.constants.AeeConstants;
 import com.aee.mokacam.utils.p;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -31,7 +28,6 @@ public class AeeApplication extends Application {
     public e B;
     public n C;
     public boolean M;
-    public o O;
     public List<q> aM;
     public List<Activity> aX;
     public k ad;
@@ -100,14 +96,12 @@ public class AeeApplication extends Application {
     public boolean N = false;
     public boolean P = false;
     public String Q = BuildConfig.FLAVOR;
-    public byte droneR = -1;
     public long S = 0;
     public int T = 0;
     public int U = 0;
     public boolean V = false;
     public boolean W = false;
     public long X = 0;
-    public AeeConstants.DroneState Y = AeeConstants.DroneState.NORMAL;
     public int[] Z = new int[8];
     public long aa = 0;
     public int[] ab = {30, 10};
@@ -218,46 +212,6 @@ public class AeeApplication extends Application {
         return null;
     }
 
-    public int a(String str) {
-        int i = 2;
-        int i2 = 0;
-        if (str.length() <= 10) {
-            i = i2;
-        } else if (str.contains("AEE_CONDOR")) {
-            this.droneR = (byte) 2;
-        } else {
-            if (str.contains("AEE_RC_CON")) {
-                i2 = 3;
-                this.droneR = (byte) 2;
-            }
-            i = i2;
-        }
-        if (i == 0) {
-            this.droneR = (byte) -1;
-        }
-        return i;
-    }
-
-    public void a(long j) {
-        byte[] bArr = new byte[32];
-        for (int i = 0; i < 32; i++) {
-            if (((byte) ((j >>> i) & 1)) == 1) {
-                bArr[i] = 1;
-            } else {
-                bArr[i] = 0;
-            }
-        }
-        if (bArr[29] == 1) {
-            this.Y = AeeConstants.DroneState.GPS;
-        } else if (bArr[30] == 1) {
-            this.Y = AeeConstants.DroneState.VISVAL;
-        } else if (bArr[31] == 1) {
-            this.Y = AeeConstants.DroneState.NORMAL;
-        }
-        for (int i2 = 0; i2 < 8; i2++) {
-            this.Z[i2] = bArr[i2 + 21];
-        }
-    }
 
     public void a(Activity activity) {
         if (this.aX == null) {
@@ -289,7 +243,7 @@ public class AeeApplication extends Application {
 
     public void e() {
         for (Activity activity : this.aX) {
-            if (!(activity instanceof ProductActivity)) {
+            if (activity != null && !activity.getClass().getName().contains("ComposeMainActivity")) {
                 activity.finish();
             }
         }
