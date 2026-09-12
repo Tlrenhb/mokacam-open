@@ -17,18 +17,23 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalDrawerSheet
 import androidx.compose.material3.ModalNavigationDrawer
+import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -54,12 +59,12 @@ import kotlinx.coroutines.withContext
 class ComposeMainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { MokacamTheme { MainScreen() } }
+        setContent { MokacamTheme { MokacamAppScreen() } }
     }
 
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
-    private fun MainScreen() {
+    private fun MokacamAppScreen() {
         val context = LocalContext.current
         val drawerState = rememberDrawerState(DrawerValue.Closed)
         val scope = rememberCoroutineScope()
@@ -67,13 +72,13 @@ class ComposeMainActivity : ComponentActivity() {
         var connected by remember { mutableStateOf(AeeApplication.a()?.f == true) }
         var message by remember { mutableStateOf("") }
 
-        fun open(clazz: Class<*>) {
+        fun navigate(clazz: Class<*>) {
             context.startActivity(Intent(context, clazz))
             scope.launch { drawerState.close() }
         }
 
         fun connect() {
-            val wifi = context.applicationContext.getSystemService(android.content.Context.WIFI_SERVICE) as? WifiManager
+            val wifi = context.applicationContext.getSystemService(Context.WIFI_SERVICE) as? WifiManager
             if (wifi == null || !wifi.isWifiEnabled) {
                 message = context.getString(R.string.please_open_wifi)
                 return
@@ -106,12 +111,12 @@ class ComposeMainActivity : ComponentActivity() {
                     Text("Mokacam", color = Color.White, fontSize = 24.sp, fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(24.dp))
                     HorizontalDivider(color = Color.White.copy(alpha = .25f))
-                    DrawerItem("产品参数") { open(com.aee.mokacam.activity.ProductParamsActivity::class.java) }
-                    DrawerItem("设置") { open(com.aee.mokacam.activity.AeeAppSettingActivity::class.java) }
-                    DrawerItem("支持") { open(com.aee.mokacam.activity.SupportActivity::class.java) }
-                    DrawerItem("法律信息") { open(com.aee.mokacam.activity.LegalActivity::class.java) }
+                    DrawerItem("产品参数") { navigate(ProductParamsActivity::class.java) }
+                    DrawerItem("设置") { navigate(AeeAppSettingActivity::class.java) }
+                    DrawerItem("支持") { navigate(SupportActivity::class.java) }
+                    DrawerItem("法律信息") { navigate(LegalActivity::class.java) }
                     DrawerItem("官网") {
-                        context.startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse(AeeConstants.v.replace("/app/android/zone/version_android.xml", ""))))
+                        context.startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://www.aee.com")))
                         scope.launch { drawerState.close() }
                     }
                 }
@@ -123,7 +128,7 @@ class ComposeMainActivity : ComponentActivity() {
                         title = { Text("AEE Mokacam", fontWeight = FontWeight.Bold) },
                         navigationIcon = {
                             IconButton(onClick = { scope.launch { drawerState.open() } }) {
-                                Text("☰", fontSize = 24.sp)
+                                Icon(Icons.Default.Menu, contentDescription = "菜单")
                             }
                         }
                     )
@@ -159,8 +164,8 @@ class ComposeMainActivity : ComponentActivity() {
                     if (message.isNotEmpty()) Text(message, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     Spacer(Modifier.height(20.dp))
                     Row(horizontalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.fillMaxWidth()) {
-                        Button(onClick = { open(SelectLibraryActivity::class.java) }, modifier = Modifier.weight(1f)) { Text("相册") }
-                        Button(onClick = { if (connected) open(AeeCameraActivty::class.java) else connect() }, modifier = Modifier.weight(1f)) { Text("实时预览") }
+                        Button(onClick = { navigate(SelectLibraryActivity::class.java) }, modifier = Modifier.weight(1f)) { Text("相册") }
+                        Button(onClick = { if (connected) navigate(AeeCameraActivty::class.java) else connect() }, modifier = Modifier.weight(1f)) { Text("实时预览") }
                     }
                 }
             }
@@ -169,7 +174,7 @@ class ComposeMainActivity : ComponentActivity() {
 
     @Composable
     private fun DrawerItem(label: String, onClick: () -> Unit) {
-        androidx.compose.material3.NavigationDrawerItem(
+        NavigationDrawerItem(
             label = { Text(label, color = Color.White) },
             selected = false,
             onClick = onClick,
@@ -180,5 +185,12 @@ class ComposeMainActivity : ComponentActivity() {
 
 @Composable
 private fun MokacamTheme(content: @Composable () -> Unit) {
-    MaterialTheme(content = content)
+    MaterialTheme(
+        colorScheme = lightColorScheme(
+            primary = Color(0xFF006A6A),
+            secondary = Color(0xFF4D6363),
+            tertiary = Color(0xFF4F5F7A)
+        ),
+        content = content
+    )
 }
