@@ -36,6 +36,15 @@ class ComposeDroneActivity : ComponentActivity() {
                 var roll by remember { mutableFloatStateOf(.5f) }
                 var pitch by remember { mutableFloatStateOf(.5f) }
                 var yaw by remember { mutableFloatStateOf(.5f) }
+                fun sendSticks() {
+                    val flight = v.b ?: return
+                    val value = { x: Float -> (1000 + (x * 1000f)).toInt() }
+                    flight.h = value(throttle)
+                    flight.i = value(roll)
+                    flight.j = value(pitch)
+                    flight.k = value(yaw)
+                    flight.b()
+                }
                 Scaffold(topBar = { TopAppBar(title = { Text("无人机控制") }) }) { padding ->
                     Column(Modifier.fillMaxSize().padding(padding).padding(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                         Text(if (connected) "飞控已连接" else "飞控未连接")
@@ -51,6 +60,7 @@ class ComposeDroneActivity : ComponentActivity() {
                         Slider(pitch, { pitch = it }, modifier = Modifier.fillMaxWidth())
                         Text("偏航 ${percent(yaw)}%")
                         Slider(yaw, { yaw = it }, modifier = Modifier.fillMaxWidth())
+                        Button(onClick = { sendSticks() }, modifier = Modifier.fillMaxWidth()) { Text("发送摇杆状态") }
                         Text("起飞/降落等飞控动作保留原协议入口，请在真实设备上谨慎操作。")
                     }
                 }
