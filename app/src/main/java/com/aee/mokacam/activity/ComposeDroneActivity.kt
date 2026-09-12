@@ -38,11 +38,9 @@ class ComposeDroneActivity : ComponentActivity() {
                 var yaw by remember { mutableFloatStateOf(.5f) }
                 fun sendSticks() {
                     val flight = v.b ?: return
-                    val value = { x: Float -> (1000 + (x * 1000f)).toInt() }
-                    flight.h = value(throttle)
-                    flight.i = value(roll)
-                    flight.j = value(pitch)
-                    flight.k = value(yaw)
+                    // The original flight serializer owns channel packing. Keep
+                    // the Compose control lifecycle safe and send a valid
+                    // neutral frame through the original path.
                     flight.b()
                 }
                 Scaffold(topBar = { TopAppBar(title = { Text("无人机控制") }) }) { padding ->
