@@ -51,7 +51,7 @@ class ComposeSettingsActivity : ComponentActivity() {
                             modifier = Modifier.fillMaxWidth(), trailingContent = { Switch(checked = welcome, onCheckedChange = { welcome = it }) })
                         HorizontalDivider()
                         ListItem(headlineContent = { Text("固件升级") }, supportingContent = { Text("从 Mokacam/fwupdate/firmware.bin 上传") },
-                            modifier = Modifier.fillMaxWidth(), leadingContent = { Text("↑") }, trailingContent = { Text("›") })
+                            modifier = Modifier.fillMaxWidth().clickable { startActivity(Intent(this@ComposeSettingsActivity, ComposeFirmwareActivity::class.java)) }, leadingContent = { Text("↑") }, trailingContent = { Text("›") })
                         HorizontalDivider()
                         ListItem(headlineContent = { Text("清除缓存") }, supportingContent = { Text("应用设置与缓存") },
                             modifier = Modifier.fillMaxWidth(), trailingContent = { Text("清除") })
