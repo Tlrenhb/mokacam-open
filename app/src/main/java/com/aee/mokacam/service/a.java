@@ -108,7 +108,7 @@ public class a {
     }
 
     public void a(Handler handler) {
-        new Thread(new g(this, String.valueOf(AeeConstants.a) + File.separator + "firmware.bin", handler)).start();
+        new Thread(new g(this, String.valueOf(AeeConstants.f) + File.separator + "firmware.bin", handler)).start();
     }
 
     public void a(Handler handler, int i, boolean z) {
