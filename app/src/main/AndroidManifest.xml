@@ -42,60 +42,16 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name="com.aee.mokacam.activity.MainActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.ProductActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.ProductParamsActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.DownLoadActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.LegalActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.SupportActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.RegisterActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.WifiPswChangeActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.ProductInSupportActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.DroneInSupportActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.AeeAppSettingActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
         <activity
             android:name="com.aee.mokacam.activity.ComposeLibraryActivity"
@@ -147,28 +103,9 @@
             android:exported="false"
             android:screenOrientation="portrait" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.SelectLibraryActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="false"
-            android:screenOrientation="fullSensor" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.SelectSimpleActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.ShowPicOrVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="false"
-            android:screenOrientation="fullSensor" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.LibraryActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="false"
-            android:screenOrientation="fullSensor" />
 
         <activity
             android:name="com.aee.mokacam.activity.ComposeCameraActivity"
@@ -177,31 +114,9 @@
             android:screenOrientation="sensorLandscape"
             android:theme="@style/Theme.FullscreenBridge" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.AeeCameraActivty"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="false"
-            android:launchMode="singleTop"
-            android:screenOrientation="sensorLandscape"
-            android:theme="@style/Theme.FullscreenBridge" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.AeeCameraSettingActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="false"
-            android:launchMode="singleTop"
-            android:screenOrientation="sensorLandscape"
-            android:theme="@style/Theme.TranslucentBridge" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.AeeCameraPlaybackActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="false" />
 
-        <activity
-            android:name="com.aee.mokacam.activity.AeeCameraWifiConfigActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
