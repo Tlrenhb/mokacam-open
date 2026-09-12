@@ -166,7 +166,7 @@ class ComposeMainActivity : ComponentActivity() {
                     Spacer(Modifier.height(20.dp))
                     Row(horizontalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.fillMaxWidth()) {
                         Button(onClick = { navigate(SelectLibraryActivity::class.java) }, modifier = Modifier.weight(1f)) { Text("相册") }
-                        Button(onClick = { if (connected) navigate(AeeCameraActivty::class.java) else connect() }, modifier = Modifier.weight(1f)) { Text("实时预览") }
+                        Button(onClick = { if (connected) navigate(ComposeCameraActivity::class.java) else connect() }, modifier = Modifier.weight(1f)) { Text("实时预览") }
                     }
                 }
             }

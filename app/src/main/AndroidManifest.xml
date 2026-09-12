@@ -121,6 +121,13 @@
             android:screenOrientation="fullSensor" />
 
         <activity
+            android:name="com.aee.mokacam.activity.ComposeCameraActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.FullscreenBridge" />
+
+        <activity
             android:name="com.aee.mokacam.activity.AeeCameraActivty"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"
