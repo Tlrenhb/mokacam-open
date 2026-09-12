@@ -28,6 +28,7 @@ import java.io.File
 import java.net.HttpURLConnection
 import java.net.URL
 
+@androidx.compose.material3.ExperimentalMaterial3Api
 class ComposeDownloadActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
