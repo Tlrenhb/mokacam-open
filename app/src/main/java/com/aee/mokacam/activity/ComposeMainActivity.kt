@@ -57,6 +57,7 @@ class ComposeMainActivity : ComponentActivity() {
         setContent { MokacamTheme { MainScreen() } }
     }
 
+    @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     private fun MainScreen() {
         val context = LocalContext.current
