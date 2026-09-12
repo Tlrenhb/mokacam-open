@@ -119,6 +119,7 @@ class ComposeMainActivity : ComponentActivity() {
                     HorizontalDivider(color = Color.White.copy(alpha = .25f))
                     DrawerItem("产品参数") { openInfo("product") }
                     DrawerItem("设置") { navigate(ComposeSettingsActivity::class.java) }
+                    DrawerItem("无人机控制") { navigate(ComposeDroneActivity::class.java) }
                     DrawerItem("支持") { openInfo("support") }
                     DrawerItem("法律信息") { openInfo("legal") }
                     DrawerItem("官网") {
