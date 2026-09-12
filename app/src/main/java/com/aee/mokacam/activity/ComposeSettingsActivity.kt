@@ -36,7 +36,7 @@ class ComposeSettingsActivity : ComponentActivity() {
                 Scaffold(topBar = { TopAppBar(title = { Text("设置") }) }) { padding ->
                     Column(Modifier.fillMaxSize().padding(padding), verticalArrangement = Arrangement.Top) {
                         ListItem(headlineContent = { Text("相机设置") }, supportingContent = { Text("录像、拍照、提示音、时间、SD 卡、Wi‑Fi") },
-                            modifier = Modifier.fillMaxWidth().clickable { startActivity(Intent(this@ComposeSettingsActivity, AeeCameraSettingActivity::class.java)) }, trailingContent = { Text("›") },
+                            modifier = Modifier.fillMaxWidth().clickable { startActivity(Intent(this@ComposeSettingsActivity, ComposeCameraSettingsActivity::class.java)) }, trailingContent = { Text("›") },
                             leadingContent = { Text("⚙") },
                             tonalElevation = 1.dp)
                         HorizontalDivider()
