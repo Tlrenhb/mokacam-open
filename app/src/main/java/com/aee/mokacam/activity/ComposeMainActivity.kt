@@ -78,6 +78,11 @@ class ComposeMainActivity : ComponentActivity() {
             scope.launch { drawerState.close() }
         }
 
+        fun openInfo(section: String) {
+            context.startActivity(Intent(context, ComposeInfoActivity::class.java).putExtra("section", section))
+            scope.launch { drawerState.close() }
+        }
+
         fun connect() {
             val wifi = context.applicationContext.getSystemService(Context.WIFI_SERVICE) as? WifiManager
             if (wifi == null || !wifi.isWifiEnabled) {
@@ -112,10 +117,10 @@ class ComposeMainActivity : ComponentActivity() {
                     Text("Mokacam", color = Color.White, fontSize = 24.sp, fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(24.dp))
                     HorizontalDivider(color = Color.White.copy(alpha = .25f))
-                    DrawerItem("产品参数") { navigate(ProductParamsActivity::class.java) }
+                    DrawerItem("产品参数") { openInfo("product") }
                     DrawerItem("设置") { navigate(ComposeSettingsActivity::class.java) }
-                    DrawerItem("支持") { navigate(SupportActivity::class.java) }
-                    DrawerItem("法律信息") { navigate(LegalActivity::class.java) }
+                    DrawerItem("支持") { openInfo("support") }
+                    DrawerItem("法律信息") { openInfo("legal") }
                     DrawerItem("官网") {
                         context.startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://www.aee.com")))
                         scope.launch { drawerState.close() }
