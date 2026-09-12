@@ -52,7 +52,7 @@ public class a extends FrameLayout {
         playerView.setPlayer(player);
         player.addListener(new androidx.media3.common.Player.Listener() {
             @Override
-            public void onPlayerError(androidx.media3.PlaybackException error) {
+            public void onPlayerError(androidx.media3.common.PlaybackException error) {
                 if (!started) return;
                 player.release();
                 player = new ExoPlayer.Builder(getContext()).build();
@@ -60,7 +60,7 @@ public class a extends FrameLayout {
                 MediaSource retry = new RtspMediaSource.Factory()
                         .setForceUseRtpTcp(true)
                         .setTimeoutMs(8000)
-                        .createMediaSource(MediaItem.fromUri(AeeConstants.CAMERA_RTSP_URL));
+                        .createMediaSource(MediaItem.fromUri(AeeConstants.g));
                 player.setMediaSource(retry);
                 player.prepare();
                 player.setPlayWhenReady(true);
@@ -69,7 +69,7 @@ public class a extends FrameLayout {
         MediaSource source = new RtspMediaSource.Factory()
                 .setForceUseRtpTcp(true)
                 .setTimeoutMs(8000)
-                .createMediaSource(MediaItem.fromUri(AeeConstants.CAMERA_RTSP_URL));
+                .createMediaSource(MediaItem.fromUri(AeeConstants.g));
         player.setMediaSource(source);
         player.prepare();
         player.setPlayWhenReady(true);
