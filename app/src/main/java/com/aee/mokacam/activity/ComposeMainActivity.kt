@@ -1,5 +1,6 @@
 package com.aee.mokacam.activity
 
+import android.content.Context
 import android.content.Intent
 import android.net.wifi.WifiManager
 import android.os.Bundle
