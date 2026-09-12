@@ -103,6 +103,11 @@
             android:screenOrientation="fullSensor" />
 
         <activity
+            android:name="com.aee.mokacam.activity.ComposeWifiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name="com.aee.mokacam.activity.ComposeCameraSettingsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />

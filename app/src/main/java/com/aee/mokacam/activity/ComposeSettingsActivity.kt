@@ -45,7 +45,7 @@ class ComposeSettingsActivity : ComponentActivity() {
                             trailingContent = { Text("›") })
                         HorizontalDivider()
                         ListItem(headlineContent = { Text("Wi‑Fi 密码") }, supportingContent = { Text("修改相机 SSID 与密码") },
-                            modifier = Modifier.fillMaxWidth().clickable { startActivity(Intent(this@ComposeSettingsActivity, AeeCameraWifiConfigActivity::class.java)) }, leadingContent = { Text("▣") }, trailingContent = { Text("›") })
+                            modifier = Modifier.fillMaxWidth().clickable { startActivity(Intent(this@ComposeSettingsActivity, ComposeWifiActivity::class.java)) }, leadingContent = { Text("▣") }, trailingContent = { Text("›") })
                         HorizontalDivider()
                         ListItem(headlineContent = { Text("欢迎页") }, supportingContent = { Text("启动时显示欢迎页") },
                             modifier = Modifier.fillMaxWidth(), trailingContent = { Switch(checked = welcome, onCheckedChange = { welcome = it }) })
