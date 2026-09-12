@@ -3,4 +3,6 @@
     <string name="change_photo_mode">请切换至拍照模式后再进行设置</string>
     <string name="change_video_mode">请切换至录像模式后再进行设置</string>
     <string name="upgrading">正在升级中,请耐心等待....</string>
+    <string name="startup_error">Startup failed. Check permissions and restart.</string>
+    <string name="retry">Retry</string>
 </resources>

@@ -225,9 +225,18 @@ public class MainActivity extends BaseActivity {
     @Override // com.aee.mokacam.activity.BaseActivity, androidx.fragment.app.FragmentActivity, android.support.v4.app.BaseFragmentActivityDonut, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        setContentView(R.layout.activity_main);
-        a();
-        b();
+        try {
+            setContentView(R.layout.activity_main);
+            a();
+            b();
+        } catch (Throwable error) {
+            android.util.Log.e("Mokacam", "MainActivity startup failed", error);
+            setContentView(R.layout.activity_start_error);
+            View retry = findViewById(R.id.start_retry);
+            if (retry != null) {
+                retry.setOnClickListener(v -> recreate());
+            }
+        }
     }
 
     @Override // com.aee.mokacam.activity.BaseActivity, androidx.fragment.app.FragmentActivity, android.support.v4.app.BaseFragmentActivityHoneycomb, android.app.Activity, android.view.LayoutInflater.Factory2
