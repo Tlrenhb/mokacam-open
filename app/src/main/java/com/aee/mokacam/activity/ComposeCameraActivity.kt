@@ -52,6 +52,7 @@ class ComposeCameraActivity : ComponentActivity() {
         val owner = LocalLifecycleOwner.current
         var recording by remember { mutableStateOf(false) }
         var mode by remember { mutableStateOf("录像") }
+        var photoMode by remember { mutableStateOf(0) }
         var status by remember { mutableStateOf("正在加载预览") }
         var seconds by remember { mutableLongStateOf(0L) }
         LaunchedEffect(recording) {
@@ -109,6 +110,13 @@ class ComposeCameraActivity : ComponentActivity() {
                             FilledTonalButton(onClick = { mode = "录像"; com.aee.mokacam.service.a.a().a(object : com.aee.mokacam.service.n { override fun a(value: Any?) {} }, com.aee.mokacam.bean.SendMsg(2, "nil", "Switch_mode")) }, modifier = Modifier.weight(1f)) { Text("录像模式") }
                             FilledTonalButton(onClick = { mode = "拍照"; com.aee.mokacam.service.a.a().a(object : com.aee.mokacam.service.n { override fun a(value: Any?) {} }, com.aee.mokacam.bean.SendMsg(2, "nil", "Switch_mode")) }, modifier = Modifier.weight(1f)) { Text("拍照模式") }
                         }
+                        if (mode == "拍照") {
+                            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                listOf("单拍", "连拍", "延时").forEachIndexed { index, label ->
+                                    FilledTonalButton(onClick = { photoMode = index }, modifier = Modifier.weight(1f)) { Text(label) }
+                                }
+                            }
+                        }
                         Spacer(Modifier.height(8.dp))
                         Button(
                             onClick = {
@@ -117,7 +125,7 @@ class ComposeCameraActivity : ComponentActivity() {
                                     com.aee.mokacam.service.a.a().a(recording, handler, true)
                                     status = if (recording) "正在录像" else "停止录像"
                                 } else {
-                                    com.aee.mokacam.service.a.a().a(handler, 0, true)
+                                    com.aee.mokacam.service.a.a().a(handler, photoMode, true)
                                     status = "正在拍照"
                                 }
                             },
